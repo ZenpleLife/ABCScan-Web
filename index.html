@@ -148,9 +148,8 @@
                         <div
                             class="absolute inset-0 bg-gradient-to-tr from-cyan-400 to-purple-600 rounded-lg blur opacity-75">
                         </div>
-                        <div
-                            class="relative bg-black rounded-lg w-full h-full flex items-center justify-center border border-white/10">
-                            <img src="logo-web.png" alt="AI Business Card Scan Logo" class="w-7 h-7 object-contain">
+                        <div class="relative bg-black rounded-lg w-full h-full overflow-hidden border border-white/10">
+                            <img src="logo-web.png" alt="AI Business Card Scan Logo" class="w-full h-full object-cover">
                         </div>
                     </div>
                     <!-- Brand Name with Unified Cyan and Bold Styling -->
@@ -210,11 +209,12 @@
 
                     <div class="flex flex-col sm:flex-row gap-5 justify-center lg:justify-start">
                         <a href="#"
-                            class="relative flex items-center justify-center gap-3 bg-black text-white px-8 py-3 rounded-xl border border-white/20 hover:bg-gray-900 transition-all group overflow-hidden">
+                            class="relative flex items-center justify-center gap-3 bg-black text-white px-6 py-2 rounded-lg border border-white/20 hover:bg-gray-900 transition-all group overflow-hidden">
                             <i class="fa-brands fa-google-play text-2xl text-white"></i>
                             <div class="text-left relative z-10">
-                                <div class="text-[9px] uppercase font-bold tracking-widest opacity-70">GET IT ON</div>
-                                <div class="text-xl font-bold leading-none -mt-0.5">Google Play</div>
+                                <div class="text-[8px] uppercase font-bold tracking-widest opacity-80 leading-none">GET
+                                    IT ON</div>
+                                <div class="text-xl font-bold leading-none mt-0.5">Google Play</div>
                             </div>
                         </a>
                         <a href="#demo"
@@ -330,6 +330,114 @@
                     <p class="text-gray-400 leading-relaxed font-medium text-base">Scan a name, get the full picture.
                         Our system suggests social profiles instantly.</p>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section id="pricing" class="py-24 relative overflow-hidden">
+        <!-- Background Glow -->
+        <div class="absolute inset-0 bg-gradient-to-b from-ai-base via-ai-surface to-ai-base opacity-80 z-[-1]"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-display text-4xl font-bold mb-4">Transparent Access</h2>
+                <p class="text-gray-400">Upgrade your workflow with our Pro capabilities.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto items-center">
+
+                <!-- Free Tier -->
+                <div class="glass-card rounded-2xl p-8 relative hover:border-white/20 transition-all">
+                    <h3 class="text-lg font-medium text-gray-300">Starter</h3>
+                    <div class="mt-4 flex items-baseline gap-1">
+                        <span class="text-4xl font-bold font-display text-white">Free</span>
+                    </div>
+                    <ul class="space-y-4 my-8">
+                        <li class="flex items-center gap-3 text-sm text-gray-400">
+                            <i class="fa-solid fa-check text-cyan-500"></i> 10 AI Scans / mo
+                        </li>
+                        <li class="flex items-center gap-3 text-sm text-gray-400">
+                            <i class="fa-solid fa-check text-cyan-500"></i> Local Storage
+                        </li>
+                    </ul>
+                    <a href="#"
+                        class="block w-full py-3 rounded-lg border border-white/10 hover:bg-white/5 text-center text-sm font-medium transition-colors">Download</a>
+                </div>
+
+                <!-- Pro Tier (Main) -->
+                <div
+                    class="relative bg-[#161032] rounded-2xl p-8 border border-purple-500 shadow-[0_0_50px_rgba(139,92,246,0.15)] transform md:scale-105 z-10">
+                    <div
+                        class="absolute top-0 right-0 left-0 h-1 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500">
+                    </div>
+                    <div
+                        class="absolute top-4 right-4 text-[10px] font-bold uppercase tracking-wider text-purple-300 bg-purple-500/20 px-2 py-1 rounded">
+                        Recommended</div>
+
+                    <h3 class="text-lg font-medium text-white">Pro Neural</h3>
+                    <div class="mt-4 flex items-baseline gap-1">
+                        <span
+                            class="text-5xl font-bold font-display text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">$9.99</span>
+                        <span class="text-gray-500">/mo</span>
+                    </div>
+
+                    <div class="my-8 space-y-4">
+                        <li class="flex items-center gap-3 text-sm text-white">
+                            <div
+                                class="w-5 h-5 rounded-full bg-purple-500/20 flex items-center justify-center text-purple-400 text-xs">
+                                <i class="fa-solid fa-infinity"></i>
+                            </div>
+                            Unlimited AI Scans
+                        </li>
+                        <li class="flex items-center gap-3 text-sm text-white">
+                            <div
+                                class="w-5 h-5 rounded-full bg-purple-500/20 flex items-center justify-center text-purple-400 text-xs">
+                                <i class="fa-solid fa-cloud"></i>
+                            </div>
+                            Encrypted Cloud Sync
+                        </li>
+                        <li class="flex items-center gap-3 text-sm text-white">
+                            <div
+                                class="w-5 h-5 rounded-full bg-purple-500/20 flex items-center justify-center text-purple-400 text-xs">
+                                <i class="fa-solid fa-file-export"></i>
+                            </div>
+                            CSV/Excel Export
+                        </li>
+                        <li class="flex items-center gap-3 text-sm text-white">
+                            <div
+                                class="w-5 h-5 rounded-full bg-purple-500/20 flex items-center justify-center text-purple-400 text-xs">
+                                <i class="fa-solid fa-wand-magic-sparkles"></i>
+                            </div>
+                            Social Enrichment
+                        </li>
+                    </div>
+
+                    <a href="#"
+                        class="block w-full py-4 rounded-lg bg-gradient-to-r from-cyan-600 to-purple-600 hover:from-cyan-500 hover:to-purple-500 text-white font-bold text-center shadow-lg transition-all text-sm">Start
+                        Free Trial</a>
+                </div>
+
+                <!-- Team Tier -->
+                <div class="glass-card rounded-2xl p-8 hover:border-white/20 transition-all">
+                    <h3 class="text-lg font-medium text-gray-300">Enterprise</h3>
+                    <div class="mt-4 flex items-baseline gap-1">
+                        <span class="text-4xl font-bold font-display text-white">$29</span>
+                        <span class="text-gray-500">/mo</span>
+                    </div>
+                    <ul class="space-y-4 my-8">
+                        <li class="flex items-center gap-3 text-sm text-gray-400">
+                            <i class="fa-solid fa-check text-cyan-500"></i> CRM Integrations
+                        </li>
+                        <li class="flex items-center gap-3 text-sm text-gray-400">
+                            <i class="fa-solid fa-check text-cyan-500"></i> Team Management
+                        </li>
+                    </ul>
+                    <a href="#"
+                        class="block w-full py-3 rounded-lg border border-white/10 hover:bg-white/5 text-center text-sm font-medium transition-colors">Contact
+                        Sales</a>
+                </div>
+
             </div>
         </div>
     </section>
