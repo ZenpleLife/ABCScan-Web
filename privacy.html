@@ -3,45 +3,175 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - ABCScan</title>
+    <title>Privacy Policy - ABC Scan</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
     <style>
+        /* Base styles from your existing code */
+        :root {
+            --primary-color: #2563eb; /* Assuming a blue theme based on standard web trends */
+            --accent-color: #1d4ed8;
+            --text-color: #1f2937;
+            --text-muted: #4b5563;
+            --bg-color: #ffffff;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Header Styles */
+        .header {
+            padding: 20px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            position: fixed;
+            width: 100%;
+            background: white;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-weight: 700;
+            font-size: 1.5rem;
+            text-decoration: none;
+            color: var(--text-color);
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white !important;
+            padding: 8px 16px;
+            border-radius: 6px;
+            transition: background 0.3s;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--accent-color);
+        }
+
+        /* Privacy Content Styles */
         .privacy-content {
             padding: 150px 0 100px;
             max-width: 800px;
             margin: 0 auto;
         }
+
         .privacy-content h1 {
+            margin-bottom: 10px;
+        }
+
+        .last-updated {
+            font-size: 0.9rem;
+            color: #6b7280;
             margin-bottom: 40px;
+            font-style: italic;
         }
+
         .privacy-content h2 {
-            margin-top: 30px;
-            margin-bottom: 15px;
+            margin-top: 40px;
+            margin-bottom: 20px;
             font-size: 1.5rem;
+            border-bottom: 1px solid #e5e7eb;
+            padding-bottom: 10px;
         }
+
+        .privacy-content h3 {
+            margin-top: 25px;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+            color: var(--text-color);
+        }
+
         .privacy-content p {
             color: var(--text-muted);
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
+
+        /* New styles for lists in the privacy policy */
+        .privacy-content ul {
+            margin-bottom: 20px;
+            padding-left: 20px;
+            color: var(--text-muted);
+        }
+        
+        .privacy-content li {
+            margin-bottom: 10px;
+        }
+
         .back-link {
             display: inline-block;
             margin-bottom: 20px;
-            color: var(--accent-color);
+            color: var(--primary-color);
             text-decoration: none;
             font-weight: 600;
         }
+
         .back-link:hover {
             text-decoration: underline;
+        }
+
+        /* Footer Styles */
+        .footer {
+            background-color: #111827;
+            color: white;
+            padding: 60px 0;
+            margin-top: auto;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .footer-bottom-links a, .social-links a {
+            color: #9ca3af;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+
+        .footer-bottom-links a:hover, .social-links a:hover {
+            color: white;
         }
     </style>
 </head>
 <body>
     <header class="header">
         <nav class="nav container">
-            <a href="index.html" class="logo">ABCScan</a>
+            <a href="index.html" class="logo">ABC Scan</a>
             <ul class="nav-links">
                 <li><a href="index.html#features">Features</a></li>
                 <li><a href="index.html#about">About</a></li>
@@ -53,38 +183,82 @@
     <main class="container">
         <article class="privacy-content">
             <a href="index.html" class="back-link">&larr; Back to Home</a>
-            <h1>Privacy Policy</h1>
-            <p>Last Updated: January 2026</p>
+            
+            <h1>Privacy Policy for ABC Scan</h1>
+            <p class="last-updated">Last updated: January 29, 2026</p>
+
+            <p>ZenpleLife ("we," "our," or "us") operates the ABC Scan mobile application (the "App"). This page informs you of our policies regarding the collection, use, and disclosure of Personal Information when you use our Service and the choices you have associated with that data.</p>
+            <p>By using the Service, you agree to the collection and use of information in accordance with this policy.</p>
 
             <section>
-                <h2>1. Introduction</h2>
-                <p>Welcome to ABCScan. We respect your privacy and are committed to protecting your personal data. This privacy policy explains how we handle your information when you use our application and website.</p>
+                <h2>1. Information Collection and Use</h2>
+                <p>To provide a better experience and ensure the functionality of our business card scanning features, we may require you to provide us with certain personally identifiable information. The information that we request will be retained by us and used as described in this privacy policy.</p>
+
+                <h3>A. Permissions We Request</h3>
+                <p>For ABC Scan to function as a business card scanner, we require the following sensitive permissions on your device:</p>
+                <ul>
+                    <li><strong>Camera:</strong> We use your device’s camera to capture images of business cards for Optical Character Recognition (OCR) processing.</li>
+                    <li><strong>Photo Gallery (Storage/Media):</strong> We request access to your photo gallery to allow you to upload existing images of business cards for scanning.</li>
+                    <li><strong>Contacts:</strong> We request access to your contact list (Read/Write) solely for the purpose of saving the scanned business card details directly into your device’s native address book at your request. We do not upload your contact list to our servers for any other purpose.</li>
+                </ul>
+
+                <h3>B. Personal Data</h3>
+                <p>When you register an account via Firebase Authentication, we may collect:</p>
+                <ul>
+                    <li>Email address</li>
+                    <li>Name</li>
+                    <li>Profile picture (if applicable via social login)</li>
+                </ul>
+
+                <h3>C. Scanned Data</h3>
+                <p>The business card data you scan (names, phone numbers, company names, etc.) is processed to convert the image to text. If you choose to save this data to the cloud, it is stored securely using Google Firebase services so you can access it across devices.</p>
             </section>
 
             <section>
-                <h2>2. Data Collection & Usage</h2>
-                <p><strong>Local Processing:</strong> ABCScan is designed with privacy at its core. All scanning and image processing are performed directly on your device. We do not upload your scanned documents, images, or extracted text to our servers.</p>
-                <p><strong>No Personal Data:</strong> We do not collect personal information such as your name, email address, or location unless you voluntarily provide it (e.g., when contacting support).</p>
+                <h2>2. Third-Party Service Providers</h2>
+                <p>The App uses third-party services that may collect information used to identify you. Below are the links to the privacy policies of the third-party service providers used by the App:</p>
+                <ul>
+                    <li>
+                        <strong>Google Play Services</strong>
+                    </li>
+                    <li>
+                        <strong>AdMob:</strong> We use AdMob to display advertisements. AdMob may use cookies and unique device identifiers (Advertising ID) to serve personalized ads based on your interests.<br>
+                        <a href="https://support.google.com/admob/answer/6128543?hl=en" target="_blank">AdMob Privacy Policy</a>
+                    </li>
+                    <li>
+                        <strong>Google Firebase:</strong> We use Firebase for authentication (logging you in), analytics, and database storage (saving your scanned cards).<br>
+                        <a href="https://firebase.google.com/support/privacy" target="_blank">Firebase Privacy Policy</a>
+                    </li>
+                </ul>
             </section>
 
             <section>
-                <h2>3. Third-Party Services</h2>
-                <p>We do not share your data with third parties. Our application does not include third-party trackers or analytics that collect your personal information.</p>
+                <h2>3. Log Data</h2>
+                <p>We want to inform you that whenever you use our Service, in a case of an error in the App, we collect data and information (through third-party products) on your phone called Log Data. This Log Data may include information such as your device Internet Protocol (“IP”) address, device name, operating system version, the configuration of the app when utilizing our Service, the time and date of your use of the Service, and other statistics.</p>
             </section>
 
             <section>
                 <h2>4. Security</h2>
-                <p>Since your data stays on your device, its security depends on the security of your device. We recommend using standard device security features (passcodes, biometrics) to protect your scans.</p>
+                <p>We value your trust in providing us your Personal Information and your scanned data. We utilize industry-standard security measures provided by Google Firebase to protect your data during transmission and storage. However, remember that no method of transmission over the internet, or method of electronic storage is 100% secure and reliable, and we cannot guarantee its absolute security.</p>
             </section>
 
             <section>
-                <h2>5. Changes to This Policy</h2>
-                <p>We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page.</p>
+                <h2>5. Children’s Privacy</h2>
+                <p>These Services do not address anyone under the age of 13. We do not knowingly collect personally identifiable information from children under 13. In the case we discover that a child under 13 has provided us with personal information, we immediately delete this from our servers. If you are a parent or guardian and you are aware that your child has provided us with personal information, please contact us so that we will be able to perform the necessary actions.</p>
             </section>
 
             <section>
-                <h2>6. Contact Us</h2>
-                <p>If you have any questions about this Privacy Policy, please contact us at support@zenplelife.com.</p>
+                <h2>6. Changes to This Privacy Policy</h2>
+                <p>We may update our Privacy Policy from time to time. Thus, you are advised to review this page periodically for any changes. We will notify you of any changes by posting the new Privacy Policy on this page. These changes are effective immediately after they are posted on this page.</p>
+            </section>
+
+            <section>
+                <h2>7. Contact Us</h2>
+                <p>If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us.</p>
+                <p>
+                    <strong>Company Name:</strong> ZenpleLife<br>
+                    <strong>Email:</strong> <a href="mailto:simplejoyfuljourney@gmail.com">simplejoyfuljourney@gmail.com</a>
+                </p>
             </section>
         </article>
     </main>
