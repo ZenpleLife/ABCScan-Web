@@ -1,281 +1,345 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - ABC Scan</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <title>Privacy Policy | AI Business Card Scan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="image/png" href="logo-web.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        ai: {
+                            base: '#030014',
+                            surface: '#110c24',
+                            highlight: '#1f1640',
+                            accent: '#8b5cf6',
+                            cyan: '#06b6d4',
+                            pink: '#ec4899'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Urbanist', 'sans-serif'],
+                        display: ['Urbanist', 'sans-serif'],
+                    },
+                    animation: {
+                        'blob': 'blob 7s infinite',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        blob: {
+                            '0%': { transform: 'translate(0px, 0px) scale(1)' },
+                            '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+                            '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+                            '100%': { transform: 'translate(0px, 0px) scale(1)' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
     <style>
-        /* Base styles from your existing code */
-        :root {
-            --primary-color: #2563eb; /* Assuming a blue theme based on standard web trends */
-            --accent-color: #1d4ed8;
-            --text-color: #1f2937;
-            --text-muted: #4b5563;
-            --bg-color: #ffffff;
+        * {
+            font-family: 'Urbanist', sans-serif !important;
         }
-        
+
         body {
-            font-family: 'Inter', sans-serif;
-            margin: 0;
-            padding: 0;
-            color: var(--text-color);
-            line-height: 1.6;
+            background-color: #030014;
+            color: #ffffff;
+            overflow-x: hidden;
         }
 
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
         }
 
-        /* Header Styles */
-        .header {
-            padding: 20px 0;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-            position: fixed;
-            width: 100%;
-            background: white;
-            top: 0;
-            z-index: 1000;
+        ::-webkit-scrollbar-track {
+            background: #030014;
         }
 
-        .nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+        ::-webkit-scrollbar-thumb {
+            background: #333;
+            border-radius: 4px;
         }
 
-        .logo {
-            font-weight: 700;
-            font-size: 1.5rem;
-            text-decoration: none;
-            color: var(--text-color);
+        ::-webkit-scrollbar-thumb:hover {
+            background: #8b5cf6;
         }
 
-        .nav-links {
-            list-style: none;
-            display: flex;
-            gap: 20px;
+        .glass-card {
+            background: rgba(17, 12, 36, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
         }
 
-        .nav-links a {
-            text-decoration: none;
-            color: var(--text-color);
-            font-weight: 500;
+        .glass-nav {
+            background: rgba(3, 0, 20, 0.8);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
         }
 
-        .btn-primary {
-            background-color: var(--primary-color);
-            color: white !important;
-            padding: 8px 16px;
-            border-radius: 6px;
-            transition: background 0.3s;
+        .text-gradient-primary {
+            background: linear-gradient(to right, #22d3ee, #a855f7, #ec4899);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
-        .btn-primary:hover {
-            background-color: var(--accent-color);
-        }
-
-        /* Privacy Content Styles */
-        .privacy-content {
-            padding: 150px 0 100px;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .privacy-content h1 {
-            margin-bottom: 10px;
-        }
-
-        .last-updated {
-            font-size: 0.9rem;
-            color: #6b7280;
-            margin-bottom: 40px;
-            font-style: italic;
-        }
-
-        .privacy-content h2 {
-            margin-top: 40px;
-            margin-bottom: 20px;
-            font-size: 1.5rem;
-            border-bottom: 1px solid #e5e7eb;
-            padding-bottom: 10px;
-        }
-
-        .privacy-content h3 {
-            margin-top: 25px;
-            margin-bottom: 15px;
-            font-size: 1.1rem;
-            color: var(--text-color);
-        }
-
-        .privacy-content p {
-            color: var(--text-muted);
-            margin-bottom: 15px;
-        }
-
-        /* New styles for lists in the privacy policy */
-        .privacy-content ul {
-            margin-bottom: 20px;
-            padding-left: 20px;
-            color: var(--text-muted);
+        .grid-bg {
+            background-size: 50px 50px;
+            background-image: linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
         }
         
-        .privacy-content li {
-            margin-bottom: 10px;
+        /* Privacy specific styling */
+        .policy-content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+            color: #9ca3af; /* text-gray-400 */
         }
-
-        .back-link {
-            display: inline-block;
-            margin-bottom: 20px;
-            color: var(--primary-color);
-            text-decoration: none;
-            font-weight: 600;
+        
+        .policy-content ul {
+            margin-bottom: 1.5rem;
+            list-style-type: none;
+            padding-left: 0;
         }
-
-        .back-link:hover {
-            text-decoration: underline;
-        }
-
-        /* Footer Styles */
-        .footer {
-            background-color: #111827;
-            color: white;
-            padding: 60px 0;
-            margin-top: auto;
-        }
-
-        .footer-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-
-        .footer-bottom-links a, .social-links a {
+        
+        .policy-content li {
+            margin-bottom: 0.75rem;
             color: #9ca3af;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .policy-content li::before {
+            content: "\f00c"; /* FontAwesome check */
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            color: #06b6d4; /* Cyan */
+            font-size: 0.8rem;
+            margin-top: 5px;
+        }
+        
+        .policy-content a {
+            color: #22d3ee;
             text-decoration: none;
-            margin: 0 10px;
             transition: color 0.3s;
         }
-
-        .footer-bottom-links a:hover, .social-links a:hover {
-            color: white;
+        
+        .policy-content a:hover {
+            color: #ec4899;
+            text-decoration: underline;
         }
     </style>
 </head>
-<body>
-    <header class="header">
-        <nav class="nav container">
-            <a href="index.html" class="logo">ABC Scan</a>
-            <ul class="nav-links">
-                <li><a href="index.html#features">Features</a></li>
-                <li><a href="index.html#about">About</a></li>
-                <li><a href="index.html#download" class="btn btn-primary">Download</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <main class="container">
-        <article class="privacy-content">
-            <a href="index.html" class="back-link">&larr; Back to Home</a>
+<body class="antialiased selection:bg-ai-accent selection:text-white">
+
+    <div class="fixed inset-0 pointer-events-none overflow-hidden">
+        <div class="absolute top-[-10%] left-[-10%] w-[500px] h-[500px] bg-purple-600/20 rounded-full blur-[128px] animate-pulse-slow"></div>
+        <div class="absolute bottom-[-10%] right-[-10%] w-[500px] h-[500px] bg-cyan-600/20 rounded-full blur-[128px] animate-pulse-slow" style="animation-delay: 2s;"></div>
+        <div class="absolute top-[20%] right-[20%] w-[300px] h-[300px] bg-pink-600/10 rounded-full blur-[96px] animate-blob"></div>
+        <div class="absolute inset-0 grid-bg z-[-1]"></div>
+    </div>
+
+    <nav class="glass-nav sticky top-0 z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex items-center gap-3">
+                    <a href="index.html" class="flex items-center gap-3 group">
+                        <div class="relative w-10 h-10 flex items-center justify-center">
+                            <div class="absolute inset-0 bg-gradient-to-tr from-cyan-400 to-purple-600 rounded-lg blur opacity-75 group-hover:opacity-100 transition-opacity"></div>
+                            <div class="relative bg-black rounded-lg w-full h-full overflow-hidden border border-white/10">
+                                <img src="logo-web.png" alt="AI Business Card Scan Logo" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <span class="font-bold text-2xl lg:text-3xl tracking-tight text-white whitespace-nowrap">
+                            <span class="text-cyan-400">A</span>I
+                            <span class="text-cyan-400 ml-1">B</span>usiness
+                            <span class="text-cyan-400 ml-1">C</span>ard
+                        </span>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="index.html" class="text-sm font-semibold text-gray-400 hover:text-white transition-colors tracking-widest uppercase">Home</a>
+                    <a href="index.html#download" class="group relative px-7 py-2.5 rounded-full bg-white/5 border border-white/10 hover:border-purple-500/50 hover:bg-white/10 transition-all duration-300">
+                        <span class="relative z-10 text-sm font-bold text-white tracking-widest uppercase">Get App</span>
+                        <div class="absolute inset-0 rounded-full bg-purple-500/20 blur opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="relative pt-12 pb-24 lg:pt-20 lg:pb-32">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             
-            <h1>Privacy Policy for ABC Scan</h1>
-            <p class="last-updated">Last updated: January 29, 2026</p>
+            <a href="index.html" class="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-gray-500 hover:text-cyan-400 transition-colors mb-8">
+                <i class="fa-solid fa-arrow-left"></i> Back to Home
+            </a>
 
-            <p>ZenpleLife ("we," "our," or "us") operates the ABC Scan mobile application (the "App"). This page informs you of our policies regarding the collection, use, and disclosure of Personal Information when you use our Service and the choices you have associated with that data.</p>
-            <p>By using the Service, you agree to the collection and use of information in accordance with this policy.</p>
+            <div class="glass-card rounded-[2.5rem] p-8 md:p-14 border border-white/5 shadow-2xl relative overflow-hidden">
+                
+                <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 opacity-50"></div>
 
-            <section>
-                <h2>1. Information Collection and Use</h2>
-                <p>To provide a better experience and ensure the functionality of our business card scanning features, we may require you to provide us with certain personally identifiable information. The information that we request will be retained by us and used as described in this privacy policy.</p>
+                <div class="mb-12 border-b border-white/10 pb-10">
+                    <h1 class="text-4xl md:text-5xl font-black mb-4 tracking-tighter text-white">
+                        Privacy <span class="text-gradient-primary">Policy</span>
+                    </h1>
+                    <div class="flex items-center gap-3 text-sm font-bold uppercase tracking-widest text-cyan-400">
+                        <i class="fa-regular fa-calendar-check"></i>
+                        <span>Last updated: January 29, 2026</span>
+                    </div>
+                </div>
 
-                <h3>A. Permissions We Request</h3>
-                <p>For ABC Scan to function as a business card scanner, we require the following sensitive permissions on your device:</p>
-                <ul>
-                    <li><strong>Camera:</strong> We use your device’s camera to capture images of business cards for Optical Character Recognition (OCR) processing.</li>
-                    <li><strong>Photo Gallery (Storage/Media):</strong> We request access to your photo gallery to allow you to upload existing images of business cards for scanning.</li>
-                    <li><strong>Contacts:</strong> We request access to your contact list (Read/Write) solely for the purpose of saving the scanned business card details directly into your device’s native address book at your request. We do not upload your contact list to our servers for any other purpose.</li>
-                </ul>
+                <div class="policy-content">
+                    <p class="text-lg text-white font-medium">ZenpleLife ("we," "our," or "us") operates the ABC Scan mobile application (the "App"). This page informs you of our policies regarding the collection, use, and disclosure of Personal Information when you use our Service and the choices you have associated with that data.</p>
+                    <p>By using the Service, you agree to the collection and use of information in accordance with this policy.</p>
 
-                <h3>B. Personal Data</h3>
-                <p>When you register an account via Firebase Authentication, we may collect:</p>
-                <ul>
-                    <li>Email address</li>
-                    <li>Name</li>
-                    <li>Profile picture (if applicable via social login)</li>
-                </ul>
+                    <h2 class="text-2xl font-black text-white mt-12 mb-6 flex items-center gap-3">
+                        <span class="w-8 h-8 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-cyan-400 text-sm">1</span>
+                        Information Collection and Use
+                    </h2>
+                    <p>To provide a better experience and ensure the functionality of our business card scanning features, we may require you to provide us with certain personally identifiable information. The information that we request will be retained by us and used as described in this privacy policy.</p>
 
-                <h3>C. Scanned Data</h3>
-                <p>The business card data you scan (names, phone numbers, company names, etc.) is processed to convert the image to text. If you choose to save this data to the cloud, it is stored securely using Google Firebase services so you can access it across devices.</p>
-            </section>
+                    <h3 class="text-lg font-bold text-white mt-8 mb-4">A. Permissions We Request</h3>
+                    <p>For ABC Scan to function as a business card scanner, we require the following sensitive permissions on your device:</p>
+                    <ul>
+                        <li><strong>Camera:</strong> We use your device’s camera to capture images of business cards for Optical Character Recognition (OCR) processing.</li>
+                        <li><strong>Photo Gallery (Storage/Media):</strong> We request access to your photo gallery to allow you to upload existing images of business cards for scanning.</li>
+                        <li><strong>Contacts:</strong> We request access to your contact list (Read/Write) solely for the purpose of saving the scanned business card details directly into your device’s native address book at your request. We do not upload your contact list to our servers for any other purpose.</li>
+                    </ul>
 
-            <section>
-                <h2>2. Third-Party Service Providers</h2>
-                <p>The App uses third-party services that may collect information used to identify you. Below are the links to the privacy policies of the third-party service providers used by the App:</p>
-                <ul>
-                    <li>
-                        <strong>Google Play Services</strong>
-                    </li>
-                    <li>
-                        <strong>AdMob:</strong> We use AdMob to display advertisements. AdMob may use cookies and unique device identifiers (Advertising ID) to serve personalized ads based on your interests.<br>
-                        <a href="https://support.google.com/admob/answer/6128543?hl=en" target="_blank">AdMob Privacy Policy</a>
-                    </li>
-                    <li>
-                        <strong>Google Firebase:</strong> We use Firebase for authentication (logging you in), analytics, and database storage (saving your scanned cards).<br>
-                        <a href="https://firebase.google.com/support/privacy" target="_blank">Firebase Privacy Policy</a>
-                    </li>
-                </ul>
-            </section>
+                    <h3 class="text-lg font-bold text-white mt-8 mb-4">B. Personal Data</h3>
+                    <p>When you register an account via Firebase Authentication, we may collect:</p>
+                    <ul>
+                        <li>Email address</li>
+                        <li>Name</li>
+                        <li>Profile picture (if applicable via social login)</li>
+                    </ul>
 
-            <section>
-                <h2>3. Log Data</h2>
-                <p>We want to inform you that whenever you use our Service, in a case of an error in the App, we collect data and information (through third-party products) on your phone called Log Data. This Log Data may include information such as your device Internet Protocol (“IP”) address, device name, operating system version, the configuration of the app when utilizing our Service, the time and date of your use of the Service, and other statistics.</p>
-            </section>
+                    <h3 class="text-lg font-bold text-white mt-8 mb-4">C. Scanned Data</h3>
+                    <p>The business card data you scan (names, phone numbers, company names, etc.) is processed to convert the image to text. If you choose to save this data to the cloud, it is stored securely using Google Firebase services so you can access it across devices.</p>
 
-            <section>
-                <h2>4. Security</h2>
-                <p>We value your trust in providing us your Personal Information and your scanned data. We utilize industry-standard security measures provided by Google Firebase to protect your data during transmission and storage. However, remember that no method of transmission over the internet, or method of electronic storage is 100% secure and reliable, and we cannot guarantee its absolute security.</p>
-            </section>
+                    <h2 class="text-2xl font-black text-white mt-12 mb-6 flex items-center gap-3">
+                        <span class="w-8 h-8 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-purple-400 text-sm">2</span>
+                        Third-Party Service Providers
+                    </h2>
+                    <p>The App uses third-party services that may collect information used to identify you. Below are the links to the privacy policies of the third-party service providers used by the App:</p>
+                    <ul>
+                        <li><strong>Google Play Services</strong></li>
+                        <li><strong>AdMob:</strong> We use AdMob to display advertisements. AdMob may use cookies and unique device identifiers (Advertising ID) to serve personalized ads based on your interests. <br> <a href="https://support.google.com/admob/answer/6128543?hl=en" target="_blank" class="ml-6 text-sm opacity-80 hover:opacity-100">View AdMob Privacy Policy</a></li>
+                        <li><strong>Google Firebase:</strong> We use Firebase for authentication (logging you in), analytics, and database storage (saving your scanned cards). <br> <a href="https://firebase.google.com/support/privacy" target="_blank" class="ml-6 text-sm opacity-80 hover:opacity-100">View Firebase Privacy Policy</a></li>
+                    </ul>
 
-            <section>
-                <h2>5. Children’s Privacy</h2>
-                <p>These Services do not address anyone under the age of 13. We do not knowingly collect personally identifiable information from children under 13. In the case we discover that a child under 13 has provided us with personal information, we immediately delete this from our servers. If you are a parent or guardian and you are aware that your child has provided us with personal information, please contact us so that we will be able to perform the necessary actions.</p>
-            </section>
+                    <h2 class="text-2xl font-black text-white mt-12 mb-6 flex items-center gap-3">
+                        <span class="w-8 h-8 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-pink-400 text-sm">3</span>
+                        Log Data
+                    </h2>
+                    <p>We want to inform you that whenever you use our Service, in a case of an error in the App, we collect data and information (through third-party products) on your phone called Log Data. This Log Data may include information such as your device Internet Protocol (“IP”) address, device name, operating system version, the configuration of the app when utilizing our Service, the time and date of your use of the Service, and other statistics.</p>
 
-            <section>
-                <h2>6. Changes to This Privacy Policy</h2>
-                <p>We may update our Privacy Policy from time to time. Thus, you are advised to review this page periodically for any changes. We will notify you of any changes by posting the new Privacy Policy on this page. These changes are effective immediately after they are posted on this page.</p>
-            </section>
+                    <h2 class="text-2xl font-black text-white mt-12 mb-6 flex items-center gap-3">
+                        <span class="w-8 h-8 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-cyan-400 text-sm">4</span>
+                        Security
+                    </h2>
+                    <p>We value your trust in providing us your Personal Information and your scanned data. We utilize industry-standard security measures provided by Google Firebase to protect your data during transmission and storage. However, remember that no method of transmission over the internet, or method of electronic storage is 100% secure and reliable, and we cannot guarantee its absolute security.</p>
 
-            <section>
-                <h2>7. Contact Us</h2>
-                <p>If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us.</p>
-                <p>
-                    <strong>Company Name:</strong> ZenpleLife<br>
-                    <strong>Email:</strong> <a href="mailto:simplejoyfuljourney@gmail.com">simplejoyfuljourney@gmail.com</a>
-                </p>
-            </section>
-        </article>
+                    <h2 class="text-2xl font-black text-white mt-12 mb-6 flex items-center gap-3">
+                        <span class="w-8 h-8 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-purple-400 text-sm">5</span>
+                        Children’s Privacy
+                    </h2>
+                    <p>These Services do not address anyone under the age of 13. We do not knowingly collect personally identifiable information from children under 13. In the case we discover that a child under 13 has provided us with personal information, we immediately delete this from our servers. If you are a parent or guardian and you are aware that your child has provided us with personal information, please contact us so that we will be able to perform the necessary actions.</p>
+
+                    <h2 class="text-2xl font-black text-white mt-12 mb-6 flex items-center gap-3">
+                        <span class="w-8 h-8 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-pink-400 text-sm">6</span>
+                        Changes to This Privacy Policy
+                    </h2>
+                    <p>We may update our Privacy Policy from time to time. Thus, you are advised to review this page periodically for any changes. We will notify you of any changes by posting the new Privacy Policy on this page. These changes are effective immediately after they are posted on this page.</p>
+
+                    <h2 class="text-2xl font-black text-white mt-12 mb-6 flex items-center gap-3">
+                        <span class="w-8 h-8 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-cyan-400 text-sm">7</span>
+                        Contact Us
+                    </h2>
+                    <p>If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us.</p>
+                    
+                    <div class="mt-8 p-6 rounded-2xl bg-white/5 border border-white/10 flex flex-col md:flex-row md:items-center gap-6">
+                        <div class="w-12 h-12 rounded-full bg-gradient-to-br from-cyan-500 to-purple-600 flex items-center justify-center text-white shadow-lg">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div>
+                            <div class="text-xs font-bold uppercase tracking-widest text-gray-500 mb-1">Company</div>
+                            <div class="text-white font-bold text-lg">ZenpleLife</div>
+                        </div>
+                        <div class="md:ml-auto">
+                            <div class="text-xs font-bold uppercase tracking-widest text-gray-500 mb-1">Email</div>
+                            <a href="mailto:simplejoyfuljourney@gmail.com" class="text-cyan-400 font-bold hover:text-white transition-colors">simplejoyfuljourney@gmail.com</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
     </main>
 
-    <footer class="footer">
-        <div class="container footer-content">
-            <p>&copy; 2026 ZenpleLife. All rights reserved.</p>
-            <div class="footer-bottom-links">
-                <a href="index.html">Home</a>
-                <a href="privacy.html" style="color: white; font-weight: 600;">Privacy Policy</a>
+    <footer class="border-t border-white/5 bg-black/50 backdrop-blur-2xl pt-24 pb-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-20">
+                <div class="col-span-1 md:col-span-1">
+                    <div class="flex items-center gap-3 mb-6">
+                        <img src="logo-web.png" alt="AI Business Card Scan Logo" class="w-8 h-8 object-contain">
+                        <span class="font-bold text-2xl tracking-tight text-white whitespace-nowrap">
+                            <span class="text-cyan-400">A</span>I
+                            <span class="text-cyan-400 ml-1">B</span>usiness
+                            <span class="text-cyan-400 ml-1">C</span>ard
+                        </span>
+                    </div>
+                    <p class="text-gray-500 text-sm leading-relaxed font-medium">Building the memory layer for your professional relationships.</p>
+                </div>
+                <div>
+                    <h4 class="font-black text-white mb-6 text-xs uppercase tracking-[0.3em]">Product</h4>
+                    <ul class="space-y-4 text-sm text-gray-500 font-bold uppercase tracking-widest text-[10px]">
+                        <li><a href="index.html#features" class="hover:text-cyan-400 transition-colors">Features</a></li>
+                        <li><a href="#" class="hover:text-cyan-400 transition-colors">Security</a></li>
+                        <li><a href="#" class="hover:text-cyan-400 transition-colors">Enterprise</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-black text-white mb-6 text-xs uppercase tracking-[0.3em]">Company</h4>
+                    <ul class="space-y-4 text-sm text-gray-500 font-bold uppercase tracking-widest text-[10px]">
+                        <li><a href="#" class="hover:text-cyan-400 transition-colors">Our Story</a></li>
+                        <li><a href="#" class="hover:text-cyan-400 transition-colors">Careers</a></li>
+                        <li><a href="#" class="hover:text-cyan-400 transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-black text-white mb-6 text-xs uppercase tracking-[0.3em]">Social</h4>
+                    <div class="flex gap-5">
+                        <a href="#" class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:border-white/40 transition-colors"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:border-white/40 transition-colors"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:border-white/40 transition-colors"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
             </div>
-            <div class="social-links">
-                <a href="#">Twitter</a>
-                <a href="#">Instagram</a>
-                <a href="#">LinkedIn</a>
+            <div class="border-t border-white/5 pt-10 text-center text-[10px] text-gray-600 uppercase font-black tracking-[0.4em]">
+                &copy; 2026 AI Business Card Scan Inc. All rights reserved.
             </div>
         </div>
     </footer>
+
 </body>
 </html>
