@@ -16,6 +16,10 @@
     <!-- Dynamic Pricing Sync -->
     <script src="pricing-sync.js"></script>
 
+    <!-- Internationalization -->
+    <script src="translations.js"></script>
+    <script src="i18n-manager.js"></script>
+
     <script>
         // Initialize as window property for external sync access
         window.PRICING_CONFIG = {
@@ -66,6 +70,9 @@
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         entry.target.classList.add('active');
+                    } else {
+                        // Allow animation to replay when scrolling back
+                        entry.target.classList.remove('active');
                     }
                 });
             }, { threshold: 0.1 });
@@ -209,15 +216,24 @@
                 </div>
                 <div class="hidden md:flex items-center gap-8">
                     <a href="#features"
-                        class="text-sm font-semibold text-gray-400 hover:text-white transition-colors tracking-widest uppercase">Intelligence</a>
+                        class="text-sm font-semibold text-gray-400 hover:text-white transition-colors tracking-widest uppercase"
+                        data-i18n="nav.features">Intelligence</a>
                     <a href="#reviews"
-                        class="text-sm font-semibold text-gray-400 hover:text-white transition-colors tracking-widest uppercase">Reviews</a>
+                        class="text-sm font-semibold text-gray-400 hover:text-white transition-colors tracking-widest uppercase"
+                        data-i18n="nav.reviews">Reviews</a>
                     <a href="#pricing"
-                        class="text-sm font-semibold text-gray-400 hover:text-white transition-colors tracking-widest uppercase">Pricing</a>
+                        class="text-sm font-semibold text-gray-400 hover:text-white transition-colors tracking-widest uppercase"
+                        data-i18n="nav.pricing">Pricing</a>
                     <a href="https://play.google.com/store/apps/details?id=com.zenple.bcscanner"
                         class="block transition-transform hover:scale-105 active:scale-95">
                         <img src="google-play-badge.png" alt="Get it on Google Play" class="h-10 w-auto">
                     </a>
+
+                    <!-- Language Trigger -->
+                    <button onclick="openLanguageDrawer()"
+                        class="ml-6 flex items-center justify-center w-10 h-10 rounded-full border border-white/10 hover:bg-white/5 hover:border-cyan-500/50 transition-all group">
+                        <i class="fa-solid fa-globe text-gray-400 group-hover:text-cyan-400 text-sm"></i>
+                    </button>
                 </div>
                 <button class="md:hidden text-gray-300 hover:text-white">
                     <i class="fa-solid fa-bars-staggered text-xl"></i>
@@ -227,7 +243,7 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="relative pt-24 pb-32 lg:pt-36 lg:pb-40 overflow-hidden">
+    <section class="relative pt-12 pb-32 lg:pt-20 lg:pb-40 overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="flex flex-col lg:flex-row items-center gap-16">
 
@@ -236,16 +252,17 @@
                     <div
                         class="reveal inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-purple-500/30 bg-purple-500/10 text-purple-300 text-[11px] font-black uppercase tracking-[0.2em] mb-10 backdrop-blur-sm">
                         <span class="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse"></span>
-                        AI Business Card Scan is Live!
+                        <span data-i18n="hero.badge">AI Business Card Scan is Live!</span>
                     </div>
 
-                    <h1 class="reveal text-5xl lg:text-7xl font-extrabold leading-[1.1] mb-8 tracking-tight">
+                    <h1 class="reveal text-5xl lg:text-7xl font-extrabold leading-[1.1] mb-8 tracking-tight"
+                        data-i18n="hero.headline">
                         Networking with <br>
                         <span class="text-gradient-primary">Artificial Intelligence</span>
                     </h1>
 
                     <p class="reveal text-lg text-gray-400 mb-12 leading-relaxed max-w-xl mx-auto lg:mx-0 font-medium tracking-normal"
-                        style="transition-delay: 0.2s">
+                        style="transition-delay: 0.2s" data-i18n="hero.subheadline">
                         ABC Scan transforms physical interactions into actionable intelligence.
                         Proprietary computer vision that understands relationship context.
                     </p>
@@ -258,7 +275,7 @@
                         </a>
                         <a href="#features"
                             class="flex items-center justify-center gap-3 px-10 py-5 rounded-2xl border border-white/10 hover:border-white/30 hover:bg-white/5 text-white transition-all backdrop-blur-sm group font-bold tracking-widest uppercase text-xs">
-                            <span>Explore Tech</span>
+                            <span data-i18n="hero.cta_tech">Explore Tech</span>
                             <i
                                 class="fa-solid fa-arrow-down text-[10px] ml-1 group-hover:translate-y-1 transition-transform"></i>
                         </a>
@@ -286,9 +303,11 @@
                             <div
                                 class="h-28 bg-gradient-to-b from-purple-900/40 to-transparent p-7 flex items-end justify-between">
                                 <div>
-                                    <div class="text-[10px] text-cyan-400 font-black tracking-widest mb-1 uppercase">
+                                    <div class="text-[10px] text-cyan-400 font-black tracking-widest mb-1 uppercase"
+                                        data-i18n="hero.phone_network">
                                         Network</div>
-                                    <div class="font-bold text-xl tracking-tight text-white">Recent Scans</div>
+                                    <div class="font-bold text-xl tracking-tight text-white"
+                                        data-i18n="hero.phone_recent">Recent Scans</div>
                                 </div>
                                 <div
                                     class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center border border-white/10">
@@ -320,7 +339,8 @@
                                     </div>
                                     <div
                                         class="bg-white text-black px-8 py-3.5 rounded-full font-black text-[10px] tracking-widest uppercase shadow-2xl">
-                                        <i class="fa-solid fa-camera mr-2"></i> Open Scanner
+                                        <i class="fa-solid fa-camera mr-2"></i> <span data-i18n="hero.phone_open">Open
+                                            Scanner</span>
                                     </div>
                                 </div>
                             </div>
@@ -346,12 +366,14 @@
     </section>
 
     <!-- Features Bento Grid -->
-    <section id="features" class="py-32 relative">
+    <section id="features" class="pt-32 pb-12 relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-24">
-                <h2 class="reveal text-4xl lg:text-6xl font-extrabold mb-6 tracking-tight lg:leading-tight">The
+                <h2 class="reveal text-4xl lg:text-6xl font-extrabold mb-6 tracking-tight lg:leading-tight"
+                    data-i18n="features.title">The
                     Suite of <br> <span class="text-gradient-primary">Neural Tools</span></h2>
-                <p class="reveal text-gray-400 font-medium max-w-xl mx-auto tracking-normal">Beyond scanning. We provide
+                <p class="reveal text-gray-400 font-medium max-w-xl mx-auto tracking-normal"
+                    data-i18n="features.subtitle">Beyond scanning. We provide
                     the
                     infrastructure for professional networking ecosystem.</p>
             </div>
@@ -368,8 +390,10 @@
                             class="w-14 h-14 rounded-2xl bg-purple-500/20 flex items-center justify-center text-purple-400 mb-8 border border-purple-500/30">
                             <i class="fa-solid fa-microchip text-xl"></i>
                         </div>
-                        <h3 class="text-3xl font-bold mb-6 tracking-tight">Proprietary <br>Neural OCR</h3>
-                        <p class="text-gray-400 leading-relaxed font-medium text-lg">99.9% accuracy on over 40+
+                        <h3 class="text-3xl font-bold mb-6 tracking-tight" data-i18n="features.card_ocr_title">
+                            Proprietary <br>Neural OCR</h3>
+                        <p class="text-gray-400 leading-relaxed font-medium text-lg" data-i18n="features.card_ocr_desc">
+                            99.9% accuracy on over 40+
                             languages. Our models don't just "see" text; they understand hierarchy and business intent
                             instantly.</p>
                     </div>
@@ -386,8 +410,10 @@
                     style="transition-delay: 0.1s">
                     <div class="flex items-start justify-between mb-8">
                         <div>
-                            <h3 class="text-2xl font-bold mb-3 tracking-tight">Quantum Sync</h3>
-                            <p class="text-gray-400 text-sm font-medium">End-to-end encrypted backup across all your
+                            <h3 class="text-2xl font-bold mb-3 tracking-tight" data-i18n="features.card_sync_title">
+                                Instant Cloud Sync</h3>
+                            <p class="text-gray-400 text-sm font-medium" data-i18n="features.card_sync_desc">End-to-end
+                                encrypted backup across all your
                                 devices, instantly. Your network follows you.</p>
                         </div>
                         <div
@@ -430,16 +456,17 @@
     </section>
 
     <!-- Pricing -->
-    <section id="pricing" class="py-32 relative overflow-hidden">
+    <section id="pricing" class="pt-12 pb-32 relative overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-24">
-                <h2 class="reveal text-4xl md:text-6xl font-extrabold mb-12 tracking-tight">Pricing</h2>
+                <h2 class="reveal text-4xl md:text-6xl font-extrabold mb-12 tracking-tight" data-i18n="pricing.title">
+                    Pricing</h2>
 
                 <!-- Pricing Toggle -->
                 <div class="reveal flex items-center justify-center gap-6">
                     <span id="monthly-toggle"
                         class="text-sm font-black uppercase tracking-widest text-white transition-colors cursor-pointer"
-                        onclick="togglePricing(false)">Monthly</span>
+                        onclick="togglePricing(false)" data-i18n="pricing.toggle_monthly">Monthly</span>
                     <div class="relative w-16 h-8 bg-white/5 border border-white/10 rounded-full p-1 cursor-pointer"
                         onclick="const s = document.getElementById('toggle-slider'); const isY = s.style.transform === 'translateX(100%)'; togglePricing(!isY)">
                         <div id="toggle-slider"
@@ -448,27 +475,30 @@
                     </div>
                     <span id="yearly-toggle"
                         class="text-sm font-black uppercase tracking-widest text-gray-500 transition-colors cursor-pointer"
-                        onclick="togglePricing(true)">Yearly <span
+                        onclick="togglePricing(true)" data-i18n="pricing.toggle_yearly">Yearly <span
                             class="text-[10px] text-green-400 ml-1">-20%</span></span>
                 </div>
             </div>
 
             <!-- Unified Pricing Matrix -->
-            <div class="reveal max-w-5xl mx-auto overflow-x-auto pb-8" style="transition-delay: 0.2s">
+            <div class="reveal max-w-5xl mx-auto overflow-x-auto pt-10 pb-8" style="transition-delay: 0.2s">
                 <div class="min-w-[760px]">
-                    <div class="glass-card rounded-[3rem] overflow-hidden border border-white/5 relative">
+                    <div class="glass-card rounded-[3rem] border border-white/5 relative">
 
                         <!-- Table Header (Plans & Pricing) -->
-                        <div class="grid grid-cols-3 border-b border-white/10 bg-white/5 backdrop-blur-md items-end">
-                            <div class="p-10 text-xs font-black uppercase tracking-[0.3em] text-gray-500">Comparison
+                        <div class="grid grid-cols-3 border-b border-white/10 bg-white/5 backdrop-blur-md items-center">
+                            <div class="p-10 text-xs font-black uppercase tracking-[0.3em] text-gray-500"
+                                data-i18n="pricing.matrix_title">Comparison
                                 Matrix</div>
 
                             <!-- Starter Column -->
                             <div
                                 class="p-10 text-center border-x border-white/5 overflow-visible flex flex-col items-center justify-center">
-                                <div class="text-[10px] font-bold tracking-[0.3em] uppercase text-cyan-400/80 mb-4">
+                                <div class="text-[10px] font-bold tracking-[0.3em] uppercase text-cyan-400/80 mb-4"
+                                    data-i18n="pricing.col_starter">
                                     Starter</div>
-                                <div class="text-5xl md:text-6xl font-extrabold text-white tracking-tight">Free</div>
+                                <div class="text-5xl md:text-6xl font-extrabold text-white tracking-tight"
+                                    data-i18n="pricing.price_free">Free</div>
                             </div>
 
                             <!-- Premium Column -->
@@ -477,7 +507,12 @@
                                 <div
                                     class="absolute top-0 right-0 left-0 h-1.5 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500">
                                 </div>
-                                <div class="text-[10px] font-bold tracking-[0.3em] uppercase text-purple-400/80 mb-4">
+                                <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-gradient-to-r from-cyan-400 to-purple-500 text-white text-[9px] font-black uppercase tracking-widest px-3 py-1 rounded-full shadow-[0_0_15px_rgba(168,85,247,0.5)] z-10 whitespace-nowrap"
+                                    data-i18n="pricing.badge_recommended">
+                                    Recommended
+                                </div>
+                                <div class="text-[10px] font-bold tracking-[0.3em] uppercase text-purple-400/80 mb-4"
+                                    data-i18n="pricing.col_premium">
                                     Premium</div>
                                 <div class="flex items-center justify-center gap-2 relative overflow-visible">
                                     <span id="premium-price"
@@ -497,36 +532,41 @@
 
 
                         <div class="divide-y divide-white/5">
-                            <div class="grid grid-cols-3 hover:bg-white/5 transition-colors">
-                                <div class="p-6 text-sm font-medium text-gray-300">Smart Search</div>
+                            <div class="grid grid-cols-3 hover:bg-white/5 transition-colors items-center">
+                                <div class="p-6 text-sm font-medium text-gray-300"
+                                    data-i18n="pricing.feat_smart_search">Smart Search</div>
                                 <div class="p-6 text-center text-cyan-400 border-x border-white/5"><i
                                         class="fa-solid fa-check"></i></div>
                                 <div class="p-6 text-center text-purple-400 bg-purple-500/[0.02]"><i
                                         class="fa-solid fa-check"></i></div>
                             </div>
-                            <div class="grid grid-cols-3 hover:bg-white/5 transition-colors">
-                                <div class="p-6 text-sm font-medium text-gray-300">Custom Tags & Categories</div>
+                            <div class="grid grid-cols-3 hover:bg-white/5 transition-colors items-center">
+                                <div class="p-6 text-sm font-medium text-gray-300" data-i18n="pricing.feat_custom_tags">
+                                    Custom Tags & Categories</div>
                                 <div class="p-6 text-center text-cyan-400 border-x border-white/5"><i
                                         class="fa-solid fa-check"></i></div>
                                 <div class="p-6 text-center text-purple-400 bg-purple-500/[0.02]"><i
                                         class="fa-solid fa-check"></i></div>
                             </div>
-                            <div class="grid grid-cols-3 hover:bg-white/5 transition-colors">
-                                <div class="p-6 text-sm font-medium text-gray-300">Digital Card Profile</div>
+                            <div class="grid grid-cols-3 hover:bg-white/5 transition-colors items-center">
+                                <div class="p-6 text-sm font-medium text-gray-300"
+                                    data-i18n="pricing.feat_digital_profile">Digital Card Profile</div>
                                 <div class="p-6 text-center text-cyan-400 border-x border-white/5"><i
                                         class="fa-solid fa-check"></i></div>
                                 <div class="p-6 text-center text-purple-400 bg-purple-500/[0.02]"><i
                                         class="fa-solid fa-check"></i></div>
                             </div>
-                            <div class="grid grid-cols-3 hover:bg-white/5 transition-colors">
-                                <div class="p-6 text-sm font-medium text-gray-300">Manual Sync (Google/Outlook)</div>
+                            <div class="grid grid-cols-3 hover:bg-white/5 transition-colors items-center">
+                                <div class="p-6 text-sm font-medium text-gray-300" data-i18n="pricing.feat_manual_sync">
+                                    Manual Sync (Google/Outlook)</div>
                                 <div class="p-6 text-center text-cyan-400 border-x border-white/5"><i
                                         class="fa-solid fa-check"></i></div>
                                 <div class="p-6 text-center text-purple-400 bg-purple-500/[0.02]"><i
                                         class="fa-solid fa-check"></i></div>
                             </div>
-                            <div class="grid grid-cols-3 hover:bg-white/5 transition-colors">
-                                <div class="p-6 text-sm font-medium text-gray-300">Cloud Backup & Restore</div>
+                            <div class="grid grid-cols-3 hover:bg-white/5 transition-colors items-center">
+                                <div class="p-6 text-sm font-medium text-gray-300"
+                                    data-i18n="pricing.feat_cloud_backup">Cloud Backup & Restore</div>
                                 <div class="p-6 text-center text-cyan-400 border-x border-white/5"><i
                                         class="fa-solid fa-check"></i></div>
                                 <div class="p-6 text-center text-purple-400 bg-purple-500/[0.02]"><i
@@ -536,69 +576,85 @@
 
                         <div class="bg-purple-500/5 px-8 py-4 border-y border-white/5 flex items-center gap-2">
                             <i class="fa-solid fa-bolt-lightning text-[10px] text-purple-400"></i>
-                            <span class="text-[10px] font-black uppercase tracking-[0.3em] text-purple-400/70">Premium
+                            <span class="text-[10px] font-black uppercase tracking-[0.3em] text-purple-400/70"
+                                data-i18n="pricing.premium_power">Premium
                                 Power</span>
                         </div>
 
                         <div class="divide-y divide-white/5">
-                            <div class="grid grid-cols-3 hover:bg-white/5 transition-colors">
-                                <div class="p-6 text-sm font-medium text-gray-300">AI-Powered Scanning</div>
-                                <div class="p-6 text-center text-xs font-bold text-gray-500 border-x border-white/5">30
+                            <div class="grid grid-cols-3 hover:bg-white/5 transition-colors items-center">
+                                <div class="p-6 text-sm font-medium text-gray-300" data-i18n="pricing.feat_ai_scanning">
+                                    AI-Powered Scanning</div>
+                                <div class="p-6 text-center text-xs font-bold text-gray-500 border-x border-white/5"
+                                    data-i18n="pricing.limit_30">30
                                     / month</div>
-                                <div class="p-6 text-center text-sm font-bold text-white bg-purple-500/[0.02]">1,200 /
+                                <div class="p-6 text-center text-sm font-bold text-white bg-purple-500/[0.02]"
+                                    data-i18n="pricing.limit_1200">1,200 /
                                     month</div>
                             </div>
-                            <div class="grid grid-cols-3 hover:bg-white/5 transition-colors">
-                                <div class="p-6 text-sm font-medium text-gray-300">Card Storage Capacity</div>
-                                <div class="p-6 text-center text-xs font-bold text-gray-500 border-x border-white/5">50
+                            <div class="grid grid-cols-3 hover:bg-white/5 transition-colors items-center">
+                                <div class="p-6 text-sm font-medium text-gray-300" data-i18n="pricing.feat_storage">Card
+                                    Storage Capacity</div>
+                                <div class="p-6 text-center text-xs font-bold text-gray-500 border-x border-white/5"
+                                    data-i18n="pricing.limit_50">50
                                     cards</div>
-                                <div class="p-6 text-center text-sm font-bold text-white bg-purple-500/[0.02]">Unlimited
+                                <div class="p-6 text-center text-sm font-bold text-white bg-purple-500/[0.02]"
+                                    data-i18n="pricing.limit_unlimited">Unlimited
                                 </div>
                             </div>
-                            <div class="grid grid-cols-3 hover:bg-white/5 transition-colors">
-                                <div class="p-6 text-sm font-medium text-gray-300">Favorites / Pinned Cards</div>
-                                <div class="p-6 text-center text-xs font-bold text-gray-500 border-x border-white/5">Max
+                            <div class="grid grid-cols-3 hover:bg-white/5 transition-colors items-center">
+                                <div class="p-6 text-sm font-medium text-gray-300" data-i18n="pricing.feat_favorites">
+                                    Favorites / Pinned Cards</div>
+                                <div class="p-6 text-center text-xs font-bold text-gray-500 border-x border-white/5"
+                                    data-i18n="pricing.limit_max5">Max
                                     5</div>
-                                <div class="p-6 text-center text-sm font-bold text-white bg-purple-500/[0.02]">Unlimited
+                                <div class="p-6 text-center text-sm font-bold text-white bg-purple-500/[0.02]"
+                                    data-i18n="pricing.limit_unlimited">Unlimited
                                 </div>
                             </div>
-                            <div class="grid grid-cols-3 hover:bg-white/5 transition-colors">
-                                <div class="p-6 text-sm font-medium text-gray-300">Export to Excel / CSV</div>
+                            <div class="grid grid-cols-3 hover:bg-white/5 transition-colors items-center">
+                                <div class="p-6 text-sm font-medium text-gray-300" data-i18n="pricing.feat_export">
+                                    Export to Excel / CSV</div>
+                                <div class="p-6 text-center text-gray-800 border-x border-white/5"><i
+                                        class="fa-solid fa-xmark"></i></div>
+                                <div class="p-6 text-center text-purple-400 bg-purple-500/[0.02]"><i
+                                        class="fa-solid fa-check"></i></div>
+                            </div>
+                            <div class="grid grid-cols-3 hover:bg-white/5 transition-colors items-center">
+                                <div class="p-6 text-sm font-medium text-gray-300" data-i18n="pricing.feat_auto_sync">
+                                    Real-time Auto Sync</div>
+                                <div class="p-6 text-center text-gray-800 border-x border-white/5"><i
+                                        class="fa-solid fa-xmark"></i></div>
+                                <div class="p-6 text-center text-purple-400 bg-purple-500/[0.02]"><i
+                                        class="fa-solid fa-check"></i></div>
+                            </div>
+                            <div class="grid grid-cols-3 hover:bg-white/5 transition-colors items-center">
+                                <div class="p-6 text-sm font-medium text-gray-300" data-i18n="pricing.feat_ad_free">
+                                    Ad-Free Experience</div>
+                                <div class="p-6 text-center text-gray-800 border-x border-white/5"><i
+                                        class="fa-solid fa-xmark"></i></div>
+                                <div class="p-6 text-center text-purple-400 bg-purple-500/[0.02]"><i
+                                        class="fa-solid fa-check"></i></div>
+                            </div>
+                            <div class="grid grid-cols-3 hover:bg-white/5 transition-colors items-center">
+                                <div class="p-6 text-sm font-medium text-gray-300" data-i18n="pricing.feat_quick_save">
+                                    Instant "Quick-Save" Mode</div>
                                 <div class="p-6 text-center text-gray-800 border-x border-white/5"><i
                                         class="fa-solid fa-xmark"></i></div>
                                 <div class="p-6 text-center text-purple-400 bg-purple-500/[0.02]"><i
                                         class="fa-solid fa-check"></i></div>
                             </div>
                             <div class="grid grid-cols-3 hover:bg-white/5 transition-colors">
-                                <div class="p-6 text-sm font-medium text-gray-300">Real-time Auto Sync</div>
-                                <div class="p-6 text-center text-gray-800 border-x border-white/5"><i
-                                        class="fa-solid fa-xmark"></i></div>
-                                <div class="p-6 text-center text-purple-400 bg-purple-500/[0.02]"><i
-                                        class="fa-solid fa-check"></i></div>
-                            </div>
-                            <div class="grid grid-cols-3 hover:bg-white/5 transition-colors">
-                                <div class="p-6 text-sm font-medium text-gray-300">Ad-Free Experience</div>
-                                <div class="p-6 text-center text-gray-800 border-x border-white/5"><i
-                                        class="fa-solid fa-xmark"></i></div>
-                                <div class="p-6 text-center text-purple-400 bg-purple-500/[0.02]"><i
-                                        class="fa-solid fa-check"></i></div>
-                            </div>
-                            <div class="grid grid-cols-3 hover:bg-white/5 transition-colors">
-                                <div class="p-6 text-sm font-medium text-gray-300">Instant "Quick-Save" Mode</div>
-                                <div class="p-6 text-center text-gray-800 border-x border-white/5"><i
-                                        class="fa-solid fa-xmark"></i></div>
-                                <div class="p-6 text-center text-purple-400 bg-purple-500/[0.02]"><i
-                                        class="fa-solid fa-check"></i></div>
-                            </div>
-                            <div class="grid grid-cols-3 hover:bg-white/5 transition-colors">
-                                <div class="p-6 text-sm font-medium text-gray-300">Profile Sharing via QR</div>
+                                <div class="p-6 text-sm font-medium text-gray-300"
+                                    data-i18n="pricing.feat_profile_share">Profile Sharing via QR</div>
                                 <div class="p-6 text-center text-gray-700 border-x border-white/5"><i
                                         class="fa-solid fa-xmark"></i></div>
                                 <div class="p-6 text-center text-purple-400 bg-purple-500/[0.02]"><i
                                         class="fa-solid fa-check"></i></div>
                             </div>
-                            <div class="grid grid-cols-3 hover:bg-white/5 transition-colors border-b-0">
-                                <div class="p-6 text-sm font-medium text-gray-300">Custom QR Styling</div>
+                            <div class="grid grid-cols-3 hover:bg-white/5 transition-colors border-b-0 items-center">
+                                <div class="p-6 text-sm font-medium text-gray-300" data-i18n="pricing.feat_custom_qr">
+                                    Custom QR Styling</div>
                                 <div class="p-6 text-center text-gray-700 border-x border-white/5"><i
                                         class="fa-solid fa-xmark"></i></div>
                                 <div class="p-6 text-center text-purple-400 bg-purple-500/[0.02]"><i
@@ -625,32 +681,41 @@
                             <span class="text-cyan-400 ml-1">Scan</span>
                         </span>
                     </div>
-                    <p class="text-gray-500 text-sm leading-relaxed font-medium">Building the memory
+                    <p class="text-gray-500 text-sm leading-relaxed font-medium" data-i18n="footer.tagline">Building the
+                        memory
                         layer for your
                         professional relationships.</p>
                 </div>
                 <div>
-                    <h4 class="font-black text-white mb-6 text-xs uppercase tracking-[0.3em]">Product
+                    <h4 class="font-black text-white mb-6 text-xs uppercase tracking-[0.3em]"
+                        data-i18n="footer.col_product">Product
                     </h4>
                     <ul class="space-y-4 text-sm text-gray-500 font-bold uppercase tracking-widest text-[10px]">
-                        <li><a href="#" class="hover:text-cyan-400 transition-colors">Features</a></li>
-                        <li><a href="#" class="hover:text-cyan-400 transition-colors">Security</a></li>
-                        <li><a href="#" class="hover:text-cyan-400 transition-colors">Enterprise</a>
+                        <li><a href="#" class="hover:text-cyan-400 transition-colors"
+                                data-i18n="footer.link_features">Features</a></li>
+                        <li><a href="#" class="hover:text-cyan-400 transition-colors"
+                                data-i18n="footer.link_security">Security</a></li>
+                        <li><a href="#" class="hover:text-cyan-400 transition-colors"
+                                data-i18n="footer.link_enterprise">Enterprise</a>
                         </li>
                     </ul>
                 </div>
                 <div>
-                    <h4 class="font-black text-white mb-6 text-xs uppercase tracking-[0.3em]">Company
+                    <h4 class="font-black text-white mb-6 text-xs uppercase tracking-[0.3em]"
+                        data-i18n="footer.col_company">Company
                     </h4>
                     <ul class="space-y-4 text-sm text-gray-500 font-bold uppercase tracking-widest text-[10px]">
-                        <li><a href="#" class="hover:text-cyan-400 transition-colors">Our Story</a></li>
-                        <li><a href="#" class="hover:text-cyan-400 transition-colors">Careers</a></li>
-                        <li><a href="mailto:simplejoyfuljourney@gmail.com"
-                                class="hover:text-cyan-400 transition-colors">Contact</a></li>
+                        <li><a href="#" class="hover:text-cyan-400 transition-colors" data-i18n="footer.link_story">Our
+                                Story</a></li>
+                        <li><a href="#" class="hover:text-cyan-400 transition-colors"
+                                data-i18n="footer.link_careers">Careers</a></li>
+                        <li><a href="mailto:simplejoyfuljourney@gmail.com" class="hover:text-cyan-400 transition-colors"
+                                data-i18n="footer.link_contact">Contact</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 class="font-black text-white mb-6 text-xs uppercase tracking-[0.3em]">Social
+                    <h4 class="font-black text-white mb-6 text-xs uppercase tracking-[0.3em]"
+                        data-i18n="footer.col_social">Social
                     </h4>
                     <div class="flex gap-5">
                         <a href="#"
@@ -667,10 +732,52 @@
             </div>
             <div
                 class="border-t border-white/5 pt-10 text-center text-[10px] text-gray-600 uppercase font-black tracking-[0.4em]">
-                &copy; 2026 ABC Scan All rights reserved.
+                <span data-i18n="footer.copyright">&copy; 2026 ABC Scan All rights reserved.</span>
             </div>
         </div>
     </footer>
+
+    <!-- Language Drawer (Slide-over) -->
+    <div id="lang-overlay" onclick="closeLanguageDrawer()"
+        class="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 opacity-0 pointer-events-none transition-opacity duration-300">
+    </div>
+    <div id="lang-drawer"
+        class="fixed top-0 right-0 h-full w-80 bg-[#030014] border-l border-white/10 shadow-2xl z-50 transform translate-x-full transition-transform duration-300 ease-in-out p-8 flex flex-col">
+        <div class="flex items-center justify-between mb-10">
+            <h3 class="text-xl font-bold tracking-tight text-white">Select Language</h3>
+            <button onclick="closeLanguageDrawer()" class="text-gray-400 hover:text-white transition-colors">
+                <i class="fa-solid fa-xmark text-xl"></i>
+            </button>
+        </div>
+
+        <div class="space-y-4 flex-1">
+            <button onclick="switchLanguage('en')"
+                class="lang-option w-full group flex items-center justify-between p-4 rounded-2xl border border-transparent hover:border-white/10 hover:bg-white/5 transition-all"
+                data-lang="en">
+                <span class="font-bold text-gray-300 group-hover:text-white">English</span>
+                <span
+                    class="text-xs font-black uppercase tracking-widest text-gray-600 group-hover:text-cyan-400">US/UK</span>
+            </button>
+            <button onclick="switchLanguage('zh-TW')"
+                class="lang-option w-full group flex items-center justify-between p-4 rounded-2xl border border-transparent hover:border-white/10 hover:bg-white/5 transition-all"
+                data-lang="zh-TW">
+                <span class="font-bold text-gray-300 group-hover:text-white">繁體中文</span>
+                <span
+                    class="text-xs font-black uppercase tracking-widest text-gray-600 group-hover:text-cyan-400">TW/HK</span>
+            </button>
+            <button onclick="switchLanguage('es')"
+                class="lang-option w-full group flex items-center justify-between p-4 rounded-2xl border border-transparent hover:border-white/10 hover:bg-white/5 transition-all"
+                data-lang="es">
+                <span class="font-bold text-gray-300 group-hover:text-white">Español</span>
+                <span
+                    class="text-xs font-black uppercase tracking-widest text-gray-600 group-hover:text-cyan-400">ES/LATAM</span>
+            </button>
+        </div>
+
+        <div class="text-center text-xs text-gray-600 mt-8 font-medium">
+            Auto-detected based on your location
+        </div>
+    </div>
 
 </body>
 

@@ -141,6 +141,10 @@ async function syncPricing() {
             priceData = await fetchPriceRowJSONP(sheetId, 'OTHERS');
         }
 
+        // Dispatch Event for i18n
+        window.USER_COUNTRY = countryCode; // Expose globally
+        window.dispatchEvent(new CustomEvent('countryDetected', { detail: { country: countryCode } }));
+
         if (priceData) {
             // Apply HTML formatting for the symbol to make it centered/professional
             const formatPrice = (symbol, amount) => {
