@@ -28,9 +28,9 @@ const translations = {
             card_sync_title: "Never Lose a Lead",
             card_sync_desc: "Your connections are instantly backed up and encrypted. Lose your phone? Your network is safe and waiting for you on the web.",
             card_export_title: "Excel & CRM Ready",
-            card_export_desc: "Don't let data die in an app. Export your entire scan history to clean Excel spreadsheets or sync directly to Outlook Contacts.",
+            card_export_desc: "Don't let data die in an app. Export your entire scan history to clean Excel spreadsheets or sync directly to Google Contacts.",
             card_tags_title: "Smart Context",
-            card_tags_desc: "The AI remembers where and when you met. Auto-tagging by location and event ensures you always have the perfect ice-breaker."
+            card_tags_desc: "Tagging by location and event ensures you always have the perfect ice-breaker."
         },
         pricing: {
             title: "Pricing",
@@ -146,9 +146,9 @@ const translations = {
             card_sync_title: "Nunca Pierdas un Cliente Potencial",
             card_sync_desc: "Tus conexiones se respaldan y encriptan al instante. ¿Perdiste tu teléfono? Tu red está segura y esperándote en la web.",
             card_export_title: "Listo para Excel y CRM",
-            card_export_desc: "No dejes que los datos mueran en una aplicación. Exporta todo tu historial de escaneo a hojas de cálculo de Excel limpias o sincroniza directamente con Contactos de Outlook.",
+            card_export_desc: "No dejes que los datos mueran en una aplicación. Exporta todo tu historial de escaneo a hojas de cálculo de Excel limpias o sincroniza directamente con Contactos de Google.",
             card_tags_title: "Contexto Inteligente",
-            card_tags_desc: "La IA recuerda dónde y cuándo os conocisteis. El etiquetado automático por ubicación y evento asegura que siempre tengas el rompehielos perfecto."
+            card_tags_desc: "El etiquetado automático por ubicación y evento asegura que siempre tengas el rompehielos perfecto."
         },
         pricing: {
             title: "Precios",
@@ -242,8 +242,8 @@ const translations = {
         },
         hero: {
             badge: "AI 驅動的精準度",
-            headline: "捕捉聯絡人。<br><span class='text-gradient-primary'>即時建立連結。</span>",
-            subheadline: "停止打字。ABC Scan 的 AI 以極高的準確率提取名片詳情，並在幾秒鐘內匯出至 Excel/Google。無需資料輸入。",
+            headline: "掃描聯絡人。<br><span class='text-gradient-primary'>即時建立連結。</span>",
+            subheadline: "不用再手動輸入。ABC Scan 的 AI 以極高的準確率提取名片詳情，並在幾秒鐘內匯出至 Excel/Google。",
             cta_google: "Google Play 下載",
             cta_tech: "了解運作原理",
             phone_network: "我的人脈",
@@ -256,15 +256,15 @@ const translations = {
         },
         features: {
             title: "將名片轉化為 <br><span class='text-gradient-primary'>業務增長</span>",
-            subtitle: "使用 AI 技術的高精度掃描儀。消除手動輸入並即時匯出至 Excel/Google。",
-            card_ocr_title: "我們的 AI 讀取如真人",
-            card_ocr_desc: "第一次就正確捕捉細節。我們的 AI 理解非標準佈局和獨特字體，幾乎無需手動編輯。",
+            subtitle: "使用 AI 技術的高精度掃描。消除手動輸入並即時匯出至 Excel/Google。",
+            card_ocr_title: "我們利用 AI 技術讀取跟真人判別一樣",
+            card_ocr_desc: "第一次就正確捕捉細節。AI 理解特殊佈局和獨特字體，幾乎無需手動編輯。",
             card_sync_title: "絕不錯過潛在客戶",
             card_sync_desc: "您的連結會立即備份並加密。手機丟了？您的人脈網在網路上安全地等著您。",
             card_export_title: "Excel & CRM 就緒",
-            card_export_desc: "不要讓資料死在應用程式裡。將您的整個掃描歷史匯出為整潔的 Excel 電子表格，或直接同步至 Outlook 聯絡人。",
+            card_export_desc: "不要讓資料死在應用程式裡。將您的整個掃描歷史匯出為整潔的 Excel 電子表格，或直接同步至 Google 聯絡人。",
             card_tags_title: "智慧情境",
-            card_tags_desc: "AI 記得您在何時何地相遇。根據地點和活動自動標記，確保您總是擁有完美的開場白。"
+            card_tags_desc: "根據地點和活動標記，確保您總是擁有完美的開場白。"
         },
         pricing: {
             title: "價格方案",
@@ -378,7 +378,7 @@ const translations = {
             card_sync_title: "لا تفقد فرصة بيع أبداً",
             card_sync_desc: "يتم نسخ اتصالاتك احتياطياً وتشفيرها فوراً. هل فقدت هاتفك؟ شبكتك آمنة وتنتظرك على الويب.",
             card_export_title: "جاهز لـ Excel و CRM",
-            card_export_desc: "صدر سجل المسح الكامل إلى جداول بيانات Excel نظيفة أو زامن مباشرة مع جهات اتصال Outlook.",
+            card_export_desc: "صدر سجل المسح الكامل إلى جداول بيانات Excel نظيفة أو زامن مباشرة مع جهات اتصال Google.",
             card_tags_title: "سياق ذكي",
             card_tags_desc: "يتذكر الذكاء الاصطناعي أين ومتى التقيت. الوسم التلقائي حسب الموقع والحدث يضمن لك دائماً بداية محادثة مثالية."
         },
@@ -494,7 +494,7 @@ const translations = {
             card_sync_title: "Verlieren Sie nie einen Lead",
             card_sync_desc: "Ihre Verbindungen werden sofort gesichert und verschlüsselt. Telefon verloren? Ihr Netzwerk ist sicher und wartet im Web auf Sie.",
             card_export_title: "Bereit für Excel & CRM",
-            card_export_desc: "Lassen Sie Daten nicht in einer App sterben. Exportieren Sie Ihren gesamten Scan-Verlauf in saubere Excel-Tabellen oder synchronisieren Sie direkt mit Outlook.",
+            card_export_desc: "Lassen Sie Daten nicht in einer App sterben. Exportieren Sie Ihren gesamten Scan-Verlauf in saubere Excel-Tabellen oder synchronisieren Sie direkt mit Google.",
             card_tags_title: "Intelligenter Kontext",
             card_tags_desc: "Die KI merkt sich, wo und wann Sie sich getroffen haben. Automatisches Tagging nach Ort und Ereignis sorgt für den perfekten Gesprächseinstieg."
         },
@@ -610,7 +610,7 @@ const translations = {
             card_sync_title: "Ne perdez jamais un prospect",
             card_sync_desc: "Vos connexions sont instantanément sauvegardées et cryptées. Téléphone perdu ? Votre réseau est en sécurité sur le web.",
             card_export_title: "Prêt pour Excel & CRM",
-            card_export_desc: "Ne laissez pas vos données mourir dans une application. Exportez tout votre historique de scan vers Excel ou synchronisez avec Outlook.",
+            card_export_desc: "Ne laissez pas vos données mourir dans une application. Exportez tout votre historique de scan vers Excel ou synchronisez avec Google.",
             card_tags_title: "Contexte Intelligent",
             card_tags_desc: "L'IA se souvient où et quand vous vous êtes rencontrés. Le balisage automatique par lieu et événement assure le parfait brise-glace."
         },
@@ -842,7 +842,7 @@ const translations = {
             card_sync_title: "リードを逃さない",
             card_sync_desc: "連絡先は即座にバックアップされ、暗号化されます。スマホを紛失しても、ネットワークはWeb上で安全に保管されます。",
             card_export_title: "Excel & CRM対応",
-            card_export_desc: "データをアプリ内で死蔵させません。全スキャン履歴をきれいなExcelスプレッドシートにエクスポートしたり、Outlookと直接同期できます。",
+            card_export_desc: "データをアプリ内で死蔵させません。全スキャン履歴をきれいなExcelスプレッドシートにエクスポートしたり、Googleと直接同期できます。",
             card_tags_title: "インテリジェントなコンテキスト",
             card_tags_desc: "AIはいつどこで会ったかを記憶します。場所やイベントによる自動タグ付けで、会話のきっかけを逃しません。"
         },
@@ -958,7 +958,7 @@ const translations = {
             card_sync_title: "리드를 절대 놓치지 마세요",
             card_sync_desc: "연락처는 즉시 백업되고 암호화됩니다. 휴대폰을 잃어버리셨나요? 네트워크는 웹에 안전하게 보관됩니다.",
             card_export_title: "Excel 및 CRM 준비 완료",
-            card_export_desc: "데이터를 앱에 가둬두지 마세요. 전체 스캔 기록을 깔끔한 Excel 스프레드시트로 내보내거나 Outlook과 직접 동기화하세요.",
+            card_export_desc: "데이터를 앱에 가둬두지 마세요. 전체 스캔 기록을 깔끔한 Excel 스프레드시트로 내보내거나 Google과 직접 동기화하세요.",
             card_tags_title: "지능형 컨텍스트",
             card_tags_desc: "AI는 언제 어디서 만났는지 기억합니다. 위치 및 이벤트별 자동 태깅으로 완벽한 대화 시작을 보장합니다."
         },
@@ -1074,7 +1074,7 @@ const translations = {
             card_sync_title: "Nunca perca um lead",
             card_sync_desc: "Suas conexões são salvas e criptografadas instantaneamente. Perdeu o telefone? Sua rede está segura na web.",
             card_export_title: "Pronto para Excel & CRM",
-            card_export_desc: "Não deixe dados morrerem em um aplicativo. Exporte todo o seu histórico para planilhas limpas do Excel ou sincronize diretamente com o Outlook.",
+            card_export_desc: "Não deixe dados morrerem em um aplicativo. Exporte todo o seu histórico para planilhas limpas do Excel ou sincronize diretamente com o Google.",
             card_tags_title: "Contexto Inteligente",
             card_tags_desc: "A IA lembra onde e quando você se encontrou. Marcação automática por local e evento garante o início de conversa perfeito."
         },
@@ -1162,3 +1162,4 @@ const translations = {
         }
     }
 };
+2026-02-07 22:36:12
