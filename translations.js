@@ -3,32 +3,34 @@ const translations = {
         nav: {
             features: "Intelligence",
             reviews: "Reviews",
-            pricing: "Pricing"
+            pricing: "Pricing",
+            contact: "Contact"
         },
         hero: {
-            badge: "Networking with AI",
-            headline: "Networking with <br><span class='text-gradient-primary'>Artificial Intelligence</span>",
-            subheadline: "ABC Scan transforms physical interactions into actionable intelligence. Proprietary computer vision that understands relationship context.",
+            badge: "AI-Powered Accuracy",
+            headline: "Capture Contacts. <br><span class='text-gradient-primary'>Connect Instantly.</span>",
+            subheadline: "Stop typing. ABC Scan's AI extracts Business Card details with extremly high accuracy and exports to Excel/Google in seconds. No data entry.",
             cta_google: "Get it on Google Play",
-            cta_tech: "Explore Tech",
-            phone_network: "Network",
+            cta_tech: "See How It Works",
+            phone_network: "My Network",
             phone_recent: "Recent Scans",
-            phone_open: "Open Scanner"
+            phone_open: "Scan Now",
+            rating: "<span class='font-bold text-white'>4.9</span>/5 Rating"
         },
         trust: {
-            trusted_by: "Trusted by <span class='text-gradient-primary'>Sales Leaders</span>"
+            trusted_by: "Trusted by <span class='text-gradient-primary'>Sales Leaders Worldwide</span>"
         },
         features: {
-            title: "The Suite of <br><span class='text-gradient-primary'>Neural Tools</span>",
-            subtitle: "Beyond scanning. We provide the infrastructure for professional networking ecosystem.",
-            card_ocr_title: "Proprietary <br>Neural OCR",
-            card_ocr_desc: "99.9% accuracy on over 40+ languages. Our models don't just 'see' text; they understand hierarchy and business intent instantly.",
-            card_sync_title: "Instant Cloud Sync",
-            card_sync_desc: "End-to-end encrypted backup across all your devices, instantly. Your network follows you.",
-            card_export_title: "Dynamic Export",
-            card_export_desc: "Excel, CSV, VCF. One-tap integration with HubSpot, Salesforce, and Zoho.",
-            card_tags_title: "Smart Labeling",
-            card_tags_desc: "AI automatically tags contacts based on event, location, and industry vertical."
+            title: "Turn Business Cards <br>into <span class='text-gradient-primary'>Business Growth</span>",
+            subtitle: "High-precision scanner using AI technology. Eliminate manual entry and export to Excel/Google instantly.",
+            card_ocr_title: "Our AI Reads Like a Human",
+            card_ocr_desc: "Capture details correctly the first time. Our AI understands non-standard layouts and unique fonts, almost zero need for manual edits.",
+            card_sync_title: "Never Lose a Lead",
+            card_sync_desc: "Your connections are instantly backed up and encrypted. Lose your phone? Your network is safe and waiting for you on the web.",
+            card_export_title: "Excel & CRM Ready",
+            card_export_desc: "Don't let data die in an app. Export your entire scan history to clean Excel spreadsheets or sync directly to Outlook Contacts.",
+            card_tags_title: "Smart Context",
+            card_tags_desc: "The AI remembers where and when you met. Auto-tagging by location and event ensures you always have the perfect ice-breaker."
         },
         pricing: {
             title: "Pricing",
@@ -39,22 +41,24 @@ const translations = {
             col_premium: "Premium",
             badge_recommended: "Recommended",
             price_free: "Free",
+            price_mo: "/mo",
+            price_yr: "/yr",
             premium_power: "Premium Power",
             // Features
-            feat_smart_search: "Smart Search",
-            feat_custom_tags: "Custom Tags & Categories",
-            feat_digital_profile: "Digital Card Profile",
-            feat_manual_sync: "Manual Sync (Google/Outlook)",
-            feat_cloud_backup: "Cloud Backup & Restore",
-            feat_ai_scanning: "AI-Powered Scanning",
-            feat_storage: "Card Storage Capacity",
-            feat_favorites: "Favorites / Pinned Cards",
-            feat_export: "Export to Excel / CSV",
-            feat_auto_sync: "Real-time Auto Sync",
-            feat_ad_free: "Ad-Free Experience",
-            feat_quick_save: "Instant 'Quick-Save' Mode",
-            feat_profile_share: "Profile Sharing via QR",
-            feat_custom_qr: "Custom QR Styling",
+            feat_smart_search: "Scan with AI",
+            feat_custom_tags: "Custom Tags",
+            feat_digital_profile: "Digital Business Card",
+            feat_manual_sync: "Google/Outlook Sync",
+            feat_cloud_backup: "Cloud Backup",
+            feat_ai_scanning: "AI Scanning",
+            feat_storage: "Card Storage",
+            feat_favorites: "Pinned Contacts",
+            feat_export: "Excel & CSV Export",
+            feat_auto_sync: "Auto-Sync Contacts",
+            feat_ad_free: "No Ads",
+            feat_quick_save: "Quick Save Mode",
+            feat_profile_share: "Share via QR code",
+            feat_custom_qr: "Custom QR Codes",
             // Limits
             limit_30: "30 / month",
             limit_1200: "1,200 / month",
@@ -74,38 +78,77 @@ const translations = {
             link_contact: "Contact",
             col_social: "Social",
             copyright: "&copy; 2026 ABC Scan All rights reserved."
+        },
+        reviews: {
+            title: "Loved by Professionals",
+            time_2d: "2 days ago",
+            time_1w: "1 week ago",
+            time_3w: "3 weeks ago",
+            time_1m: "1 month ago",
+            comment_1: "I've tried every scanner app. This is the only one that gets the text right 100% of the time, even with fancy fonts. The Excel export is a lifesaver for my sales team.",
+            comment_2: "The auto-sync to Google Contacts is instant. I scan a card at a conference and it's on my phone before I even walk away. Incredible speed.",
+            comment_3: "Worth every penny for the premium version. The ability to scan batches of cards and have them sorted automatically is a game changer.",
+            comment_4: "Simple, clean, and fast. Does exactly what it promises without any bloat. The dark mode UI is also very sleek."
+        },
+        mockup: {
+            user_name: "Alexander",
+            processing: "AI Neural Processing",
+            digitizing: "Digitizing Contact...",
+            nav_home: "Home",
+            nav_contacts: "Contacts",
+            nav_profile: "Profile",
+            nav_setting: "Setting",
+            field_name: "Name",
+            field_title: "Title",
+            field_email: "Email",
+            data_name: "John Doe",
+            data_title: "CEO @ Tech",
+            data_email: "john@tech.com",
+            badge_engine: "AI Powered Engine"
+        },
+        lang: {
+            title: "Select Language",
+            auto_detected: "Auto-detected based on your location"
+        },
+        seo: {
+            title: "ABC Scan - AI Business Card Scanner & Contact Manager",
+            description_short: "The #1 AI Business Card Scanner. Instantly digitize contacts with 99.9% accuracy. Export to Excel, CSV, and Outlook. Download for iOS & Android.",
+            description_long: "Stop typing. ABC Scan's AI extracts contact details with 99.9% accuracy and exports to Excel/Outlook in seconds.",
+            keywords: "business card scanner, AI OCR, digital business card, export to excel, contact management app, free card reader, business card reader"
         }
     },
     es: {
         nav: {
             features: "Inteligencia",
             reviews: "Reseñas",
-            pricing: "Precios"
+            pricing: "Precios",
+            contact: "Contacto"
         },
         hero: {
-            badge: "Networking con IA",
-            headline: "Networking con <br><span class='text-gradient-primary'>Inteligencia Artificial</span>",
-            subheadline: "ABC Scan transforma interacciones físicas en inteligencia accionable. Visión por computadora propietaria que entiende el contexto.",
+            badge: "Precisión Impulsada por IA",
+            headline: "Captura Contactos. <br><span class='text-gradient-primary'>Conecta al Instante.</span>",
+            subheadline: "Deja de escribir. La IA de ABC Scan extrae los detalles de las tarjetas de visita con una precisión extremadamente alta y los exporta a Excel/Google en segundos. Sin entrada de datos.",
             cta_google: "Consíguelo en Google Play",
-            cta_tech: "Explorar Tecnología",
-            phone_network: "Networking",
+            cta_tech: "Ver Cómo Funciona",
+            phone_network: "Mi Red",
             phone_recent: "Escaneos Recientes",
-            phone_open: "Abrir Escáner"
+            phone_open: "Escanear Ahora",
+            rating: "Calificación <span class='font-bold text-white'>4.9</span>/5"
         },
         trust: {
-            trusted_by: "Con la confianza de <span class='text-gradient-primary'>Líderes de Ventas</span>"
+            trusted_by: "Con la confianza de <span class='text-gradient-primary'>Líderes de Ventas en Todo el Mundo</span>"
         },
         features: {
-            title: "La Suite de <br><span class='text-gradient-primary'>Herramientas Neuronales</span>",
-            subtitle: "Más allá del escaneo. Proveemos la infraestructura para el ecosistema de networking profesional.",
-            card_ocr_title: "OCR Neuronal <br>Propietario",
-            card_ocr_desc: "99.9% de precisión en más de 40 idiomas. Nuestros modelos no solo 'ven' texto; entienden jerarquía e intención de negocio al instante.",
-            card_sync_title: "Sincronización Instantánea",
-            card_sync_desc: "Respaldo encriptado de extremo a extremo en todos tus dispositivos. Tu red te sigue.",
-            card_export_title: "Exportación Dinámica",
-            card_export_desc: "Excel, CSV, VCF. Integración con un toque con HubSpot, Salesforce y Zoho.",
-            card_tags_title: "Etiquetado Inteligente",
-            card_tags_desc: "La IA etiqueta contactos automáticamente basado en evento, ubicación e industria."
+            title: "Convierte Tarjetas de Visita <br>en <span class='text-gradient-primary'>Crecimiento Empresarial</span>",
+            subtitle: "Escáner de alta precisión utilizando tecnología de IA. Elimina la entrada manual y exporta a Excel/Google al instante.",
+            card_ocr_title: "Nuestra IA Lee Como un Humano",
+            card_ocr_desc: "Captura los detalles correctamente a la primera. Nuestra IA entiende diseños no estándar y fuentes únicas, casi sin necesidad de ediciones manuales.",
+            card_sync_title: "Nunca Pierdas un Cliente Potencial",
+            card_sync_desc: "Tus conexiones se respaldan y encriptan al instante. ¿Perdiste tu teléfono? Tu red está segura y esperándote en la web.",
+            card_export_title: "Listo para Excel y CRM",
+            card_export_desc: "No dejes que los datos mueran en una aplicación. Exporta todo tu historial de escaneo a hojas de cálculo de Excel limpias o sincroniza directamente con Contactos de Outlook.",
+            card_tags_title: "Contexto Inteligente",
+            card_tags_desc: "La IA recuerda dónde y cuándo os conocisteis. El etiquetado automático por ubicación y evento asegura que siempre tengas el rompehielos perfecto."
         },
         pricing: {
             title: "Precios",
@@ -116,11 +159,13 @@ const translations = {
             col_premium: "Premium",
             badge_recommended: "Recomendado",
             price_free: "Gratis",
+            price_mo: "/mes",
+            price_yr: "/año",
             premium_power: "Poder Premium",
-            feat_smart_search: "Búsqueda Inteligente",
+            feat_smart_search: "Escanear con IA",
             feat_custom_tags: "Etiquetas Personalizadas",
-            feat_digital_profile: "Perfil Digital",
-            feat_manual_sync: "Sincronización Manual",
+            feat_digital_profile: "Tarjeta de Visita Digital",
+            feat_manual_sync: "Sincronización Google/Outlook",
             feat_cloud_backup: "Respaldo en la Nube",
             feat_ai_scanning: "Escaneo con IA",
             feat_storage: "Capacidad de Tarjetas",
@@ -149,38 +194,77 @@ const translations = {
             link_contact: "Contacto",
             col_social: "Social",
             copyright: "&copy; 2026 ABC Scan Todos los derechos reservados."
+        },
+        reviews: {
+            title: "Amado por Profesionales",
+            time_2d: "Hace 2 días",
+            time_1w: "Hace 1 semana",
+            time_3w: "Hace 3 semanas",
+            time_1m: "Hace 1 mes",
+            comment_1: "He probado todas las aplicaciones de escaneo. Esta es la única que reconoce el texto correctamente el 100% de las veces, incluso con fuentes elegantes. La exportación a Excel es un salvavidas para mi equipo de ventas.",
+            comment_2: "La sincronización automática con Google Contacts es instantánea. Escaneo una tarjeta en una conferencia y ya está en mi teléfono antes de que me aleje. Velocidad increíble.",
+            comment_3: "Vale cada centavo por la versión premium. La capacidad de escanear lotes de tarjetas y que se clasifiquen automáticamente cambia las reglas del juego.",
+            comment_4: "Simple, limpio y rápido. Hace exactamente lo que promete sin relleno. La interfaz en modo oscuro también es muy elegante."
+        },
+        mockup: {
+            user_name: "Alejandro",
+            processing: "Procesamiento Neuronal IA",
+            digitizing: "Digitalizando Contacto...",
+            nav_home: "Inicio",
+            nav_contacts: "Contactos",
+            nav_profile: "Perfil",
+            nav_setting: "Ajustes",
+            field_name: "Nombre",
+            field_title: "Cargo",
+            field_email: "Email",
+            data_name: "Juan Pérez",
+            data_title: "CEO @ Tech",
+            data_email: "juan@tech.com",
+            badge_engine: "Motor con IA"
+        },
+        lang: {
+            title: "Seleccionar Idioma",
+            auto_detected: "Detectado automáticamente según tu ubicación"
+        },
+        seo: {
+            title: "ABC Scan - Escáner de Tarjetas de Visita con IA y Gestor de Contactos",
+            description_short: "El escáner de tarjetas de visita #1 con IA. Digitaliza contactos al instante con un 99.9% de precisión. Exporta a Excel, CSV y Outlook.",
+            description_long: "Deja de escribir. La IA de ABC Scan extrae detalles de contacto con un 99.9% de precisión y exporta a Excel/Outlook en segundos.",
+            keywords: "escáner de tarjetas de visita, IA OCR, tarjeta de visita digital, exportar a excel, gestión de contactos, lector de tarjetas gratis"
         }
     },
     'zh-TW': {
         nav: {
-            features: "智慧功能",
+            features: "AI 智慧",
             reviews: "用戶評價",
-            pricing: "價格方案"
+            pricing: "價格方案",
+            contact: "聯絡我們"
         },
         hero: {
-            badge: "AI 智慧社交",
-            headline: "開啟 <br><span class='text-gradient-primary'>人工智慧社交新時代</span>",
-            subheadline: "ABC Scan 將實體互動轉化為可操作的智慧資訊。專有的電腦視覺技術，深度理解人脈關係背景。",
+            badge: "AI 驅動的精準度",
+            headline: "捕捉聯絡人。<br><span class='text-gradient-primary'>即時建立連結。</span>",
+            subheadline: "停止打字。ABC Scan 的 AI 以極高的準確率提取名片詳情，並在幾秒鐘內匯出至 Excel/Google。無需資料輸入。",
             cta_google: "Google Play 下載",
-            cta_tech: "探索技術細節",
-            phone_network: "人脈網絡",
+            cta_tech: "了解運作原理",
+            phone_network: "我的人脈",
             phone_recent: "最近掃描",
-            phone_open: "開啟掃描器"
+            phone_open: "立即掃描",
+            rating: "<span class='font-bold text-white'>4.9</span>/5 用戶好評"
         },
         trust: {
-            trusted_by: "深受 <span class='text-gradient-primary'>銷售領袖</span> 信賴"
+            trusted_by: "全球 <span class='text-gradient-primary'>銷售領袖</span> 一致信賴"
         },
         features: {
-            title: "全套 <br><span class='text-gradient-primary'>神經網路工具</span>",
-            subtitle: "不僅僅是掃描。我們為專業社交生態系統提供基礎設施。",
-            card_ocr_title: "專有 <br>神經網路 OCR",
-            card_ocr_desc: "40多種語言的辨識準確率高達99.9%。我們的模型不僅能「看見」文字，還能即時理解層級結構和商業意圖。",
-            card_sync_title: "雲端即時同步",
-            card_sync_desc: "所有裝置端對端加密備份，即時生效。您的業務網絡隨身而行。",
-            card_export_title: "動態匯出",
-            card_export_desc: "支援 Excel, CSV, VCF。一鍵整合 HubSpot, Salesforce 和 Zoho。",
-            card_tags_title: "智慧標籤",
-            card_tags_desc: "AI 根據活動、地點和產業垂直領域自動標記聯絡人。"
+            title: "將名片轉化為 <br><span class='text-gradient-primary'>業務增長</span>",
+            subtitle: "使用 AI 技術的高精度掃描儀。消除手動輸入並即時匯出至 Excel/Google。",
+            card_ocr_title: "我們的 AI 讀取如真人",
+            card_ocr_desc: "第一次就正確捕捉細節。我們的 AI 理解非標準佈局和獨特字體，幾乎無需手動編輯。",
+            card_sync_title: "絕不錯過潛在客戶",
+            card_sync_desc: "您的連結會立即備份並加密。手機丟了？您的人脈網在網路上安全地等著您。",
+            card_export_title: "Excel & CRM 就緒",
+            card_export_desc: "不要讓資料死在應用程式裡。將您的整個掃描歷史匯出為整潔的 Excel 電子表格，或直接同步至 Outlook 聯絡人。",
+            card_tags_title: "智慧情境",
+            card_tags_desc: "AI 記得您在何時何地相遇。根據地點和活動自動標記，確保您總是擁有完美的開場白。"
         },
         pricing: {
             title: "價格方案",
@@ -191,11 +275,13 @@ const translations = {
             col_premium: "進階版",
             badge_recommended: "推薦",
             price_free: "免費",
+            price_mo: "/月",
+            price_yr: "/年",
             premium_power: "進階功能",
-            feat_smart_search: "智慧搜尋",
+            feat_smart_search: "AI 智慧掃描",
             feat_custom_tags: "自訂標籤分類",
             feat_digital_profile: "數位名片檔案",
-            feat_manual_sync: "手動同步 (Google/Outlook)",
+            feat_manual_sync: "Google/Outlook 同步",
             feat_cloud_backup: "雲端備份與還原",
             feat_ai_scanning: "AI 智慧掃描",
             feat_storage: "名片儲存容量",
@@ -224,6 +310,855 @@ const translations = {
             link_contact: "聯絡我們",
             col_social: "社群媒體",
             copyright: "&copy; 2026 ABC Scan 保留所有權利。"
+        },
+        reviews: {
+            title: "專業界人士的一致好評",
+            time_2d: "2 天前",
+            time_1w: "1 週前",
+            time_3w: "3 週前",
+            time_1m: "1 個月前",
+            comment_1: "我試過所有的掃描 App，這是唯一一個能 100% 辨識正確的，即使是藝術字體也沒問題。Excel 匯出功能拯救了我們業務團隊的效率。",
+            comment_2: "與 Google 聯絡人的同步非常快。我在研討會掃描完名片，還沒走回座位，手機就已經同步好了。速度驚人！",
+            comment_3: "進階版物超所值。批次掃描並自動分類的功能完全改變了我的工作方式，再也不用手動整理。",
+            comment_4: "簡潔、純粹、快速。沒有冗餘功能，完全符合需求。深色模式的介面設計也非常高級。",
+        },
+        mockup: {
+            user_name: "亞歷山大",
+            processing: "AI 神經網路運算中",
+            digitizing: "正在轉化數位名片...",
+            nav_home: "首頁",
+            nav_contacts: "所有聯絡人",
+            nav_profile: "個人檔案",
+            nav_setting: "設定",
+            field_name: "姓名",
+            field_title: "職稱",
+            field_email: "電子郵件",
+            data_name: "陳小明",
+            data_title: "科技公司執行長",
+            data_email: "ming@tech.com",
+            badge_engine: "AI 智慧引擎"
+        },
+        lang: {
+            title: "選擇語言",
+            auto_detected: "根據您的位置自動偵測"
+        },
+        seo: {
+            title: "ABC Scan - AI 智慧名片辨識掃描與人脈管理",
+            description_short: "第一名的 AI 名片掃描 App。99.9% 準確率數位化您的聯絡人，支援匯出 Excel, CSV。iOS 與 Android 熱烈下載中。",
+            description_long: "別再手動輸入了。ABC Scan 的 AI 以 99.9% 的準確率提取聯絡資訊，並在幾秒鐘內匯出至 Excel/Outlook。",
+            keywords: "名片掃描, AI OCR, 數位名片, 匯出 Excel, 人脈管理 App, 免費名片辨識, 名片讀取器"
+        }
+    },
+    ar: {
+        nav: {
+            features: "الذكاء",
+            reviews: "الآراء",
+            pricing: "الأسعار",
+            contact: "اتصل بنا"
+        },
+        hero: {
+            badge: "دقة مدعومة بالذكاء الاصطناعي",
+            headline: "التقط جهات الاتصال. <br><span class='text-gradient-primary'>تواصل فوراً.</span>",
+            subheadline: "توقف عن الكتابة. يستخرج ذكاء ABC Scan تفاصيل بطاقة العمل بدقة عالية جداً ويصدرها إلى Excel/Google في ثوانٍ.",
+            cta_google: "احصل عليه في Google Play",
+            cta_tech: "شاهد كيف يعمل",
+            phone_network: "شبكتي",
+            phone_recent: "عمليات المسح الأخيرة",
+            phone_open: "امسح الآن",
+            rating: "<span class='font-bold text-white'>4.9</span>/5 تقييم"
+        },
+        trust: {
+            trusted_by: "محل ثقة <span class='text-gradient-primary'>قادة المبيعات حول العالم</span>"
+        },
+        features: {
+            title: "حول بطاقات العمل <br>إلى <span class='text-gradient-primary'>نمو تجاري</span>",
+            subtitle: "ماسح ضوئي عالي الدقة يستخدم تقنية الذكاء الاصطناعي. تخلص من الإدخال اليدوي وصدر إلى Excel/Google فوراً.",
+            card_ocr_title: "الذكاء الاصطناعي يقرأ كالبشر",
+            card_ocr_desc: "التقط التفاصيل بشكل صحيح من المرة الأولى. يفهم ذكاؤنا الاصطناعي التخطيطات غير القياسية والخطوط الفريدة.",
+            card_sync_title: "لا تفقد فرصة بيع أبداً",
+            card_sync_desc: "يتم نسخ اتصالاتك احتياطياً وتشفيرها فوراً. هل فقدت هاتفك؟ شبكتك آمنة وتنتظرك على الويب.",
+            card_export_title: "جاهز لـ Excel و CRM",
+            card_export_desc: "صدر سجل المسح الكامل إلى جداول بيانات Excel نظيفة أو زامن مباشرة مع جهات اتصال Outlook.",
+            card_tags_title: "سياق ذكي",
+            card_tags_desc: "يتذكر الذكاء الاصطناعي أين ومتى التقيت. الوسم التلقائي حسب الموقع والحدث يضمن لك دائماً بداية محادثة مثالية."
+        },
+        pricing: {
+            title: "الأسعار",
+            toggle_monthly: "شهري",
+            toggle_yearly: "سنوي <span class='text-[10px] text-green-400 ml-1'>-20%</span>",
+            matrix_title: "مصفوفة المقارنة",
+            col_starter: "البداية",
+            col_premium: "المميز",
+            badge_recommended: "موصى به",
+            price_free: "مجاني",
+            price_mo: "/شهر",
+            price_yr: "/سنة",
+            premium_power: "قوة المميز",
+            feat_smart_search: "المسح بالذكاء الاصطناعي",
+            feat_custom_tags: "وسوم مخصصة",
+            feat_digital_profile: "بطاقة عمل رقمية",
+            feat_manual_sync: "مزامنة Google/Outlook",
+            feat_cloud_backup: "نسخ احتياطي سحابي",
+            feat_ai_scanning: "مسح بالذكاء الاصطناعي",
+            feat_storage: "سعة البطاقات",
+            feat_favorites: "جهات اتصال مثبتة",
+            feat_export: "تصدير Excel و CSV",
+            feat_auto_sync: "مزامنة تلقائية",
+            feat_ad_free: "تربة خالية من الإعلانات",
+            feat_quick_save: "وضع الحفظ السريع",
+            feat_profile_share: "مشاركة عبر QR",
+            feat_custom_qr: "رموز QR مخصصة",
+            limit_30: "30 / شهر",
+            limit_1200: "1,200 / شهر",
+            limit_50: "50 بطاقة",
+            limit_unlimited: "غير محدود",
+            limit_max5: "حد أقصى 5"
+        },
+        footer: {
+            tagline: "بناء طبقة الذاكرة لعلاقاتك المهنية.",
+            col_product: "المنتج",
+            link_features: "الميزات",
+            link_security: "الأمان",
+            link_enterprise: "المؤسسات",
+            col_company: "الشركة",
+            link_story: "قصتنا",
+            link_careers: "وظائف",
+            link_contact: "اتصل بنا",
+            col_social: "تواصل اجتماعي",
+            copyright: "&copy; 2026 ABC Scan جميع الحقوق محفوظة."
+        },
+        reviews: {
+            title: "محبوب من قبل المحترفين",
+            time_2d: "منذ يومين",
+            time_1w: "منذ أسبوع",
+            time_3w: "منذ 3 أسابيع",
+            time_1m: "منذ شهر",
+            comment_1: "هذا هو التطبيق الوحيد الذي يلتقط النص بشكل صحيح 100٪ من الوقت، حتى مع الخطوط المزخرفة. تصدير Excel منقذ لفريق مبيعاتي.",
+            comment_2: "المزامنة التلقائية مع جهات اتصال Google فورية. سرعة لا تصدق.",
+            comment_3: "يستحق كل بنس للنسخة المميزة. القدرة على مسح دفعات من البطاقات وفرزها تلقائياً أمر يغير قواعد اللعبة.",
+            comment_4: "بسيط، نظيف، وسريع. يفعل بالضبط ما يعد به بدون أي تعقيدات."
+        },
+        mockup: {
+            user_name: "أمير",
+            processing: "معالجة عصبية بالذكاء الاصطناعي",
+            digitizing: "رقمنة جهة الاتصال...",
+            nav_home: "الرئيسية",
+            nav_contacts: "جهات الاتصال",
+            nav_profile: "الملف الشخصي",
+            nav_setting: "الإعدادات",
+            field_name: "الاسم",
+            field_title: "المسمى الوظيفي",
+            field_email: "البريد الإلكتروني",
+            data_name: "أحمد علي",
+            data_title: "مدير تنفيذي",
+            data_email: "ahmed@tech.com",
+            badge_engine: "محرك مدعوم بالذكاء الاصطناعي"
+        },
+        lang: {
+            title: "اختر اللغة",
+            auto_detected: "تم اكتشافه تلقائياً بناءً على موقعك"
+        },
+        seo: {
+            title: "ABC Scan - ماسح بطاقات العمل بالذكاء الاصطناعي ومدير جهات الاتصال",
+            description_short: "ماسح بطاقات العمل رقم 1 بالذكاء الاصطناعي. رقمنة جهات الاتصال بدقة 99.9٪.",
+            description_long: "توقف عن الكتابة. يستخرج ذكاء ABC Scan تفاصيل جهات الاتصال بدقة 99.9٪ ويصدرها إلى Excel/Outlook في ثوانٍ.",
+            keywords: "ماسح بطاقات العمل، OCR بالذكاء الاصطناعي، بطاقة عمل رقمية"
+        }
+    },
+    de: {
+        nav: {
+            features: "Intelligenz",
+            reviews: "Bewertungen",
+            pricing: "Preise",
+            contact: "Kontakt"
+        },
+        hero: {
+            badge: "KI-gestützte Genauigkeit",
+            headline: "Kontakte erfassen. <br><span class='text-gradient-primary'>Sofort verbinden.</span>",
+            subheadline: "Schluss mit Tippen. Die KI von ABC Scan extrahiert Visitenkartendaten mit extrem hoher Genauigkeit und exportiert sie in Sekunden nach Excel/Google.",
+            cta_google: "Auf Google Play laden",
+            cta_tech: "So funktioniert's",
+            phone_network: "Mein Netzwerk",
+            phone_recent: "Letzte Scans",
+            phone_open: "Jetzt scannen",
+            rating: "<span class='font-bold text-white'>4.9</span>/5 Bewertung"
+        },
+        trust: {
+            trusted_by: "Vertraut von <span class='text-gradient-primary'>Vertriebsleitern weltweit</span>"
+        },
+        features: {
+            title: "Verwandeln Sie Visitenkarten <br>in <span class='text-gradient-primary'>Geschäftswachstum</span>",
+            subtitle: "Hochpräziser Scanner mit KI-Technologie. Keine manuelle Eingabe mehr – Export nach Excel/Google sofort.",
+            card_ocr_title: "Unsere KI liest wie ein Mensch",
+            card_ocr_desc: "Erfassen Sie Details beim ersten Mal richtig. Unsere KI versteht nicht-standardisierte Layouts und einzigartige Schriftarten fast ohne manuelle Korrekturen.",
+            card_sync_title: "Verlieren Sie nie einen Lead",
+            card_sync_desc: "Ihre Verbindungen werden sofort gesichert und verschlüsselt. Telefon verloren? Ihr Netzwerk ist sicher und wartet im Web auf Sie.",
+            card_export_title: "Bereit für Excel & CRM",
+            card_export_desc: "Lassen Sie Daten nicht in einer App sterben. Exportieren Sie Ihren gesamten Scan-Verlauf in saubere Excel-Tabellen oder synchronisieren Sie direkt mit Outlook.",
+            card_tags_title: "Intelligenter Kontext",
+            card_tags_desc: "Die KI merkt sich, wo und wann Sie sich getroffen haben. Automatisches Tagging nach Ort und Ereignis sorgt für den perfekten Gesprächseinstieg."
+        },
+        pricing: {
+            title: "Preise",
+            toggle_monthly: "Monatlich",
+            toggle_yearly: "Jährlich <span class='text-[10px] text-green-400 ml-1'>-20%</span>",
+            matrix_title: "Vergleichsmatrix",
+            col_starter: "Starter",
+            col_premium: "Premium",
+            badge_recommended: "Empfohlen",
+            price_free: "Kostenlos",
+            price_mo: "/Monat",
+            price_yr: "/Jahr",
+            premium_power: "Premium Power",
+            feat_smart_search: "Scannen mit KI",
+            feat_custom_tags: "Eigene Tags",
+            feat_digital_profile: "Digitale Visitenkarte",
+            feat_manual_sync: "Google/Outlook Sync",
+            feat_cloud_backup: "Cloud-Backup",
+            feat_ai_scanning: "KI-Scannen",
+            feat_storage: "Kartenspeicher",
+            feat_favorites: "Favoriten",
+            feat_export: "Excel & CSV Export",
+            feat_auto_sync: "Auto-Sync",
+            feat_ad_free: "Werbefrei",
+            feat_quick_save: "Schnellspeichermodus",
+            feat_profile_share: "Per QR teilen",
+            feat_custom_qr: "Eigene QR-Codes",
+            limit_30: "30 / Monat",
+            limit_1200: "1.200 / Monat",
+            limit_50: "50 Karten",
+            limit_unlimited: "Unbegrenzt",
+            limit_max5: "Max 5"
+        },
+        footer: {
+            tagline: "Die Gedächtnisschicht für Ihre professionellen Beziehungen.",
+            col_product: "Produkt",
+            link_features: "Funktionen",
+            link_security: "Sicherheit",
+            link_enterprise: "Enterprise",
+            col_company: "Unternehmen",
+            link_story: "Unsere Geschichte",
+            link_careers: "Karriere",
+            link_contact: "Kontakt",
+            col_social: "Social",
+            copyright: "&copy; 2026 ABC Scan Alle Rechte vorbehalten."
+        },
+        reviews: {
+            title: "Von Profis geliebt",
+            time_2d: "Vor 2 Tagen",
+            time_1w: "Vor 1 Woche",
+            time_3w: "Vor 3 Wochen",
+            time_1m: "Vor 1 Monat",
+            comment_1: "Ich habe jede Scanner-App ausprobiert. Dies ist die einzige, die den Text zu 100% richtig erkennt, selbst bei ausgefallenen Schriften. Der Excel-Export ist ein Lebensretter für mein Vertriebsteam.",
+            comment_2: "Der Auto-Sync mit Google Kontakten ist sofort da. Unglaubliche Geschwindigkeit.",
+            comment_3: "Jeden Cent wert für die Premium-Version. Stapelscan und automatische Sortierung sind ein Gamechanger.",
+            comment_4: "Einfach, sauber und schnell. Tut genau, was es verspricht, ohne Schnickschnack."
+        },
+        mockup: {
+            user_name: "Alexander",
+            processing: "KI: Neurale Verarbeitung",
+            digitizing: "Kontakt digitalisieren...",
+            nav_home: "Home",
+            nav_contacts: "Kontakte",
+            nav_profile: "Profil",
+            nav_setting: "Einst.",
+            field_name: "Name",
+            field_title: "Titel",
+            field_email: "E-Mail",
+            data_name: "Max Müller",
+            data_title: "CEO @ Tech",
+            data_email: "max@tech.com",
+            badge_engine: "KI-Engine"
+        },
+        lang: {
+            title: "Sprache wählen",
+            auto_detected: "Basierend auf Ihrem Standort automatisch erkannt"
+        },
+        seo: {
+            title: "ABC Scan - KI Visitenkartenscanner & Kontaktmanager",
+            description_short: "Der #1 KI Visitenkartenscanner. Digitalisieren Sie Kontakte sofort mit 99,9% Genauigkeit.",
+            description_long: "Schluss mit Tippen. Die KI von ABC Scan extrahiert Kontaktdetails mit 99,9% Genauigkeit und exportiert sie in Sekunden nach Excel/Outlook.",
+            keywords: "Visitenkartenscanner, KI OCR, digitale Visitenkarte, Excel exportieren, Kontaktmanager"
+        }
+    },
+    fr: {
+        nav: {
+            features: "Intelligence",
+            reviews: "Avis",
+            pricing: "Tarifs",
+            contact: "Contact"
+        },
+        hero: {
+            badge: "Précision alimentée par l'IA",
+            headline: "Capturez des contacts. <br><span class='text-gradient-primary'>Connectez-vous instantanément.</span>",
+            subheadline: "Arrêtez de taper. L'IA d'ABC Scan extrait les détails des cartes de visite avec une précision extrême et les exporte vers Excel/Google en quelques secondes.",
+            cta_google: "Télécharger sur Google Play",
+            cta_tech: "Voir comment ça marche",
+            phone_network: "Mon Réseau",
+            phone_recent: "Scans Récents",
+            phone_open: "Scanner",
+            rating: "Note de <span class='font-bold text-white'>4.9</span>/5"
+        },
+        trust: {
+            trusted_by: "Approuvé par les <span class='text-gradient-primary'>Leaders mondiaux de la vente</span>"
+        },
+        features: {
+            title: "Transformez les cartes <br>en <span class='text-gradient-primary'>Croissance Commerciale</span>",
+            subtitle: "Scanner haute précision utilisant la technologie IA. Éliminez la saisie manuelle et exportez vers Excel/Google instantanément.",
+            card_ocr_title: "Notre IA lit comme un humain",
+            card_ocr_desc: "Capturez les détails correctement dès la première fois. Notre IA comprend les mises en page non standard et les polices uniques.",
+            card_sync_title: "Ne perdez jamais un prospect",
+            card_sync_desc: "Vos connexions sont instantanément sauvegardées et cryptées. Téléphone perdu ? Votre réseau est en sécurité sur le web.",
+            card_export_title: "Prêt pour Excel & CRM",
+            card_export_desc: "Ne laissez pas vos données mourir dans une application. Exportez tout votre historique de scan vers Excel ou synchronisez avec Outlook.",
+            card_tags_title: "Contexte Intelligent",
+            card_tags_desc: "L'IA se souvient où et quand vous vous êtes rencontrés. Le balisage automatique par lieu et événement assure le parfait brise-glace."
+        },
+        pricing: {
+            title: "Tarifs",
+            toggle_monthly: "Mensuel",
+            toggle_yearly: "Annuel <span class='text-[10px] text-green-400 ml-1'>-20%</span>",
+            matrix_title: "Matrice de Comparaison",
+            col_starter: "Débutant",
+            col_premium: "Premium",
+            badge_recommended: "Recommandé",
+            price_free: "Gratuit",
+            price_mo: "/mois",
+            price_yr: "/an",
+            premium_power: "Puissance Premium",
+            feat_smart_search: "H Recherche Intelligente",
+            feat_custom_tags: "Tags Personnalisés",
+            feat_digital_profile: "Carte de Visite Numérique",
+            feat_manual_sync: "Sync Google/Outlook",
+            feat_cloud_backup: "Sauvegarde Cloud",
+            feat_ai_scanning: "Scan par IA",
+            feat_storage: "Stockage de Cartes",
+            feat_favorites: "Favoris",
+            feat_export: "Export Excel & CSV",
+            feat_auto_sync: "Sync Auto",
+            feat_ad_free: "Sans Publicité",
+            feat_quick_save: "Mode Sauvegarde Rapide",
+            feat_profile_share: "Partage via QR",
+            feat_custom_qr: "Codes QR Personnalisés",
+            limit_30: "30 / mois",
+            limit_1200: "1,200 / mois",
+            limit_50: "50 cartes",
+            limit_unlimited: "Illimité",
+            limit_max5: "Max 5"
+        },
+        footer: {
+            tagline: "Construire la couche mémoire de vos relations professionnelles.",
+            col_product: "Produit",
+            link_features: "Fonctionnalités",
+            link_security: "Sécurité",
+            link_enterprise: "Entreprise",
+            col_company: "Société",
+            link_story: "Notre Histoire",
+            link_careers: "Carrières",
+            link_contact: "Contact",
+            col_social: "Social",
+            copyright: "&copy; 2026 ABC Scan Tous droits réservés."
+        },
+        reviews: {
+            title: "Aimé par les Professionnels",
+            time_2d: "Il y a 2 jours",
+            time_1w: "Il y a 1 semaine",
+            time_3w: "Il y a 3 semaines",
+            time_1m: "Il y a 1 mois",
+            comment_1: "J'ai essayé toutes les applications de scanner. C'est la seule qui obtient le texte correct à 100%, même avec des polices fantaisie. L'exportation Excel est une bouée de sauvetage pour mon équipe commerciale.",
+            comment_2: "La synchronisation auto avec Google Contacts est instantanée. Une vitesse incroyable.",
+            comment_3: "Vaut chaque centime pour la version premium. La capacité de scanner des lots de cartes est un changement de jeu.",
+            comment_4: "Simple, propre et rapide. Fait exactement ce qu'il promet."
+        },
+        mockup: {
+            user_name: "Alexandre",
+            processing: "Traitement Neuronal IA",
+            digitizing: "Numérisation...",
+            nav_home: "Accueil",
+            nav_contacts: "Contacts",
+            nav_profile: "Profil",
+            nav_setting: "Param.",
+            field_name: "Nom",
+            field_title: "Titre",
+            field_email: "Email",
+            data_name: "Jean Dupont",
+            data_title: "PDG @ Tech",
+            data_email: "jean@tech.com",
+            badge_engine: "Moteur IA"
+        },
+        lang: {
+            title: "Choisir la Langue",
+            auto_detected: "Détecté automatiquement selon votre position"
+        },
+        seo: {
+            title: "ABC Scan - Scanner de Cartes de Visite IA & Gestionnaire de Contacts",
+            description_short: "Le scanner de cartes de visite IA #1. Numérisez des contacts instantanément avec une précision de 99,9%.",
+            description_long: "Arrêtez de taper. L'IA d'ABC Scan extrait les détails de contact avec une précision de 99,9% et exporte vers Excel/Outlook en quelques secondes.",
+            keywords: "scanner de carte de visite, IA OCR, carte de visite numérique, export excel"
+        }
+    },
+    hi: {
+        nav: {
+            features: "बुद्धिमत्ता",
+            reviews: "समीक्षाएँ",
+            pricing: "मूल्य निर्धारण",
+            contact: "संपर्क"
+        },
+        hero: {
+            badge: "AI द्वारा संचालित सटीकता",
+            headline: "संपर्क कैप्चर करें। <br><span class='text-gradient-primary'>तुरंत कनेक्ट करें।</span>",
+            subheadline: "टाइप करना बंद करें। ABC Scan का AI अत्यधिक उच्च सटीकता के साथ बिजनेस कार्ड विवरण निकालता है और सेकंडों में Excel/Google में निर्यात करता है।",
+            cta_google: "Google Play पर प्राप्त करें",
+            cta_tech: "देखें यह कैसे काम करता है",
+            phone_network: "मेरा नेटवर्क",
+            phone_recent: "हाल के स्कैन",
+            phone_open: "अभी स्कैन करें",
+            rating: "<span class='font-bold text-white'>4.9</span>/5 रेटिंग"
+        },
+        trust: {
+            trusted_by: "<span class='text-gradient-primary'>दुनिया भर के बिक्री नेताओं</span> द्वारा विश्वसनीय"
+        },
+        features: {
+            title: "बिजनेस कार्ड्स को <br><span class='text-gradient-primary'>व्यावसायिक विकास</span> में बदलें",
+            subtitle: "AI तकनीक का उपयोग करने वाला उच्च परिशुद्धता स्कैनर। मैन्युअल प्रविष्टि हटाएं और तुरंत Excel/Google में निर्यात करें।",
+            card_ocr_title: "हमारा AI इंसानों की तरह पढ़ता है",
+            card_ocr_desc: "पहली बार में ही सही विवरण कैप्चर करें। हमारा AI गैर-मानक लेआउट और अद्वितीय फ़ॉन्ट्स को लगभग शून्य मैन्युअल सुधार के साथ समझता है।",
+            card_sync_title: "कभी भी लीड न खोएं",
+            card_sync_desc: "आपके कनेक्शन तुरंत बैकअप और एन्क्रिप्ट किए जाते हैं। फोन खो गया? आपका नेटवर्क सुरक्षित है और वेब पर आपका इंतजार कर रहा है।",
+            card_export_title: "Excel और CRM के लिए तैयार",
+            card_export_desc: "डेटा को किसी ऐप में मरने न दें। अपने पूरे स्कैन इतिहास को साफ Excel स्प्रेडशीट में निर्यात करें या सीधे Outlook के साथ सिंक करें।",
+            card_tags_title: "बुद्धिमान संदर्भ",
+            card_tags_desc: "AI याद रखता है कि आप कहाँ और कब मिले थे। स्थान और घटना द्वारा स्वचालित टैगिंग सही बातचीत शुरू करना सुनिश्चित करती है।"
+        },
+        pricing: {
+            title: "मूल्य निर्धारण",
+            toggle_monthly: "मासिक",
+            toggle_yearly: "वार्षिक <span class='text-[10px] text-green-400 ml-1'>-20%</span>",
+            matrix_title: "तुलना मैट्रिक्स",
+            col_starter: "स्टार्टर",
+            col_premium: "प्रीमियम",
+            badge_recommended: "अनुशंसित",
+            price_free: "निःशुल्क",
+            price_mo: "/माह",
+            price_yr: "/वर्ष",
+            premium_power: "प्रीमियम पावर",
+            feat_smart_search: "AI के साथ स्कैन",
+            feat_custom_tags: "कस्टम टैग",
+            feat_digital_profile: "डिजिटल बिजनेस कार्ड",
+            feat_manual_sync: "Google/Outlook सिंक",
+            feat_cloud_backup: "क्लाउड बैकअप",
+            feat_ai_scanning: "AI स्कैनिंग",
+            feat_storage: "कार्ड स्टोरेज",
+            feat_favorites: "पसंदीदा",
+            feat_export: "Excel और CSV निर्यात",
+            feat_auto_sync: "ऑटो सिंक",
+            feat_ad_free: "विज्ञापन मुक्त",
+            feat_quick_save: "त्वरित बचत मोड",
+            feat_profile_share: "QR के माध्यम से साझा करें",
+            feat_custom_qr: "कस्टम QR कोड",
+            limit_30: "30 / माह",
+            limit_1200: "1,200 / माह",
+            limit_50: "50 कार्ड",
+            limit_unlimited: "असीमित",
+            limit_max5: "अधिकतम 5"
+        },
+        footer: {
+            tagline: "अपने पेशेवर रिश्तों के लिए मेमोरी लेयर बनाना।",
+            col_product: "उत्पाद",
+            link_features: "सुविधाएँ",
+            link_security: "सुरक्षा",
+            link_enterprise: "उद्यम",
+            col_company: "कंपनी",
+            link_story: "हमारी कहानी",
+            link_careers: "कैरियर",
+            link_contact: "संपर्क",
+            col_social: "सामाजिक",
+            copyright: "&copy; 2026 ABC Scan सर्वाधिकार सुरक्षित।"
+        },
+        reviews: {
+            title: "पेशेवरों द्वारा पसंद किया गया",
+            time_2d: "2 दिन पहले",
+            time_1w: "1 सप्ताह पहले",
+            time_3w: "3 सप्ताह पहले",
+            time_1m: "1 महीने पहले",
+            comment_1: "मैंने हर स्कैनर ऐप की कोशिश की है। यह एकमात्र ऐसा है जो फैंसी फ़ॉन्ट्स के साथ भी टेक्स्ट को 100% सही करता है। Excel निर्यात मेरी बिक्री टीम के लिए जीवन रक्षक है।",
+            comment_2: "Google संपर्कों के साथ ऑटो-सिंक तुरंत होता है। अविश्वसनीय गति।",
+            comment_3: "प्रीमियम संस्करण के लिए हर पैसे के लायक। कार्ड के बैचों को स्कैन करने और उन्हें स्वचालित रूप से क्रमबद्ध करने की क्षमता एक गेम चेंजर है।",
+            comment_4: "सरल, साफ और तेज। बिना किसी बकवास के वही करता है जो यह वादा करता है।"
+        },
+        mockup: {
+            user_name: "राहुल",
+            processing: "AI न्यूरल प्रोसेसिंग",
+            digitizing: "संपर्क को डिजिटल किया जा रहा है...",
+            nav_home: "होम",
+            nav_contacts: "संपर्क",
+            nav_profile: "प्रोफ़ाइल",
+            nav_setting: "सेटिंग्स",
+            field_name: "नाम",
+            field_title: "उपाधि",
+            field_email: "ईमेल",
+            data_name: "अमित शर्मा",
+            data_title: "सीईओ @ टेक",
+            data_email: "amit@tech.com",
+            badge_engine: "AI इंजन"
+        },
+        lang: {
+            title: "भाषा चुनें",
+            auto_detected: "आपके स्थान के आधार पर स्वतः पहचाना गया"
+        },
+        seo: {
+            title: "ABC Scan - AI बिजनेस कार्ड स्कैनर और संपर्क प्रबंधक",
+            description_short: "#1 AI बिजनेस कार्ड स्कैनर। संपर्कों को तुरंत 99.9% सटीकता के साथ डिजिटाइज़ करें।",
+            description_long: "टाइप करना बंद करें। ABC Scan का AI संपर्क विवरण 99.9% सटीकता के साथ निकालता है और सेकंडों में Excel/Outlook में निर्यात करता है।",
+            keywords: "बिजनेस कार्ड स्कैनर, AI OCR, डिजिटल बिजनेस कार्ड, एक्सेल निर्यात"
+        }
+    },
+    ja: {
+        nav: {
+            features: "インテリジェンス",
+            reviews: "レビュー",
+            pricing: "料金",
+            contact: "お問い合わせ"
+        },
+        hero: {
+            badge: "AI搭載の精度",
+            headline: "連絡先をキャプチャ。<br><span class='text-gradient-primary'>即座につながる。</span>",
+            subheadline: "入力作業は不要。ABC ScanのAIは、名刺情報を極めて高い精度で抽出し、数秒でExcel/Googleにエクスポートします。",
+            cta_google: "Google Playで入手",
+            cta_tech: "仕組みを見る",
+            phone_network: "マイネットワーク",
+            phone_recent: "最近のスキャン",
+            phone_open: "今すぐスキャン",
+            rating: "<span class='font-bold text-white'>4.9</span>/5 評価"
+        },
+        trust: {
+            trusted_by: "世界中の<span class='text-gradient-primary'>セールスリーダー</span>から信頼されています"
+        },
+        features: {
+            title: "名刺を<br><span class='text-gradient-primary'>ビジネスの成長</span>に変える",
+            subtitle: "AI技術を使用した高精度スキャナー。手動入力を排除し、Excel/Googleへ即座にエクスポート。",
+            card_ocr_title: "人間のように読むAI",
+            card_ocr_desc: "最初のスキャンで詳細を正確に取得。当社のAIは、標準外のレイアウトや独自のフォントも理解します。",
+            card_sync_title: "リードを逃さない",
+            card_sync_desc: "連絡先は即座にバックアップされ、暗号化されます。スマホを紛失しても、ネットワークはWeb上で安全に保管されます。",
+            card_export_title: "Excel & CRM対応",
+            card_export_desc: "データをアプリ内で死蔵させません。全スキャン履歴をきれいなExcelスプレッドシートにエクスポートしたり、Outlookと直接同期できます。",
+            card_tags_title: "インテリジェントなコンテキスト",
+            card_tags_desc: "AIはいつどこで会ったかを記憶します。場所やイベントによる自動タグ付けで、会話のきっかけを逃しません。"
+        },
+        pricing: {
+            title: "料金プラン",
+            toggle_monthly: "月払い",
+            toggle_yearly: "年払い <span class='text-[10px] text-green-400 ml-1'>-20%</span>",
+            matrix_title: "機能比較",
+            col_starter: "スターター",
+            col_premium: "プレミアム",
+            badge_recommended: "おすすめ",
+            price_free: "無料",
+            price_mo: "/月",
+            price_yr: "/年",
+            premium_power: "プレミアム機能",
+            feat_smart_search: "AIスキャン",
+            feat_custom_tags: "カスタムタグ",
+            feat_digital_profile: "デジタル名刺",
+            feat_manual_sync: "Google/Outlook同期",
+            feat_cloud_backup: "クラウドバックアップ",
+            feat_ai_scanning: "AIスキャン",
+            feat_storage: "名刺保存容量",
+            feat_favorites: "お気に入り登録",
+            feat_export: "Excel/CSVエクスポート",
+            feat_auto_sync: "自動同期",
+            feat_ad_free: "広告なし",
+            feat_quick_save: "高速保存モード",
+            feat_profile_share: "QRコード共有",
+            feat_custom_qr: "カスタムQRコード",
+            limit_30: "30枚 / 月",
+            limit_1200: "1,200枚 / 月",
+            limit_50: "50枚",
+            limit_unlimited: "無制限",
+            limit_max5: "最大5個"
+        },
+        footer: {
+            tagline: "プロフェッショナルな関係の記憶層を構築する。",
+            col_product: "製品",
+            link_features: "機能",
+            link_security: "セキュリティ",
+            link_enterprise: "エンタープライズ",
+            col_company: "会社",
+            link_story: "ストーリー",
+            link_careers: "採用情報",
+            link_contact: "お問い合わせ",
+            col_social: "ソーシャル",
+            copyright: "&copy; 2026 ABC Scan All Rights Reserved."
+        },
+        reviews: {
+            title: "プロフェッショナルに愛用されています",
+            time_2d: "2日前",
+            time_1w: "1週間前",
+            time_3w: "3週間前",
+            time_1m: "1ヶ月前",
+            comment_1: "あらゆるスキャナーアプリを試しましたが、これが唯一、変わったフォントでも100%正確にテキストを読み取れます。Excelのエクスポートは、私の営業チームにとって救世主です。",
+            comment_2: "Googleコンタクトとの自動同期が瞬時に行われます。信じられないほどの速さです。",
+            comment_3: "プレミアム版は価格以上の価値があります。名刺をまとめてスキャンして自動仕分けできる機能は革命的です。",
+            comment_4: "シンプルでクリーン、そして高速。余計な機能がなく、約束通りの動きをします。"
+        },
+        mockup: {
+            user_name: "ヒロシ",
+            processing: "AIニューラル処理",
+            digitizing: "連絡先をデジタル化中...",
+            nav_home: "ホーム",
+            nav_contacts: "連絡先",
+            nav_profile: "プロフィール",
+            nav_setting: "設定",
+            field_name: "名前",
+            field_title: "役職",
+            field_email: "Email",
+            data_name: "田中 健太",
+            data_title: "CEO @ Tech",
+            data_email: "kenta@tech.com",
+            badge_engine: "AIエンジン"
+        },
+        lang: {
+            title: "言語を選択",
+            auto_detected: "位置情報に基づいて自動検出"
+        },
+        seo: {
+            title: "ABC Scan - AI名刺スキャナー & 連絡先管理",
+            description_short: "No.1 AI名刺スキャナー。連絡先を99.9%の精度で瞬時にデジタル化。",
+            description_long: "入力作業を中止しましょう。ABC ScanのAIは連絡先詳細を99.9%の精度で抽出し、数秒でExcel/Outlookにエクスポートします。",
+            keywords: "名刺スキャナー, AI OCR, デジタル名刺, Excelエクスポート"
+        }
+    },
+    ko: {
+        nav: {
+            features: "인텔리전스",
+            reviews: "리뷰",
+            pricing: "요금",
+            contact: "문의"
+        },
+        hero: {
+            badge: "AI 기반 정확도",
+            headline: "연락처 캡처. <br><span class='text-gradient-primary'>즉시 연결.</span>",
+            subheadline: "입력하지 마세요. ABC Scan의 AI가 명함 정보를 매우 높은 정확도로 추출하여 몇 초 만에 Excel/Google로 내보냅니다.",
+            cta_google: "Google Play에서 받기",
+            cta_tech: "작동 원리 보기",
+            phone_network: "내 네트워크",
+            phone_recent: "최근 스캔",
+            phone_open: "지금 스캔",
+            rating: "<span class='font-bold text-white'>4.9</span>/5 평점"
+        },
+        trust: {
+            trusted_by: "전 세계 <span class='text-gradient-primary'>영업 리더</span>들이 신뢰함"
+        },
+        features: {
+            title: "명함을 <br><span class='text-gradient-primary'>비즈니스 성장</span>으로 전환",
+            subtitle: "AI 기술을 활용한 고정밀 스캐너. 수동 입력 없이 즉시 Excel/Google로 내보내세요.",
+            card_ocr_title: "사람처럼 읽는 AI",
+            card_ocr_desc: "처음부터 정확하게 세부 정보를 캡처합니다. 저희 AI는 비표준 레이아웃과 독특한 글꼴도 이해합니다.",
+            card_sync_title: "리드를 절대 놓치지 마세요",
+            card_sync_desc: "연락처는 즉시 백업되고 암호화됩니다. 휴대폰을 잃어버리셨나요? 네트워크는 웹에 안전하게 보관됩니다.",
+            card_export_title: "Excel 및 CRM 준비 완료",
+            card_export_desc: "데이터를 앱에 가둬두지 마세요. 전체 스캔 기록을 깔끔한 Excel 스프레드시트로 내보내거나 Outlook과 직접 동기화하세요.",
+            card_tags_title: "지능형 컨텍스트",
+            card_tags_desc: "AI는 언제 어디서 만났는지 기억합니다. 위치 및 이벤트별 자동 태깅으로 완벽한 대화 시작을 보장합니다."
+        },
+        pricing: {
+            title: "요금제",
+            toggle_monthly: "월간",
+            toggle_yearly: "연간 <span class='text-[10px] text-green-400 ml-1'>-20%</span>",
+            matrix_title: "기능 비교",
+            col_starter: "스타터",
+            col_premium: "프리미엄",
+            badge_recommended: "추천",
+            price_free: "무료",
+            price_mo: "/월",
+            price_yr: "/년",
+            premium_power: "프리미엄 파워",
+            feat_smart_search: "AI 스캔",
+            feat_custom_tags: "자체 태그",
+            feat_digital_profile: "디지털 명함",
+            feat_manual_sync: "Google/Outlook 동기화",
+            feat_cloud_backup: "클라우드 백업",
+            feat_ai_scanning: "AI 스캔",
+            feat_storage: "명함 저장 용량",
+            feat_favorites: "즐겨찾기",
+            feat_export: "Excel 및 CSV 내보내기",
+            feat_auto_sync: "자동 동기화",
+            feat_ad_free: "광고 없음",
+            feat_quick_save: "빠른 저장 모드",
+            feat_profile_share: "QR로 공유",
+            feat_custom_qr: "맞춤형 QR 코드",
+            limit_30: "30개 / 월",
+            limit_1200: "1,200개 / 월",
+            limit_50: "50장",
+            limit_unlimited: "무제한",
+            limit_max5: "최대 5개"
+        },
+        footer: {
+            tagline: "전문적 관계를 위한 기억 계층 구축.",
+            col_product: "제품",
+            link_features: "기능",
+            link_security: "보안",
+            link_enterprise: "엔터프라이즈",
+            col_company: "회사",
+            link_story: "스토리",
+            link_careers: "채용",
+            link_contact: "문의",
+            col_social: "소셜",
+            copyright: "&copy; 2026 ABC Scan All Rights Reserved."
+        },
+        reviews: {
+            title: "전문가들의 사랑을 받음",
+            time_2d: "2일 전",
+            time_1w: "1주 전",
+            time_3w: "3주 전",
+            time_1m: "1달 전",
+            comment_1: "모든 스캐너 앱을 써봤지만, 특이한 폰트까지 100% 정확하게 텍스트를 인식하는 건 이것뿐입니다. Excel 내보내기는 제 영업팀에게 생명의 은인입니다。",
+            comment_2: "Google 주소록 자동 동기화가 즉시 이루어집니다. 믿을 수 없는 속도입니다.",
+            comment_3: "프리미엄 버전은 돈값을 합니다. 명함을 일괄 스캔하고 자동 분류하는 기능은 정말 획기적입니다.",
+            comment_4: "단순하고 깨끗하며 빠릅니다. 군더더기 없이 약속한 기능을 정확히 수행합니다."
+        },
+        mockup: {
+            user_name: "민수",
+            processing: "AI 신경망 처리",
+            digitizing: "연락처 디지털화 중...",
+            nav_home: "홈",
+            nav_contacts: "연락처",
+            nav_profile: "프로필",
+            nav_setting: "설정",
+            field_name: "이름",
+            field_title: "직함",
+            field_email: "이메일",
+            data_name: "김철수",
+            data_title: "CEO @ Tech",
+            data_email: "cs_kim@tech.com",
+            badge_engine: "AI 엔진"
+        },
+        lang: {
+            title: "언어 선택",
+            auto_detected: "위치 기반 자동 감지됨"
+        },
+        seo: {
+            title: "ABC Scan - AI 명함 스캐너 & 연락처 관리자",
+            description_short: "1위 AI 명함 스캐너. 99.9% 정확도로 연락처를 즉시 디지털화하세요.",
+            description_long: "입력하지 마세요. ABC Scan의 AI는 연락처 세부 정보를 99.9% 정확도로 추출하고 몇 초 만에 Excel/Outlook으로 내보냅니다.",
+            keywords: "명함 스캐너, AI OCR, 디지털 명함, 엑셀 내보내기"
+        }
+    },
+    pt: {
+        nav: {
+            features: "Inteligência",
+            reviews: "Avaliações",
+            pricing: "Preços",
+            contact: "Contato"
+        },
+        hero: {
+            badge: "Precisão impulsionada por IA",
+            headline: "Capture contatos. <br><span class='text-gradient-primary'>Conecte-se instantaneamente.</span>",
+            subheadline: "Pare de digitar. A IA do ABC Scan extrai detalhes de cartões de visita com precisão ultra-alta e exporta para Excel/Google em segundos.",
+            cta_google: "Baixar no Google Play",
+            cta_tech: "Veja como funciona",
+            phone_network: "Minha Rede",
+            phone_recent: "Scans Recentes",
+            phone_open: "Escanear Agora",
+            rating: "Classificação de <span class='font-bold text-white'>4.9</span>/5"
+        },
+        trust: {
+            trusted_by: "Confiado por <span class='text-gradient-primary'>Líderes de Vendas Globais</span>"
+        },
+        features: {
+            title: "Transforme Cartões <br>em <span class='text-gradient-primary'>Crescimento de Negócios</span>",
+            subtitle: "Scanner de alta precisão usando tecnologia IA. Elimine a entrada manual e exporte para Excel/Google instantaneamente.",
+            card_ocr_title: "Nossa IA lê como um humano",
+            card_ocr_desc: "Capture detalhes corretamente na primeira vez. Nossa IA entende layouts não padrão e fontes únicas.",
+            card_sync_title: "Nunca perca um lead",
+            card_sync_desc: "Suas conexões são salvas e criptografadas instantaneamente. Perdeu o telefone? Sua rede está segura na web.",
+            card_export_title: "Pronto para Excel & CRM",
+            card_export_desc: "Não deixe dados morrerem em um aplicativo. Exporte todo o seu histórico para planilhas limpas do Excel ou sincronize diretamente com o Outlook.",
+            card_tags_title: "Contexto Inteligente",
+            card_tags_desc: "A IA lembra onde e quando você se encontrou. Marcação automática por local e evento garante o início de conversa perfeito."
+        },
+        pricing: {
+            title: "Preços",
+            toggle_monthly: "Mensal",
+            toggle_yearly: "Anual <span class='text-[10px] text-green-400 ml-1'>-20%</span>",
+            matrix_title: "Matriz de Comparação",
+            col_starter: "Iniciante",
+            col_premium: "Premium",
+            badge_recommended: "Recomendado",
+            price_free: "Grátis",
+            price_mo: "/mês",
+            price_yr: "/ano",
+            premium_power: "Poder Premium",
+            feat_smart_search: "H Busca Inteligente",
+            feat_custom_tags: "Tags Personalizadas",
+            feat_digital_profile: "Cartão de Visita Digital",
+            feat_manual_sync: "Sincronização Google/Outlook",
+            feat_cloud_backup: "Backup na Nuvem",
+            feat_ai_scanning: "Scan via IA",
+            feat_storage: "Armazenamento de Cartões",
+            feat_favorites: "Favoritos",
+            feat_export: "Exportar Excel & CSV",
+            feat_auto_sync: "Sincronização Auto",
+            feat_ad_free: "Sem Anúncios",
+            feat_quick_save: "Modo de Salvamento Rápido",
+            feat_profile_share: "Compartilhar via QR",
+            feat_custom_qr: "QR Codes Personalizados",
+            limit_30: "30 / mês",
+            limit_1200: "1.200 / mês",
+            limit_50: "50 cartões",
+            limit_unlimited: "Ilimitado",
+            limit_max5: "Máx 5"
+        },
+        footer: {
+            tagline: "Construindo a camada de memória para suas relações profissionais.",
+            col_product: "Produto",
+            link_features: "Funcionalidades",
+            link_security: "Segurança",
+            link_enterprise: "Empresarial",
+            col_company: "Empresa",
+            link_story: "Nossa História",
+            link_careers: "Carreiras",
+            link_contact: "Contato",
+            col_social: "Social",
+            copyright: "&copy; 2026 ABC Scan Todos os direitos reservados."
+        },
+        reviews: {
+            title: "Amado por Profissionais",
+            time_2d: "Há 2 dias",
+            time_1w: "Há 1 semana",
+            time_3w: "Há 3 semanas",
+            time_1m: "Há 1 mês",
+            comment_1: "Tentei todos os aplicativos de scanner. Este é o único que acerta o texto 100% das vezes, mesmo com fontes extravagantes. A exportação para Excel é um salva-vidas para minha equipe de vendas.",
+            comment_2: "A sincronização automática com o Google Contatos é instantânea. Velocidade incrível.",
+            comment_3: "Vale cada centavo pela versão premium. A capacidade de escanear lotes de cartões e classificá-los automaticamente é um divisor de águas.",
+            comment_4: "Simples, limpo e rápido. Faz exatamente o que promete sem enrolação."
+        },
+        mockup: {
+            user_name: "André",
+            processing: "Processamento Neural IA",
+            digitizing: "Digitalizando...",
+            nav_home: "Início",
+            nav_contacts: "Contatos",
+            nav_profile: "Perfil",
+            nav_setting: "Config",
+            field_name: "Nome",
+            field_title: "Cargo",
+            field_email: "Email",
+            data_name: "Carlos Silva",
+            data_title: "CEO @ Tech",
+            data_email: "carlos@tech.com",
+            badge_engine: "Motor IA"
+        },
+        lang: {
+            title: "Escolher Idioma",
+            auto_detected: "Detectado automaticamente com base na sua localização"
+        },
+        seo: {
+            title: "ABC Scan - Scanner de Cartão de Visita IA & Gerenciador",
+            description_short: "O scanner de cartão de visita nº 1 com IA. Digitalize contatos instantaneamente com 99,9% de precisão.",
+            description_long: "Pare de digitar. A IA do ABC Scan extrai detalhes de contato com 99,9% de precisão e exporta para Excel/Outlook em segundos.",
+            keywords: "scanner de cartão de visita, IA OCR, cartão de visita digital, exportar excel"
         }
     }
 };

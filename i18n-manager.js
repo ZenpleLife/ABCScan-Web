@@ -16,6 +16,20 @@ document.addEventListener('DOMContentLoaded', () => {
             setLanguage('zh-TW');
         } else if (browserLang.startsWith('es')) {
             setLanguage('es');
+        } else if (browserLang.startsWith('ar')) {
+            setLanguage('ar');
+        } else if (browserLang.startsWith('de')) {
+            setLanguage('de');
+        } else if (browserLang.startsWith('fr')) {
+            setLanguage('fr');
+        } else if (browserLang.startsWith('hi')) {
+            setLanguage('hi');
+        } else if (browserLang.startsWith('ja')) {
+            setLanguage('ja');
+        } else if (browserLang.startsWith('ko')) {
+            setLanguage('ko');
+        } else if (browserLang.startsWith('pt')) {
+            setLanguage('pt');
         } else if (browserLang.startsWith('zh')) {
             setLanguage('zh-TW'); // Fallback for broadly Chinese browsers to TW
         } else {
@@ -33,6 +47,20 @@ document.addEventListener('DOMContentLoaded', () => {
             setLanguage('zh-TW');
         } else if (['ES', 'MX', 'AR', 'CO', 'PE', 'VE', 'CL', 'EC', 'GT', 'CU', 'BO', 'DO', 'HN', 'PY', 'SV', 'NI', 'CR', 'PA', 'UY'].includes(country)) {
             setLanguage('es');
+        } else if (['SA', 'AE', 'EG', 'QA', 'KW', 'OM', 'BH', 'JO', 'LB', 'LY', 'DZ', 'MA', 'TN', 'YE', 'IQ'].includes(country)) {
+            setLanguage('ar');
+        } else if (['DE', 'AT', 'CH', 'LI'].includes(country)) {
+            setLanguage('de');
+        } else if (['FR', 'BE', 'LU', 'MC'].includes(country)) {
+            setLanguage('fr');
+        } else if (country === 'IN') {
+            setLanguage('hi');
+        } else if (country === 'JP') {
+            setLanguage('ja');
+        } else if (country === 'KR') {
+            setLanguage('ko');
+        } else if (['PT', 'BR', 'AO', 'MZ'].includes(country)) {
+            setLanguage('pt');
         } else {
             // Default stays as set in section 1
         }
@@ -60,11 +88,13 @@ document.addEventListener('DOMContentLoaded', () => {
     window.openLanguageDrawer = function () {
         document.getElementById('lang-drawer').classList.remove('translate-x-full');
         document.getElementById('lang-overlay').classList.remove('opacity-0', 'pointer-events-none');
+        document.body.style.overflow = 'hidden';
     };
 
     window.closeLanguageDrawer = function () {
         document.getElementById('lang-drawer').classList.add('translate-x-full');
         document.getElementById('lang-overlay').classList.add('opacity-0', 'pointer-events-none');
+        document.body.style.overflow = '';
     };
 
     function setLanguage(lang) {
@@ -93,6 +123,33 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         document.documentElement.lang = lang;
+        document.documentElement.dir = (lang === 'ar') ? 'rtl' : 'ltr';
+
+        // Update SEO Metadata (Title & Meta Tags)
+        const seoData = translations[lang].seo;
+        if (seoData) {
+            if (seoData.title) document.title = seoData.title;
+
+            const metaDescription = document.querySelector('meta[name="description"]');
+            if (metaDescription && seoData.description_short) metaDescription.content = seoData.description_short;
+
+            const metaKeywords = document.querySelector('meta[name="keywords"]');
+            if (metaKeywords && seoData.keywords) metaKeywords.content = seoData.keywords;
+
+            // OG Tags
+            const ogTitle = document.querySelector('meta[property="og:title"]');
+            if (ogTitle && seoData.title) ogTitle.content = seoData.title;
+
+            const ogDescription = document.querySelector('meta[property="og:description"]');
+            if (ogDescription && seoData.description_long) ogDescription.content = seoData.description_long;
+
+            // Twitter Tags
+            const twTitle = document.querySelector('meta[property="twitter:title"]');
+            if (twTitle && seoData.title) twTitle.content = seoData.title;
+
+            const twDescription = document.querySelector('meta[property="twitter:description"]');
+            if (twDescription && seoData.description_long) twDescription.content = seoData.description_long;
+        }
     }
 
     function getNestedTranslation(obj, path) {

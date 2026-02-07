@@ -4,7 +4,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Business Card Scan | AI-Powered Reader</title>
+    <title>ABC Scan - AI Business Card Scanner & Contact Manager</title>
+    <meta name="description"
+        content="The #1 AI Business Card Scanner. Instantly digitize contacts with 99.9% accuracy. Export to Excel, CSV, and Outlook. Download for iOS & Android.">
+    <meta name="keywords"
+        content="business card scanner, AI OCR, digital business card, export to excel, contact management app, free card reader, business card reader">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://abcscan.zenplelife.com/">
+    <meta property="og:title" content="ABC Scan - AI Business Card Scanner & Contact Manager">
+    <meta property="og:description"
+        content="Stop typing. ABC Scan's AI extracts contact details with 99.9% accuracy and exports to Excel/Outlook in seconds.">
+    <meta property="og:image" content="https://abcscan.zenplelife.com/og-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://abcscan.zenplelife.com/">
+    <meta property="twitter:title" content="ABC Scan - AI Business Card Scanner & Contact Manager">
+    <meta property="twitter:description"
+        content="Stop typing. ABC Scan's AI extracts contact details with 99.9% accuracy and exports to Excel/Outlook in seconds.">
+    <meta property="twitter:image" content="https://abcscan.zenplelife.com/og-image.jpg">
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Urbanist: The single source of truth for all typography -->
     <link
@@ -27,13 +47,13 @@
                 starter: "Free",
                 premium: '<span class="flex items-center justify-center"><span class="text-2xl lg:text-3xl mr-1.5 opacity-80 font-bold">$</span>9.99</span>',
                 premiumSuffix: "/mo",
-                currency: "USD"
+                currency: ""
             },
             yearly: {
                 starter: "Free",
                 premium: '<span class="flex items-center justify-center"><span class="text-2xl lg:text-3xl mr-1.5 opacity-80 font-bold">$</span>89.99</span>',
                 premiumSuffix: "/yr",
-                currency: "USD"
+                currency: ""
             }
         };
 
@@ -175,6 +195,126 @@
             opacity: 1;
             transform: translateY(0);
         }
+
+        /* Phone Animations */
+        @keyframes float-vertical {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-15px);
+            }
+        }
+
+        .animate-float-vertical {
+            animation: float-vertical 6s ease-in-out infinite;
+        }
+
+        @keyframes float-upright {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-12px);
+            }
+        }
+
+        .animate-float-upright {
+            animation: float-upright 5s ease-in-out infinite;
+        }
+
+        @keyframes scan-y {
+            100% {
+                top: 110%;
+                opacity: 0;
+            }
+        }
+
+        .animate-scan-y {
+            animation: scan-y 3s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+        }
+
+        @keyframes star-pulse {
+
+            0%,
+            100% {
+                transform: scale(1);
+                opacity: 1;
+                filter: drop-shadow(0 0 0px rgba(250, 204, 21, 0));
+            }
+
+            50% {
+                transform: scale(1.1);
+                opacity: 0.8;
+                filter: drop-shadow(0 0 8px rgba(250, 204, 21, 0.5));
+            }
+        }
+
+        .animate-star-pulse {
+            animation: star-pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse-slow {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.5;
+            }
+        }
+
+        .animate-pulse-slow {
+            animation: pulse-slow 4s ease-in-out infinite;
+        }
+
+        @keyframes scroll-left {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        .animate-scroll-left {
+            animation: scroll-left 30s linear infinite;
+        }
+
+        @keyframes scan-x {
+
+            0%,
+            100% {
+                left: -10%;
+            }
+
+            50% {
+                left: 90%;
+            }
+        }
+
+        @keyframes shimmer {
+            0% {
+                transform: translateX(-100%);
+            }
+
+            100% {
+                transform: translateX(100%);
+            }
+        }
+
+        .hover\:pause:hover {
+            animation-play-state: paused;
+        }
     </style>
 </head>
 
@@ -224,6 +364,9 @@
                     <a href="#pricing"
                         class="text-sm font-semibold text-gray-400 hover:text-white transition-colors tracking-widest uppercase"
                         data-i18n="nav.pricing">Pricing</a>
+                    <a href="mailto:simplejoyfuljourney@gmail.com"
+                        class="text-sm font-semibold text-gray-400 hover:text-white transition-colors tracking-widest uppercase"
+                        data-i18n="nav.contact">Contact</a>
                     <a href="https://play.google.com/store/apps/details?id=com.zenple.bcscanner"
                         class="block transition-transform hover:scale-105 active:scale-95">
                         <img src="google-play-badge.png" alt="Get it on Google Play" class="h-10 w-auto">
@@ -253,6 +396,19 @@
                         class="reveal inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-purple-500/30 bg-purple-500/10 text-purple-300 text-[11px] font-black uppercase tracking-[0.2em] mb-10 backdrop-blur-sm">
                         <span class="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse"></span>
                         <span data-i18n="hero.badge">AI Business Card Scan is Live!</span>
+                    </div>
+
+                    <!-- Hero Rating Badge -->
+                    <div class="reveal flex items-center gap-3 mb-6 justify-center lg:justify-start"
+                        style="transition-delay: 0.1s">
+                        <div class="flex text-yellow-500 gap-1 animate-star-pulse">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i>
+                        </div>
+                        <span class="text-gray-400 text-sm font-bold uppercase tracking-widest" data-i18n="hero.rating">
+                            <span class="font-bold text-white">4.9</span>/5 Rating
+                        </span>
                     </div>
 
                     <h1 class="reveal text-5xl lg:text-7xl font-extrabold leading-[1.1] mb-8 tracking-tight"
@@ -285,65 +441,128 @@
                 <!-- Hero Visual (Phone Mockup) -->
                 <div class="lg:w-1/2 relative lg:h-[650px] flex items-center justify-center reveal"
                     style="transition-delay: 0.6s">
+                    <!-- Spinning Glow Ring -->
                     <div
                         class="absolute w-[550px] h-[550px] rounded-full border border-white/5 animate-[spin_30s_linear_infinite]">
                         <div class="absolute top-0 left-1/2 w-2 h-2 bg-cyan-500 rounded-full shadow-[0_0_15px_#06b6d4]">
                         </div>
                     </div>
 
+                    <!-- Phone Container -->
                     <div
-                        class="relative w-[310px] h-[620px] bg-[#000] rounded-[50px] border-[8px] border-gray-900 shadow-[0_0_80px_rgba(139,92,246,0.25)] overflow-hidden animate-float z-20 ring-1 ring-white/10">
+                        class="relative w-[310px] h-[620px] bg-[#030014] rounded-[50px] border-[8px] border-gray-900 shadow-[0_0_80px_rgba(139,92,246,0.25)] overflow-hidden animate-float-vertical z-20 ring-1 ring-white/10">
                         <!-- Top Notch -->
                         <div
                             class="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-7 bg-black rounded-b-3xl z-30 border-b border-l border-r border-gray-900">
                         </div>
 
-                        <!-- Screen Content -->
-                        <div class="w-full h-full bg-ai-surface flex flex-col relative">
+                        <!-- Screen Content (Dashboard UI) -->
+                        <div class="w-full h-full flex flex-col relative pt-2 text-white">
+
+                            <!-- Status Bar (Realistic Phone UI) -->
                             <div
-                                class="h-28 bg-gradient-to-b from-purple-900/40 to-transparent p-7 flex items-end justify-between">
-                                <div>
-                                    <div class="text-[10px] text-cyan-400 font-black tracking-widest mb-1 uppercase"
-                                        data-i18n="hero.phone_network">
-                                        Network</div>
-                                    <div class="font-bold text-xl tracking-tight text-white"
-                                        data-i18n="hero.phone_recent">Recent Scans</div>
-                                </div>
-                                <div
-                                    class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center border border-white/10">
-                                    <i class="fa-solid fa-user text-xs text-white"></i>
+                                class="px-6 h-6 flex justify-between items-center text-[10px] font-bold opacity-80 z-40">
+                                <span>9:41</span>
+                                <div class="flex items-center gap-1.5">
+                                    <i class="fa-solid fa-signal"></i>
+                                    <i class="fa-solid fa-wifi"></i>
+                                    <i class="fa-solid fa-battery-three-quarters text-[11px]"></i>
                                 </div>
                             </div>
 
-                            <div class="p-5 space-y-4 flex-1 overflow-hidden relative">
-                                <div
-                                    class="bg-white/5 border border-white/10 p-5 rounded-2xl backdrop-blur-xl flex gap-4 items-center">
-                                    <div
-                                        class="w-11 h-11 rounded-full bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center font-black text-sm tracking-tighter text-white">
-                                        JD</div>
-                                    <div class="flex-1">
-                                        <div class="h-2.5 w-28 bg-white/20 rounded-full mb-2"></div>
-                                        <div class="h-2 w-16 bg-white/10 rounded-full"></div>
+                            <!-- Front Camera / Punch Hole -->
+                            <div
+                                class="absolute top-2.5 left-1/2 -translate-x-1/2 w-3.5 h-3.5 bg-[#0a0a0a] rounded-full border border-white/5 z-50">
+                            </div>
+
+                            <!-- Header: User Profile -->
+                            <div class="px-6 mt-12 mb-10 flex items-center gap-4">
+                                <div class="w-16 h-16 rounded-full p-0.5 bg-gradient-to-tr from-cyan-400 to-purple-600">
+                                    <img src="https://api.dicebear.com/9.x/avataaars/svg?seed=Alexander" alt="Profile"
+                                        class="w-full h-full rounded-full bg-black object-cover">
+                                </div>
+                                <div class="flex flex-col">
+                                    <span class="text-2xl font-bold leading-none mb-1"
+                                        data-i18n="mockup.user_name">Alexander</span>
+                                </div>
+                            </div>
+
+                            <!-- Focused Scanning Centerpiece -->
+                            <div class="flex-1 relative flex flex-col items-center justify-center -mt-12">
+                                <!-- Status Indicator -->
+                                <div class="mb-8 flex flex-col items-center">
+                                    <div class="text-cyan-400 text-xs font-black tracking-[0.3em] uppercase mb-2"
+                                        data-i18n="mockup.processing">AI
+                                        Neural Processing</div>
+                                    <div class="flex gap-1">
+                                        <div class="w-1 h-1 rounded-full bg-cyan-400 animate-pulse"></div>
+                                        <div class="w-1 h-1 rounded-full bg-cyan-400 animate-pulse"
+                                            style="animation-delay: 0.2s"></div>
+                                        <div class="w-1 h-1 rounded-full bg-cyan-400 animate-pulse"
+                                            style="animation-delay: 0.4s"></div>
                                     </div>
-                                    <div class="text-cyan-400"><i class="fa-solid fa-check-circle text-sm"></i></div>
                                 </div>
 
-                                <!-- Scanning Simulation -->
+                                <!-- Virtual Business Card Overlay (Scanning Animation) - Now UPRIGHT -->
                                 <div
-                                    class="absolute bottom-0 left-0 w-full h-[65%] bg-gradient-to-t from-black to-transparent flex flex-col items-center justify-end pb-10">
-                                    <div
-                                        class="w-52 h-36 border-2 border-dashed border-cyan-500/30 rounded-2xl relative mb-8 overflow-hidden">
-                                        <div
-                                            class="absolute top-0 w-full h-1.5 bg-cyan-400 shadow-[0_0_20px_#22d3ee] animate-scan">
+                                    class="relative w-64 h-36 bg-[#1a1a2e] rounded-2xl border border-white/20 shadow-[0_0_50px_rgba(34,211,238,0.15)] animate-float-upright flex flex-col p-6 overflow-hidden">
+                                    <!-- Card Content Skeleton -->
+                                    <div class="flex items-center gap-4 mb-4">
+                                        <div class="w-10 h-10 rounded-full bg-white/10"></div>
+                                        <div class="space-y-2">
+                                            <div class="w-28 h-2.5 bg-white/20 rounded-full"></div>
+                                            <div class="w-16 h-1.5 bg-white/10 rounded-full"></div>
                                         </div>
                                     </div>
+                                    <div class="space-y-2 mt-2">
+                                        <div class="w-full h-1 bg-white/5 rounded-full"></div>
+                                        <div class="w-4/5 h-1 bg-white/5 rounded-full"></div>
+                                    </div>
                                     <div
-                                        class="bg-white text-black px-8 py-3.5 rounded-full font-black text-[10px] tracking-widest uppercase shadow-2xl">
-                                        <i class="fa-solid fa-camera mr-2"></i> <span data-i18n="hero.phone_open">Open
-                                            Scanner</span>
+                                        class="mt-auto w-32 h-2 bg-gradient-to-r from-cyan-500/50 to-purple-500/50 rounded-full">
+                                    </div>
+
+                                    <!-- Laser Scanner Beam -->
+                                    <div
+                                        class="absolute top-0 left-0 w-full h-12 bg-gradient-to-b from-cyan-400/40 to-transparent shadow-[0_0_25px_rgba(34,211,238,0.6)] animate-scan-y">
                                     </div>
                                 </div>
+
+                                <!-- Real-time Feedback Toast -->
+                                <div
+                                    class="mt-12 bg-white/5 border border-white/10 backdrop-blur-md px-6 py-3 rounded-full flex items-center gap-3">
+                                    <i class="fa-solid fa-circle-notch animate-spin text-cyan-400 text-xs"></i>
+                                    <span class="text-[10px] font-bold tracking-widest uppercase opacity-80"
+                                        data-i18n="mockup.digitizing">Digitizing
+                                        Contact...</span>
+                                </div>
                             </div>
+
+                            <!-- Bottom Navigation -->
+                            <div
+                                class="mt-auto h-20 border-t border-white/10 bg-[#030014]/90 backdrop-blur-lg flex justify-around items-center px-2 pb-2">
+                                <div class="flex flex-col items-center gap-1 text-cyan-400"><i
+                                        class="fa-solid fa-house text-lg"></i><span class="text-[9px]"
+                                        data-i18n="mockup.nav_home">Home</span></div>
+                                <div class="flex flex-col items-center gap-1 text-gray-500"><i
+                                        class="fa-solid fa-user-group text-lg"></i><span class="text-[9px]"
+                                        data-i18n="mockup.nav_contacts">Contacts</span></div>
+                                <!-- Scan Button (Center) -->
+                                <div
+                                    class="w-14 h-14 rounded-full bg-cyan-400 text-black flex items-center justify-center text-2xl shadow-[0_0_20px_rgba(34,211,238,0.4)] mb-8 border-4 border-[#030014] animate-pulse-slow">
+                                    <i class="fa-solid fa-camera cursor-pointer"
+                                        onclick="document.querySelector('#features').scrollIntoView({behavior:'smooth'})"></i>
+                                </div>
+                                <div class="flex flex-col items-center gap-1 text-gray-500"><i
+                                        class="fa-regular fa-user text-lg"></i><span class="text-[9px]"
+                                        data-i18n="mockup.nav_profile">Profile</span>
+                                </div>
+                                <div class="flex flex-col items-center gap-1 text-gray-500"><i
+                                        class="fa-solid fa-gear text-lg"></i><span class="text-[9px]"
+                                        data-i18n="mockup.nav_setting">Setting</span>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -351,24 +570,11 @@
         </div>
     </section>
 
-    <!-- Trust / Social Proof -->
-    <section class="py-12 border-y border-white/5 bg-white/[0.01]">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div
-                class="flex flex-wrap justify-center items-center gap-12 md:gap-20 opacity-30 grayscale hover:grayscale-0 transition-all duration-700">
-                <span class="text-xl font-black italic tracking-tighter text-white">THE VERGE</span>
-                <span class="text-xl font-black tracking-tighter text-white">TECHCRUNCH</span>
-                <span class="text-xl font-black italic tracking-tighter text-white text-gradient-primary">WIRED</span>
-                <span class="text-xl font-black tracking-tighter text-white">FORBES</span>
-                <span class="text-xl font-black italic tracking-tighter text-white">DIGITAL TRENDS</span>
-            </div>
-        </div>
-    </section>
 
     <!-- Features Bento Grid -->
-    <section id="features" class="pt-32 pb-12 relative">
+    <section id="features" class="pt-20 pb-12 relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-24">
+            <div class="text-center mb-12">
                 <h2 class="reveal text-4xl lg:text-6xl font-extrabold mb-6 tracking-tight lg:leading-tight"
                     data-i18n="features.title">The
                     Suite of <br> <span class="text-gradient-primary">Neural Tools</span></h2>
@@ -378,87 +584,438 @@
                     infrastructure for professional networking ecosystem.</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-6 h-auto md:h-[700px]">
+            <!-- Background Gradient Orb -->
+            <div
+                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-purple-500/20 rounded-full blur-[120px] -z-10 pointer-events-none">
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-6 h-auto md:h-[620px]">
                 <!-- Large Bento Card: AI OCR -->
                 <div
-                    class="reveal md:col-span-2 md:row-span-2 bento-card glass-card rounded-[2.5rem] p-10 flex flex-col justify-between overflow-hidden relative group">
-                    <div class="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
-                        <i class="fa-solid fa-brain text-[160px] text-purple-500"></i>
-                    </div>
-                    <div>
+                    class="reveal md:col-span-2 md:row-span-2 bento-card glass-card rounded-[2.5rem] p-6 flex flex-col justify-between overflow-hidden relative group border border-white/10 hover:border-purple-500/50 transition-all duration-500">
+
+                    <!-- Content at the top -->
+                    <div class="relative z-10 mb-8">
                         <div
-                            class="w-14 h-14 rounded-2xl bg-purple-500/20 flex items-center justify-center text-purple-400 mb-8 border border-purple-500/30">
-                            <i class="fa-solid fa-microchip text-xl"></i>
+                            class="w-12 h-12 rounded-2xl bg-gradient-to-br from-purple-500 to-indigo-600 flex items-center justify-center text-white mb-4 shadow-lg shadow-purple-500/20">
+                            <i class="fa-solid fa-brain text-lg"></i>
                         </div>
-                        <h3 class="text-3xl font-bold mb-6 tracking-tight" data-i18n="features.card_ocr_title">
-                            Proprietary <br>Neural OCR</h3>
-                        <p class="text-gray-400 leading-relaxed font-medium text-lg" data-i18n="features.card_ocr_desc">
-                            99.9% accuracy on over 40+
-                            languages. Our models don't just "see" text; they understand hierarchy and business intent
-                            instantly.</p>
+                        <h3 class="text-3xl font-bold mb-4 tracking-tight" data-i18n="features.card_ocr_title">
+                            Gemini Powered <br>Neural AI</h3>
+                        <p class="text-gray-400 leading-relaxed font-medium text-base"
+                            data-i18n="features.card_ocr_desc">
+                            The only scanner with zero correction required. Our advanced Neural AI decivers complex
+                            fonts
+                            and non-standard layouts with 99.9% precision.</p>
                     </div>
-                    <div class="mt-8 pt-8 border-t border-white/5 flex gap-4">
-                        <span
-                            class="px-3 py-1.5 rounded-full bg-white/5 text-[10px] font-black uppercase tracking-widest text-purple-300 border border-white/5">FastAPI</span>
-                        <span
-                            class="px-3 py-1.5 rounded-full bg-white/5 text-[10px] font-black uppercase tracking-widest text-cyan-300 border border-white/5">PyTorch</span>
+
+                    <!-- Visual: Card-to-Data Animation at the bottom -->
+                    <div
+                        class="relative w-full h-[380px] bg-[#0A0A0A] rounded-2xl overflow-hidden border border-white/5 shadow-2xl flex items-center px-6 gap-8">
+                        <!-- Left: Business Card Mockup -->
+                        <div
+                            class="relative w-1/2 h-32 bg-gradient-to-br from-white/10 to-white/5 rounded-xl border border-white/10 p-4 shadow-lg overflow-hidden shrink-0">
+                            <!-- Card Content Shell -->
+                            <div class="space-y-2">
+                                <div class="w-8 h-8 rounded bg-white/20"></div>
+                                <div class="w-2/3 h-2 bg-white/20 rounded-full"></div>
+                                <div class="w-1/2 h-1.5 bg-white/10 rounded-full"></div>
+                            </div>
+                            <!-- Scanning Laser -->
+                            <div
+                                class="absolute top-0 left-0 w-12 h-full bg-gradient-to-r from-purple-500/0 via-purple-500/50 to-purple-500/0 animate-[scan-x_4s_ease-in-out_infinite] shadow-[0_0_20px_rgba(168,85,247,0.4)]">
+                            </div>
+                        </div>
+
+                        <!-- Right: Data Fields Populating -->
+                        <div class="w-1/2 space-y-4">
+                            <div class="flex items-center gap-3 animate-[pulse_2s_infinite]">
+                                <div class="w-2 h-2 rounded-full bg-purple-500"></div>
+                                <div class="flex-grow space-y-1.5">
+                                    <div class="h-1.5 w-full bg-white/10 rounded-full overflow-hidden">
+                                        <div class="h-full bg-purple-500 w-full animate-[shimmer_2s_infinite]"></div>
+                                    </div>
+                                    <div class="flex justify-between items-center">
+                                        <span class="text-[8px] text-gray-500 font-bold uppercase tracking-widest"><span
+                                                data-i18n="mockup.field_name">Name</span>:
+                                            <span data-i18n="mockup.data_name">John Doe</span></span>
+                                        <span class="text-[8px] text-purple-400 font-bold">100%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-3 animate-[pulse_2s_infinite_0.5s]">
+                                <div class="w-2 h-2 rounded-full bg-cyan-500"></div>
+                                <div class="flex-grow space-y-1.5">
+                                    <div class="h-1.5 w-4/5 bg-white/10 rounded-full overflow-hidden">
+                                        <div class="h-full bg-cyan-500 w-full animate-[shimmer_2s_infinite]"></div>
+                                    </div>
+                                    <div class="flex justify-between items-center">
+                                        <span class="text-[8px] text-gray-500 font-bold uppercase tracking-widest"><span
+                                                data-i18n="mockup.field_title">Title</span>:
+                                            <span data-i18n="mockup.data_title">CEO @ Tech</span></span>
+                                        <span class="text-[8px] text-cyan-400 font-bold">99.9%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-3 animate-[pulse_2s_infinite_1s]">
+                                <div class="w-2 h-2 rounded-full bg-pink-500"></div>
+                                <div class="flex-grow space-y-1.5">
+                                    <div class="h-1.5 w-5/6 bg-white/10 rounded-full overflow-hidden">
+                                        <div class="h-full bg-pink-500 w-full animate-[shimmer_2s_infinite]"></div>
+                                    </div>
+                                    <div class="flex justify-between items-center">
+                                        <span class="text-[8px] text-gray-500 font-bold uppercase tracking-widest"><span
+                                                data-i18n="mockup.field_email">Email</span>:
+                                            <span data-i18n="mockup.data_email">john@tech.com</span></span>
+                                        <span class="text-[8px] text-pink-400 font-bold">100%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Float Badge -->
+                        <div class="absolute top-4 right-4 bg-purple-600/20 border border-purple-500/30 text-purple-300 text-[8px] font-black px-2 py-1 rounded-md uppercase tracking-tighter"
+                            data-i18n="mockup.badge_engine">
+                            AI Powered Engine
+                        </div>
                     </div>
                 </div>
 
                 <!-- Bento Card: Cloud Sync -->
-                <div class="reveal md:col-span-2 bento-card glass-card rounded-[2.5rem] p-10 flex flex-col justify-between relative group overflow-hidden"
+                <div class="reveal md:col-span-2 bento-card glass-card rounded-[2.5rem] p-6 flex flex-col justify-between relative group overflow-hidden border border-white/10 hover:border-cyan-500/50 transition-all duration-500"
                     style="transition-delay: 0.1s">
-                    <div class="flex items-start justify-between mb-8">
-                        <div>
-                            <h3 class="text-2xl font-bold mb-3 tracking-tight" data-i18n="features.card_sync_title">
-                                Instant Cloud Sync</h3>
-                            <p class="text-gray-400 text-sm font-medium" data-i18n="features.card_sync_desc">End-to-end
-                                encrypted backup across all your
-                                devices, instantly. Your network follows you.</p>
-                        </div>
-                        <div
-                            class="w-12 h-12 rounded-2xl bg-cyan-500/20 flex items-center justify-center text-cyan-400 border border-cyan-500/30">
-                            <i class="fa-solid fa-cloud text-lg"></i>
-                        </div>
+
+                    <div
+                        class="absolute top-0 right-0 w-64 h-64 bg-cyan-500/10 rounded-full blur-3xl -mr-16 -mt-16 pointer-events-none">
                     </div>
-                    <div class="flex gap-2">
-                        <div class="h-1.5 w-full bg-cyan-500/10 rounded-full overflow-hidden">
-                            <div class="h-full bg-gradient-to-r from-cyan-400 to-purple-400 w-3/4 animate-pulse"></div>
+
+                    <div class="flex items-start justify-between mb-4 relative z-10">
+                        <div>
+                            <div
+                                class="w-10 h-10 rounded-xl bg-gradient-to-br from-cyan-400 to-blue-500 flex items-center justify-center text-white mb-4 shadow-lg shadow-cyan-500/20">
+                                <i class="fa-solid fa-cloud text-sm"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-2 tracking-tight" data-i18n="features.card_sync_title">
+                                Never Lose a Lead</h3>
+                            <p class="text-gray-400 text-sm font-medium leading-relaxed max-w-sm"
+                                data-i18n="features.card_sync_desc">
+                                Your connections are instantly backed up. Lose your phone? Your network is safe.</p>
+                        </div>
+                        <!-- Animated Cloud Visual -->
+                        <div class="relative w-20 h-20 flex items-center justify-center">
+                            <div
+                                class="absolute inset-0 border-2 border-cyan-500/30 rounded-full animate-[spin_8s_linear_infinite]">
+                            </div>
+                            <div
+                                class="absolute inset-2 border border-cyan-500/20 rounded-full animate-[spin_12s_linear_infinite_reverse]">
+                            </div>
+                            <i
+                                class="fa-solid fa-arrows-rotate text-cyan-400 text-2xl animate-[spin_3s_linear_infinite]"></i>
                         </div>
                     </div>
                 </div>
 
                 <!-- Bento Card: Export -->
-                <div class="reveal bento-card glass-card rounded-[2.5rem] p-10 flex flex-col justify-between group overflow-hidden"
+                <div class="reveal bento-card glass-card rounded-[2.5rem] p-6 flex flex-col justify-between group overflow-hidden border border-white/10 hover:border-green-500/50 transition-all duration-500"
                     style="transition-delay: 0.2s">
-                    <div
-                        class="w-12 h-12 rounded-2xl bg-pink-500/20 flex items-center justify-center text-pink-400 mb-6 border border-pink-500/30">
-                        <i class="fa-solid fa-file-export text-lg"></i>
+
+                    <!-- Mini Excel Visual -->
+                    <div class="absolute -right-6 -top-6 w-32 h-32 bg-green-500/10 rounded-full blur-2xl"></div>
+
+                    <div class="flex flex-col h-full">
+                        <div
+                            class="w-10 h-10 rounded-xl bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center text-white mb-4 shadow-lg shadow-green-500/20">
+                            <i class="fa-solid fa-file-csv text-sm"></i>
+                        </div>
+
+                        <div class="flex-grow mb-4">
+                            <h3 class="text-xl font-bold mb-2 tracking-tight" data-i18n="features.card_export_title">
+                                Excel & CRM Ready</h3>
+                            <p class="text-gray-400 text-xs leading-relaxed font-medium"
+                                data-i18n="features.card_export_desc">
+                                Export your entire scan history to clean Excel spreadsheets or sync directly.</p>
+                        </div>
+
+                        <!-- Spreadsheet CSS Visual -->
+                        <div
+                            class="w-full bg-[#0F172A] border border-white/10 rounded-lg p-2 flex flex-col gap-1 opacity-70 group-hover:opacity-100 transition-opacity">
+                            <div class="flex gap-1">
+                                <div class="h-2 w-1/3 bg-green-500/30 rounded-sm"></div>
+                                <div class="h-2 w-1/3 bg-white/10 rounded-sm"></div>
+                                <div class="h-2 w-1/3 bg-white/10 rounded-sm"></div>
+                            </div>
+                            <div class="flex gap-1">
+                                <div class="h-2 w-1/3 bg-white/10 rounded-sm"></div>
+                                <div class="h-2 w-1/3 bg-white/10 rounded-sm"></div>
+                                <div class="h-2 w-1/3 bg-green-500/30 rounded-sm"></div>
+                            </div>
+                            <div class="flex gap-1">
+                                <div class="h-2 w-1/3 bg-white/10 rounded-sm"></div>
+                                <div class="h-2 w-1/3 bg-white/10 rounded-sm"></div>
+                                <div class="h-2 w-1/3 bg-white/10 rounded-sm"></div>
+                            </div>
+                        </div>
                     </div>
-                    <h3 class="text-xl font-bold mb-3 tracking-tight">Dynamic Export</h3>
-                    <p class="text-gray-400 text-xs leading-relaxed font-medium">Excel, CSV, VCF. One-tap integration
-                        with HubSpot, Salesforce, and Zoho.</p>
                 </div>
 
                 <!-- Bento Card: Smart Tags -->
-                <div class="reveal bento-card glass-card rounded-[2.5rem] p-10 flex flex-col justify-between group overflow-hidden"
+                <div class="reveal bento-card glass-card rounded-[2.5rem] p-6 flex flex-col justify-between group overflow-hidden border border-white/10 hover:border-yellow-500/50 transition-all duration-500"
                     style="transition-delay: 0.3s">
+
                     <div
-                        class="w-12 h-12 rounded-2xl bg-yellow-500/20 flex items-center justify-center text-yellow-400 mb-6 border border-yellow-500/30">
-                        <i class="fa-solid fa-tags text-lg"></i>
+                        class="w-10 h-10 rounded-xl bg-gradient-to-br from-yellow-400 to-orange-500 flex items-center justify-center text-white mb-4 shadow-lg shadow-yellow-500/20">
+                        <i class="fa-solid fa-tags text-sm"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-3 tracking-tight">Smart Labeling</h3>
-                    <p class="text-gray-400 text-xs leading-relaxed font-medium">AI automatically tags contacts based on
-                        event, location, and industry vertical.</p>
+
+                    <div class="mb-auto">
+                        <h3 class="text-xl font-bold mb-2 tracking-tight" data-i18n="features.card_tags_title">Smart
+                            Context</h3>
+                        <p class="text-gray-400 text-xs leading-relaxed font-medium"
+                            data-i18n="features.card_tags_desc">
+                            The AI remembers where and when you met. Auto-tags by location and event.</p>
+                    </div>
+
+                    <!-- Floating Chips Visual -->
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <span
+                            class="px-2 py-1 rounded-md bg-white/5 border border-white/10 text-[10px] text-gray-300 group-hover:border-yellow-500/50 group-hover:text-yellow-400 transition-colors">#CES2026</span>
+                        <span
+                            class="px-2 py-1 rounded-md bg-white/5 border border-white/10 text-[10px] text-gray-300 group-hover:border-cyan-500/50 group-hover:text-cyan-400 transition-colors">#Tech</span>
+                        <span
+                            class="px-2 py-1 rounded-md bg-white/5 border border-white/10 text-[10px] text-gray-300 group-hover:border-purple-500/50 group-hover:text-purple-400 transition-colors">#CEO</span>
+                        <span
+                            class="px-2 py-1 rounded-md bg-white/5 border border-white/10 text-[10px] text-gray-300 group-hover:border-green-500/50 group-hover:text-green-400 transition-colors">#Sales</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section (Google Play Style) -->
+    <section id="reviews" class="py-24 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12 text-center">
+            <h2 class="reveal text-3xl md:text-5xl font-extrabold mb-4 tracking-tight" data-i18n="reviews.title">Loved
+                by Professionals</h2>
+            <div class="reveal flex items-center justify-center gap-2 text-yellow-400 text-xl"
+                style="transition-delay: 0.2s">
+                <span class="text-white font-bold text-2xl mr-2">4.9</span>
+                <div class="flex gap-1 animate-star-pulse">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="reveal relative w-full overflow-hidden" style="transition-delay: 0.4s">
+            <div class="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-[#030014] to-transparent z-10"></div>
+            <div class="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-[#030014] to-transparent z-10"></div>
+
+            <div class="flex gap-6 animate-scroll-left w-max hover:pause px-4">
+                <!-- Set 1 -->
+                <!-- Review 1 -->
+                <div class="reveal w-[350px] md:w-[400px] bg-[#0f0b1f] border border-white/10 rounded-3xl p-6 flex flex-col gap-4 shrink-0 hover:border-cyan-500/30 transition-colors"
+                    style="transition-delay: 0.1s">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-3">
+                            <img src="https://api.dicebear.com/9.x/avataaars/svg?seed=Sarah"
+                                class="w-10 h-10 rounded-full bg-purple-500/20">
+                            <span class="font-bold text-white">Sarah Jenkins</span>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-2 text-xs text-gray-400">
+                        <div class="flex text-yellow-400 text-[10px] gap-0.5">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i>
+                        </div>
+                        <span>•</span>
+                        <span data-i18n="reviews.time_2d">2 days ago</span>
+                    </div>
+                    <p class="text-gray-300 text-sm leading-relaxed" data-i18n="reviews.comment_1">"I've tried every
+                        scanner app. This is the only one
+                        that gets the text right 100% of the time, even with fancy fonts. The Excel export is a
+                        lifesaver
+                        for my sales team."</p>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="reveal w-[350px] md:w-[400px] bg-[#0f0b1f] border border-white/10 rounded-3xl p-6 flex flex-col gap-4 shrink-0 hover:border-cyan-500/30 transition-colors"
+                    style="transition-delay: 0.1s">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-3">
+                            <img src="https://api.dicebear.com/9.x/avataaars/svg?seed=Felix"
+                                class="w-10 h-10 rounded-full bg-cyan-500/20">
+                            <span class="font-bold text-white">David Chen</span>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-2 text-xs text-gray-400">
+                        <div class="flex text-yellow-400 text-[10px] gap-0.5">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i>
+                        </div>
+                        <span>•</span>
+                        <span data-i18n="reviews.time_1w">1 week ago</span>
+                    </div>
+                    <p class="text-gray-300 text-sm leading-relaxed" data-i18n="reviews.comment_2">"The auto-sync to
+                        Google Contacts is instant. I
+                        scan a card at a conference and it's on my phone before I even walk away. Incredible speed."</p>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="reveal w-[350px] md:w-[400px] bg-[#0f0b1f] border border-white/10 rounded-3xl p-6 flex flex-col gap-4 shrink-0 hover:border-cyan-500/30 transition-colors"
+                    style="transition-delay: 0.1s">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-3">
+                            <img src="https://api.dicebear.com/9.x/avataaars/svg?seed=Michael"
+                                class="w-10 h-10 rounded-full bg-pink-500/20">
+                            <span class="font-bold text-white">Michael Ross</span>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-2 text-xs text-gray-400">
+                        <div class="flex text-yellow-400 text-[10px] gap-0.5">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i>
+                        </div>
+                        <span>•</span>
+                        <span data-i18n="reviews.time_3w">3 weeks ago</span>
+                    </div>
+                    <p class="text-gray-300 text-sm leading-relaxed" data-i18n="reviews.comment_3">"Worth every penny
+                        for the premium version. The
+                        ability to scan batches of cards and have them sorted automatically is a game changer."</p>
+                </div>
+
+                <!-- Review 4 -->
+                <div class="reveal w-[350px] md:w-[400px] bg-[#0f0b1f] border border-white/10 rounded-3xl p-6 flex flex-col gap-4 shrink-0 hover:border-cyan-500/30 transition-colors"
+                    style="transition-delay: 0.1s">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-3">
+                            <img src="https://api.dicebear.com/9.x/avataaars/svg?seed=Emma"
+                                class="w-10 h-10 rounded-full bg-green-500/20">
+                            <span class="font-bold text-white">Emma Wilson</span>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-2 text-xs text-gray-400">
+                        <div class="flex text-yellow-400 text-[10px] gap-0.5">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i>
+                        </div>
+                        <span>•</span>
+                        <span data-i18n="reviews.time_1m">1 month ago</span>
+                    </div>
+                    <p class="text-gray-300 text-sm leading-relaxed" data-i18n="reviews.comment_4">"Simple, clean, and
+                        fast. Does exactly what it
+                        promises without any bloat. The dark mode UI is also very sleek."</p>
+                </div>
+
+                <!-- Set 2 (Duplicate for Seamless Loop) -->
+                <!-- Review 1 -->
+                <div class="reveal w-[350px] md:w-[400px] bg-[#0f0b1f] border border-white/10 rounded-3xl p-6 flex flex-col gap-4 shrink-0 hover:border-cyan-500/30 transition-colors"
+                    style="transition-delay: 0.1s">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-3">
+                            <img src="https://api.dicebear.com/9.x/avataaars/svg?seed=Sarah"
+                                class="w-10 h-10 rounded-full bg-purple-500/20">
+                            <span class="font-bold text-white">Sarah Jenkins</span>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-2 text-xs text-gray-400">
+                        <div class="flex text-yellow-400 text-[10px] gap-0.5">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i>
+                        </div>
+                        <span>•</span>
+                        <span data-i18n="reviews.time_2d">2 days ago</span>
+                    </div>
+                    <p class="text-gray-300 text-sm leading-relaxed" data-i18n="reviews.comment_1">"I've tried every
+                        scanner app. This is the only one
+                        that gets the text right 100% of the time, even with fancy fonts. The Excel export is a
+                        lifesaver
+                        for my sales team."</p>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="reveal w-[350px] md:w-[400px] bg-[#0f0b1f] border border-white/10 rounded-3xl p-6 flex flex-col gap-4 shrink-0 hover:border-cyan-500/30 transition-colors"
+                    style="transition-delay: 0.1s">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-3">
+                            <img src="https://api.dicebear.com/9.x/avataaars/svg?seed=Felix"
+                                class="w-10 h-10 rounded-full bg-cyan-500/20">
+                            <span class="font-bold text-white">David Chen</span>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-2 text-xs text-gray-400">
+                        <div class="flex text-yellow-400 text-[10px] gap-0.5">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i>
+                        </div>
+                        <span>•</span>
+                        <span data-i18n="reviews.time_1w">1 week ago</span>
+                    </div>
+                    <p class="text-gray-300 text-sm leading-relaxed" data-i18n="reviews.comment_2">"The auto-sync to
+                        Google Contacts is instant. I
+                        scan a card at a conference and it's on my phone before I even walk away. Incredible speed."</p>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="reveal w-[350px] md:w-[400px] bg-[#0f0b1f] border border-white/10 rounded-3xl p-6 flex flex-col gap-4 shrink-0 hover:border-cyan-500/30 transition-colors"
+                    style="transition-delay: 0.1s">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-3">
+                            <img src="https://api.dicebear.com/9.x/avataaars/svg?seed=Michael"
+                                class="w-10 h-10 rounded-full bg-pink-500/20">
+                            <span class="font-bold text-white">Michael Ross</span>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-2 text-xs text-gray-400">
+                        <div class="flex text-yellow-400 text-[10px] gap-0.5">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i>
+                        </div>
+                        <span>•</span>
+                        <span data-i18n="reviews.time_3w">3 weeks ago</span>
+                    </div>
+                    <p class="text-gray-300 text-sm leading-relaxed" data-i18n="reviews.comment_3">"Worth every penny
+                        for the premium version. The
+                        ability to scan batches of cards and have them sorted automatically is a game changer."</p>
+                </div>
+
+                <!-- Review 4 -->
+                <div class="reveal w-[350px] md:w-[400px] bg-[#0f0b1f] border border-white/10 rounded-3xl p-6 flex flex-col gap-4 shrink-0 hover:border-cyan-500/30 transition-colors"
+                    style="transition-delay: 0.1s">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-3">
+                            <img src="https://api.dicebear.com/9.x/avataaars/svg?seed=Emma"
+                                class="w-10 h-10 rounded-full bg-green-500/20">
+                            <span class="font-bold text-white">Emma Wilson</span>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-2 text-xs text-gray-400">
+                        <div class="flex text-yellow-400 text-[10px] gap-0.5">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i>
+                        </div>
+                        <span>•</span>
+                        <span data-i18n="reviews.time_1m">1 month ago</span>
+                    </div>
+                    <p class="text-gray-300 text-sm leading-relaxed" data-i18n="reviews.comment_4">"Simple, clean, and
+                        fast. Does exactly what it
+                        promises without any bloat. The dark mode UI is also very sleek."</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Pricing -->
-    <section id="pricing" class="pt-12 pb-32 relative overflow-hidden">
+    <section id="pricing" class="pt-32 pb-32 relative overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-24">
+            <div class="text-center mb-12">
                 <h2 class="reveal text-4xl md:text-6xl font-extrabold mb-12 tracking-tight" data-i18n="pricing.title">
                     Pricing</h2>
 
@@ -494,7 +1051,7 @@
                             <!-- Starter Column -->
                             <div
                                 class="p-10 text-center border-x border-white/5 overflow-visible flex flex-col items-center justify-center">
-                                <div class="text-[10px] font-bold tracking-[0.3em] uppercase text-cyan-400/80 mb-4"
+                                <div class="text-xs font-black tracking-[0.3em] uppercase text-cyan-400/80 mb-4"
                                     data-i18n="pricing.col_starter">
                                     Starter</div>
                                 <div class="text-5xl md:text-6xl font-extrabold text-white tracking-tight"
@@ -507,11 +1064,11 @@
                                 <div
                                     class="absolute top-0 right-0 left-0 h-1.5 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500">
                                 </div>
-                                <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-gradient-to-r from-cyan-400 to-purple-500 text-white text-[9px] font-black uppercase tracking-widest px-3 py-1 rounded-full shadow-[0_0_15px_rgba(168,85,247,0.5)] z-10 whitespace-nowrap"
+                                <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-gradient-to-r from-cyan-400 to-purple-500 text-white text-xs font-black uppercase tracking-widest px-3 py-1 rounded-full shadow-[0_0_15px_rgba(168,85,247,0.5)] z-10 whitespace-nowrap"
                                     data-i18n="pricing.badge_recommended">
                                     Recommended
                                 </div>
-                                <div class="text-[10px] font-bold tracking-[0.3em] uppercase text-purple-400/80 mb-4"
+                                <div class="text-xs font-black tracking-[0.3em] uppercase text-purple-400/80 mb-4"
                                     data-i18n="pricing.col_premium">
                                     Premium</div>
                                 <div class="flex items-center justify-center gap-2 relative overflow-visible">
@@ -522,7 +1079,7 @@
                                     </span>
                                     <div class="flex flex-col items-start justify-end ml-1">
                                         <span id="premium-currency"
-                                            class="text-[10px] text-purple-400 font-bold uppercase tracking-widest leading-none mb-1">USD</span>
+                                            class="hidden text-[10px] text-purple-400 font-bold uppercase tracking-widest leading-none mb-1">USD</span>
                                         <span id="premium-suffix"
                                             class="text-[10px] text-gray-500 font-bold uppercase tracking-widest leading-none">/mo</span>
                                     </div>
@@ -533,7 +1090,7 @@
 
                         <div class="divide-y divide-white/5">
                             <div class="grid grid-cols-3 hover:bg-white/5 transition-colors items-center">
-                                <div class="p-6 text-sm font-medium text-gray-300"
+                                <div class="p-6 text-base font-semibold text-white/90"
                                     data-i18n="pricing.feat_smart_search">Smart Search</div>
                                 <div class="p-6 text-center text-cyan-400 border-x border-white/5"><i
                                         class="fa-solid fa-check"></i></div>
@@ -541,7 +1098,8 @@
                                         class="fa-solid fa-check"></i></div>
                             </div>
                             <div class="grid grid-cols-3 hover:bg-white/5 transition-colors items-center">
-                                <div class="p-6 text-sm font-medium text-gray-300" data-i18n="pricing.feat_custom_tags">
+                                <div class="p-6 text-base font-semibold text-white/90"
+                                    data-i18n="pricing.feat_custom_tags">
                                     Custom Tags & Categories</div>
                                 <div class="p-6 text-center text-cyan-400 border-x border-white/5"><i
                                         class="fa-solid fa-check"></i></div>
@@ -549,7 +1107,7 @@
                                         class="fa-solid fa-check"></i></div>
                             </div>
                             <div class="grid grid-cols-3 hover:bg-white/5 transition-colors items-center">
-                                <div class="p-6 text-sm font-medium text-gray-300"
+                                <div class="p-6 text-base font-semibold text-white/90"
                                     data-i18n="pricing.feat_digital_profile">Digital Card Profile</div>
                                 <div class="p-6 text-center text-cyan-400 border-x border-white/5"><i
                                         class="fa-solid fa-check"></i></div>
@@ -557,7 +1115,8 @@
                                         class="fa-solid fa-check"></i></div>
                             </div>
                             <div class="grid grid-cols-3 hover:bg-white/5 transition-colors items-center">
-                                <div class="p-6 text-sm font-medium text-gray-300" data-i18n="pricing.feat_manual_sync">
+                                <div class="p-6 text-base font-semibold text-white/90"
+                                    data-i18n="pricing.feat_manual_sync">
                                     Manual Sync (Google/Outlook)</div>
                                 <div class="p-6 text-center text-cyan-400 border-x border-white/5"><i
                                         class="fa-solid fa-check"></i></div>
@@ -565,7 +1124,7 @@
                                         class="fa-solid fa-check"></i></div>
                             </div>
                             <div class="grid grid-cols-3 hover:bg-white/5 transition-colors items-center">
-                                <div class="p-6 text-sm font-medium text-gray-300"
+                                <div class="p-6 text-base font-semibold text-white/90"
                                     data-i18n="pricing.feat_cloud_backup">Cloud Backup & Restore</div>
                                 <div class="p-6 text-center text-cyan-400 border-x border-white/5"><i
                                         class="fa-solid fa-check"></i></div>
@@ -576,14 +1135,15 @@
 
                         <div class="bg-purple-500/5 px-8 py-4 border-y border-white/5 flex items-center gap-2">
                             <i class="fa-solid fa-bolt-lightning text-[10px] text-purple-400"></i>
-                            <span class="text-[10px] font-black uppercase tracking-[0.3em] text-purple-400/70"
+                            <span class="text-xs font-black uppercase tracking-[0.3em] text-purple-400/70"
                                 data-i18n="pricing.premium_power">Premium
                                 Power</span>
                         </div>
 
                         <div class="divide-y divide-white/5">
                             <div class="grid grid-cols-3 hover:bg-white/5 transition-colors items-center">
-                                <div class="p-6 text-sm font-medium text-gray-300" data-i18n="pricing.feat_ai_scanning">
+                                <div class="p-6 text-base font-semibold text-white/90"
+                                    data-i18n="pricing.feat_ai_scanning">
                                     AI-Powered Scanning</div>
                                 <div class="p-6 text-center text-xs font-bold text-gray-500 border-x border-white/5"
                                     data-i18n="pricing.limit_30">30
@@ -593,7 +1153,8 @@
                                     month</div>
                             </div>
                             <div class="grid grid-cols-3 hover:bg-white/5 transition-colors items-center">
-                                <div class="p-6 text-sm font-medium text-gray-300" data-i18n="pricing.feat_storage">Card
+                                <div class="p-6 text-base font-semibold text-white/90" data-i18n="pricing.feat_storage">
+                                    Card
                                     Storage Capacity</div>
                                 <div class="p-6 text-center text-xs font-bold text-gray-500 border-x border-white/5"
                                     data-i18n="pricing.limit_50">50
@@ -603,7 +1164,8 @@
                                 </div>
                             </div>
                             <div class="grid grid-cols-3 hover:bg-white/5 transition-colors items-center">
-                                <div class="p-6 text-sm font-medium text-gray-300" data-i18n="pricing.feat_favorites">
+                                <div class="p-6 text-base font-semibold text-white/90"
+                                    data-i18n="pricing.feat_favorites">
                                     Favorites / Pinned Cards</div>
                                 <div class="p-6 text-center text-xs font-bold text-gray-500 border-x border-white/5"
                                     data-i18n="pricing.limit_max5">Max
@@ -613,7 +1175,7 @@
                                 </div>
                             </div>
                             <div class="grid grid-cols-3 hover:bg-white/5 transition-colors items-center">
-                                <div class="p-6 text-sm font-medium text-gray-300" data-i18n="pricing.feat_export">
+                                <div class="p-6 text-base font-semibold text-white/90" data-i18n="pricing.feat_export">
                                     Export to Excel / CSV</div>
                                 <div class="p-6 text-center text-gray-800 border-x border-white/5"><i
                                         class="fa-solid fa-xmark"></i></div>
@@ -621,7 +1183,8 @@
                                         class="fa-solid fa-check"></i></div>
                             </div>
                             <div class="grid grid-cols-3 hover:bg-white/5 transition-colors items-center">
-                                <div class="p-6 text-sm font-medium text-gray-300" data-i18n="pricing.feat_auto_sync">
+                                <div class="p-6 text-base font-semibold text-white/90"
+                                    data-i18n="pricing.feat_auto_sync">
                                     Real-time Auto Sync</div>
                                 <div class="p-6 text-center text-gray-800 border-x border-white/5"><i
                                         class="fa-solid fa-xmark"></i></div>
@@ -629,7 +1192,7 @@
                                         class="fa-solid fa-check"></i></div>
                             </div>
                             <div class="grid grid-cols-3 hover:bg-white/5 transition-colors items-center">
-                                <div class="p-6 text-sm font-medium text-gray-300" data-i18n="pricing.feat_ad_free">
+                                <div class="p-6 text-base font-semibold text-white/90" data-i18n="pricing.feat_ad_free">
                                     Ad-Free Experience</div>
                                 <div class="p-6 text-center text-gray-800 border-x border-white/5"><i
                                         class="fa-solid fa-xmark"></i></div>
@@ -637,7 +1200,8 @@
                                         class="fa-solid fa-check"></i></div>
                             </div>
                             <div class="grid grid-cols-3 hover:bg-white/5 transition-colors items-center">
-                                <div class="p-6 text-sm font-medium text-gray-300" data-i18n="pricing.feat_quick_save">
+                                <div class="p-6 text-base font-semibold text-white/90"
+                                    data-i18n="pricing.feat_quick_save">
                                     Instant "Quick-Save" Mode</div>
                                 <div class="p-6 text-center text-gray-800 border-x border-white/5"><i
                                         class="fa-solid fa-xmark"></i></div>
@@ -645,16 +1209,8 @@
                                         class="fa-solid fa-check"></i></div>
                             </div>
                             <div class="grid grid-cols-3 hover:bg-white/5 transition-colors">
-                                <div class="p-6 text-sm font-medium text-gray-300"
+                                <div class="p-6 text-base font-semibold text-white/90"
                                     data-i18n="pricing.feat_profile_share">Profile Sharing via QR</div>
-                                <div class="p-6 text-center text-gray-700 border-x border-white/5"><i
-                                        class="fa-solid fa-xmark"></i></div>
-                                <div class="p-6 text-center text-purple-400 bg-purple-500/[0.02]"><i
-                                        class="fa-solid fa-check"></i></div>
-                            </div>
-                            <div class="grid grid-cols-3 hover:bg-white/5 transition-colors border-b-0 items-center">
-                                <div class="p-6 text-sm font-medium text-gray-300" data-i18n="pricing.feat_custom_qr">
-                                    Custom QR Styling</div>
                                 <div class="p-6 text-center text-gray-700 border-x border-white/5"><i
                                         class="fa-solid fa-xmark"></i></div>
                                 <div class="p-6 text-center text-purple-400 bg-purple-500/[0.02]"><i
@@ -668,70 +1224,9 @@
     </section>
 
     <!-- Footer -->
-    <footer class="border-t border-white/5 bg-black/50 backdrop-blur-2xl pt-24 pb-12">
+    <footer class="border-t border-white/5 bg-black/50 backdrop-blur-2xl py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-20">
-                <div class="col-span-1 md:col-span-1">
-                    <div class="flex items-center gap-3 mb-6">
-                        <img src="logo-web.png" alt="AI Business Card Scan Logo" class="w-8 h-8 object-contain">
-                        <span class="font-bold text-2xl tracking-tight text-white whitespace-nowrap">
-                            <span class="text-cyan-400">A</span>I
-                            <span class="text-cyan-400 ml-1">B</span>usiness
-                            <span class="text-cyan-400 ml-1">C</span>ard
-                            <span class="text-cyan-400 ml-1">Scan</span>
-                        </span>
-                    </div>
-                    <p class="text-gray-500 text-sm leading-relaxed font-medium" data-i18n="footer.tagline">Building the
-                        memory
-                        layer for your
-                        professional relationships.</p>
-                </div>
-                <div>
-                    <h4 class="font-black text-white mb-6 text-xs uppercase tracking-[0.3em]"
-                        data-i18n="footer.col_product">Product
-                    </h4>
-                    <ul class="space-y-4 text-sm text-gray-500 font-bold uppercase tracking-widest text-[10px]">
-                        <li><a href="#" class="hover:text-cyan-400 transition-colors"
-                                data-i18n="footer.link_features">Features</a></li>
-                        <li><a href="#" class="hover:text-cyan-400 transition-colors"
-                                data-i18n="footer.link_security">Security</a></li>
-                        <li><a href="#" class="hover:text-cyan-400 transition-colors"
-                                data-i18n="footer.link_enterprise">Enterprise</a>
-                        </li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-black text-white mb-6 text-xs uppercase tracking-[0.3em]"
-                        data-i18n="footer.col_company">Company
-                    </h4>
-                    <ul class="space-y-4 text-sm text-gray-500 font-bold uppercase tracking-widest text-[10px]">
-                        <li><a href="#" class="hover:text-cyan-400 transition-colors" data-i18n="footer.link_story">Our
-                                Story</a></li>
-                        <li><a href="#" class="hover:text-cyan-400 transition-colors"
-                                data-i18n="footer.link_careers">Careers</a></li>
-                        <li><a href="mailto:simplejoyfuljourney@gmail.com" class="hover:text-cyan-400 transition-colors"
-                                data-i18n="footer.link_contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-black text-white mb-6 text-xs uppercase tracking-[0.3em]"
-                        data-i18n="footer.col_social">Social
-                    </h4>
-                    <div class="flex gap-5">
-                        <a href="#"
-                            class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:border-white/40 transition-colors"><i
-                                class="fa-brands fa-twitter"></i></a>
-                        <a href="#"
-                            class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:border-white/40 transition-colors"><i
-                                class="fa-brands fa-linkedin-in"></i></a>
-                        <a href="#"
-                            class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:border-white/40 transition-colors"><i
-                                class="fa-brands fa-github"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div
-                class="border-t border-white/5 pt-10 text-center text-[10px] text-gray-600 uppercase font-black tracking-[0.4em]">
+            <div class="text-center text-[10px] text-gray-600 uppercase font-black tracking-[0.4em]">
                 <span data-i18n="footer.copyright">&copy; 2026 ABC Scan All rights reserved.</span>
             </div>
         </div>
@@ -744,37 +1239,66 @@
     <div id="lang-drawer"
         class="fixed top-0 right-0 h-full w-80 bg-[#030014] border-l border-white/10 shadow-2xl z-50 transform translate-x-full transition-transform duration-300 ease-in-out p-8 flex flex-col">
         <div class="flex items-center justify-between mb-10">
-            <h3 class="text-xl font-bold tracking-tight text-white">Select Language</h3>
+            <h3 class="text-xl font-bold tracking-tight text-white" data-i18n="lang.title">Select Language</h3>
             <button onclick="closeLanguageDrawer()" class="text-gray-400 hover:text-white transition-colors">
                 <i class="fa-solid fa-xmark text-xl"></i>
             </button>
         </div>
 
-        <div class="space-y-4 flex-1">
+        <div class="space-y-1.5 flex-1 overflow-y-auto pr-2 custom-scrollbar">
             <button onclick="switchLanguage('en')"
                 class="lang-option w-full group flex items-center justify-between p-4 rounded-2xl border border-transparent hover:border-white/10 hover:bg-white/5 transition-all"
                 data-lang="en">
                 <span class="font-bold text-gray-300 group-hover:text-white">English</span>
-                <span
-                    class="text-xs font-black uppercase tracking-widest text-gray-600 group-hover:text-cyan-400">US/UK</span>
             </button>
             <button onclick="switchLanguage('zh-TW')"
                 class="lang-option w-full group flex items-center justify-between p-4 rounded-2xl border border-transparent hover:border-white/10 hover:bg-white/5 transition-all"
                 data-lang="zh-TW">
                 <span class="font-bold text-gray-300 group-hover:text-white">繁體中文</span>
-                <span
-                    class="text-xs font-black uppercase tracking-widest text-gray-600 group-hover:text-cyan-400">TW/HK</span>
             </button>
             <button onclick="switchLanguage('es')"
                 class="lang-option w-full group flex items-center justify-between p-4 rounded-2xl border border-transparent hover:border-white/10 hover:bg-white/5 transition-all"
                 data-lang="es">
                 <span class="font-bold text-gray-300 group-hover:text-white">Español</span>
-                <span
-                    class="text-xs font-black uppercase tracking-widest text-gray-600 group-hover:text-cyan-400">ES/LATAM</span>
+            </button>
+            <button onclick="switchLanguage('ar')"
+                class="lang-option w-full group flex items-center justify-between p-4 rounded-2xl border border-transparent hover:border-white/10 hover:bg-white/5 transition-all"
+                data-lang="ar">
+                <span class="font-bold text-gray-300 group-hover:text-white">العربية</span>
+            </button>
+            <button onclick="switchLanguage('de')"
+                class="lang-option w-full group flex items-center justify-between p-4 rounded-2xl border border-transparent hover:border-white/10 hover:bg-white/5 transition-all"
+                data-lang="de">
+                <span class="font-bold text-gray-300 group-hover:text-white">Deutsch</span>
+            </button>
+            <button onclick="switchLanguage('fr')"
+                class="lang-option w-full group flex items-center justify-between p-4 rounded-2xl border border-transparent hover:border-white/10 hover:bg-white/5 transition-all"
+                data-lang="fr">
+                <span class="font-bold text-gray-300 group-hover:text-white">Français</span>
+            </button>
+            <button onclick="switchLanguage('hi')"
+                class="lang-option w-full group flex items-center justify-between p-4 rounded-2xl border border-transparent hover:border-white/10 hover:bg-white/5 transition-all"
+                data-lang="hi">
+                <span class="font-bold text-gray-300 group-hover:text-white">हिन्दी</span>
+            </button>
+            <button onclick="switchLanguage('ja')"
+                class="lang-option w-full group flex items-center justify-between p-4 rounded-2xl border border-transparent hover:border-white/10 hover:bg-white/5 transition-all"
+                data-lang="ja">
+                <span class="font-bold text-gray-300 group-hover:text-white">日本語</span>
+            </button>
+            <button onclick="switchLanguage('ko')"
+                class="lang-option w-full group flex items-center justify-between p-4 rounded-2xl border border-transparent hover:border-white/10 hover:bg-white/5 transition-all"
+                data-lang="ko">
+                <span class="font-bold text-gray-300 group-hover:text-white">한국어</span>
+            </button>
+            <button onclick="switchLanguage('pt')"
+                class="lang-option w-full group flex items-center justify-between p-4 rounded-2xl border border-transparent hover:border-white/10 hover:bg-white/5 transition-all"
+                data-lang="pt">
+                <span class="font-bold text-gray-300 group-hover:text-white">Português</span>
             </button>
         </div>
 
-        <div class="text-center text-xs text-gray-600 mt-8 font-medium">
+        <div class="text-center text-xs text-gray-600 mt-8 font-medium" data-i18n="lang.auto_detected">
             Auto-detected based on your location
         </div>
     </div>

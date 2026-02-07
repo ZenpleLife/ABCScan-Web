@@ -148,20 +148,24 @@ async function syncPricing() {
         if (priceData) {
             // Apply HTML formatting for the symbol to make it centered/professional
             const formatPrice = (symbol, amount) => {
-                return `<span class="flex items-center"><span class="text-2xl lg:text-3xl mr-1.5 opacity-80 font-bold">${symbol}</span>${amount}</span>`;
+                const cleanSymbol = symbol.replace(/[A-Z]/g, '').trim();
+                return `<span class="flex items-center"><span class="text-2xl lg:text-3xl mr-1.5 opacity-80 font-bold">${cleanSymbol}</span>${amount}</span>`;
             };
+
+            const lang = document.documentElement.lang || 'en';
+            const t = translations[lang].pricing;
 
             CURRENT_PRICING = {
                 monthly: {
-                    starter: "Free",
+                    starter: t.price_free || "Free",
                     premium: formatPrice(priceData.symbol, priceData.monthly),
-                    premiumSuffix: "/mo",
+                    premiumSuffix: t.price_mo || "/mo",
                     currency: priceData.currency
                 },
                 yearly: {
-                    starter: "Free",
+                    starter: t.price_free || "Free",
                     premium: formatPrice(priceData.symbol, priceData.yearly),
-                    premiumSuffix: "/yr",
+                    premiumSuffix: t.price_yr || "/yr",
                     currency: priceData.currency
                 }
             };
