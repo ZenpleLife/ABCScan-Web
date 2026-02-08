@@ -257,7 +257,7 @@ const translations = {
         features: {
             title: "將名片轉化為 <br><span class='text-gradient-primary'>業務增長</span>",
             subtitle: "使用 AI 技術的高精度掃描。消除手動輸入並即時匯出至 Excel/Google。",
-            card_ocr_title: "我們利用 AI 技術讀取跟真人判別一樣",
+            card_ocr_title: "AI 讀取跟真人判別一樣",
             card_ocr_desc: "第一次就正確捕捉細節。AI 理解特殊佈局和獨特字體，幾乎無需手動編輯。",
             card_sync_title: "絕不錯過潛在客戶",
             card_sync_desc: "您的連結會立即備份並加密。手機丟了？您的人脈網在網路上安全地等著您。",
@@ -1162,4 +1162,3 @@ const translations = {
         }
     }
 };
-2026-02-07 22:36:12

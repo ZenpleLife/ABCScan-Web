@@ -13,13 +13,13 @@ const GOOGLE_SHEET_URL = 'https://docs.google.com/spreadsheets/d/1AyiDa-n35NMu_8
 let CURRENT_PRICING = {
     monthly: {
         starter: "Free",
-        premium: `<span class="flex items-center"><span class="text-2xl lg:text-3xl mr-1.5 opacity-80 font-bold">$</span>4.99</span>`,
+        premium: `<span class="flex items-center justify-center"><span class="text-2xl lg:text-3xl mr-1.5 opacity-80 font-bold">$</span>4.99</span>`, // Default fallback price
         premiumSuffix: "/mo",
         currency: "USD"
     },
     yearly: {
         starter: "Free",
-        premium: `<span class="flex items-center"><span class="text-2xl lg:text-3xl mr-1.5 opacity-80 font-bold">$</span>39.99</span>`,
+        premium: `<span class="flex items-center justify-center"><span class="text-2xl lg:text-3xl mr-1.5 opacity-80 font-bold">$</span>39.99</span>`, // Default fallback price
         premiumSuffix: "/yr",
         currency: "USD"
     }
@@ -90,8 +90,8 @@ function fetchPriceRowJSONP(sheetId, countryCode) {
             // Extract values: B=Monthly, C=Yearly, D=Symbol, E=CurrencyUnit
             const row = data.table.rows[0].c;
             resolve({
-                monthly: row[0]?.v || 9.99,
-                yearly: row[1]?.v || 89.99,
+                monthly: row[0]?.v || 4.99,
+                yearly: row[1]?.v || 39.99,
                 symbol: row[2]?.v || '$',
                 currency: row[3]?.v || 'USD' // Column E
             });
@@ -149,23 +149,23 @@ async function syncPricing() {
             // Apply HTML formatting for the symbol to make it centered/professional
             const formatPrice = (symbol, amount) => {
                 const cleanSymbol = symbol.replace(/[A-Z]/g, '').trim();
-                return `<span class="flex items-center"><span class="text-2xl lg:text-3xl mr-1.5 opacity-80 font-bold">${cleanSymbol}</span>${amount}</span>`;
+                return `<span class="flex items-center justify-center"><span class="text-2xl lg:text-3xl mr-1.5 opacity-80 font-bold">${cleanSymbol}</span>${amount}</span>`;
             };
 
             const lang = document.documentElement.lang || 'en';
-            const t = translations[lang].pricing;
+            const pricingTranslations = (typeof translations !== 'undefined' && translations[lang]) ? translations[lang].pricing : {};
 
             CURRENT_PRICING = {
                 monthly: {
-                    starter: t.price_free || "Free",
+                    starter: pricingTranslations.price_free || "Free",
                     premium: formatPrice(priceData.symbol, priceData.monthly),
-                    premiumSuffix: t.price_mo || "/mo",
+                    premiumSuffix: pricingTranslations.price_mo || "/mo",
                     currency: priceData.currency
                 },
                 yearly: {
-                    starter: t.price_free || "Free",
+                    starter: pricingTranslations.price_free || "Free",
                     premium: formatPrice(priceData.symbol, priceData.yearly),
-                    premiumSuffix: t.price_yr || "/yr",
+                    premiumSuffix: pricingTranslations.price_yr || "/yr",
                     currency: priceData.currency
                 }
             };
