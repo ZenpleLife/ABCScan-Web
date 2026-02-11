@@ -1,0 +1,24 @@
+
+-------------------------------------------------------------------------------
+   ROBOCOPY     ::     Robust File Copy for Windows                              
+-------------------------------------------------------------------------------
+
+  Started : Monday, February 9, 2026 10:48:03 AM
+   Source : C:\Users\rad80\My Drive\Eddie\APP\ABC Scan\ABC Scan_Web\ABCScan-Web\
+     Dest : C:\Users\rad80\Desktop\ABCScan-Web\
+
+    Files : *.*
+	    
+  Options : *.* /V /TEE /S /E /DCOPY:DA /COPY:DAT /MOVE /R:1000000 /W:30 
+
+------------------------------------------------------------------------------
+
+	  New Dir         11	C:\Users\rad80\My Drive\Eddie\APP\ABC Scan\ABC Scan_Web\ABCScan-Web\
+	    New File  		      39	.gitignore100%  
+	    New File  		      58	app-ads.txt100%  
+	    New File  		      22	CNAME100%  
+	    New File  		    4904	google-play-badge.png100%  
+	    New File  		    6810	i18n-manager.js100%  
+	    New File  		   78548	index.html100%  
+	    New File  		   3.2 m	logo-web.png 30%   61%   91%  100%  
+	    New File  		       0	move_log.txt

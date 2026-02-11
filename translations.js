@@ -4,7 +4,8 @@ const translations = {
             features: "Intelligence",
             reviews: "Reviews",
             pricing: "Pricing",
-            contact: "Contact"
+            contact: "Contact",
+            privacy: "Privacy Policy"
         },
         hero: {
             badge: "AI-Powered Accuracy",
@@ -122,7 +123,8 @@ const translations = {
             features: "Inteligencia",
             reviews: "Reseñas",
             pricing: "Precios",
-            contact: "Contacto"
+            contact: "Contacto",
+            privacy: "Política de Privacidad"
         },
         hero: {
             badge: "Precisión Impulsada por IA",
@@ -238,7 +240,8 @@ const translations = {
             features: "AI 智慧",
             reviews: "用戶評價",
             pricing: "價格方案",
-            contact: "聯絡我們"
+            contact: "聯絡我們",
+            privacy: "隱私政策"
         },
         hero: {
             badge: "導入 AI 的精準技術",
@@ -354,7 +357,8 @@ const translations = {
             features: "الذكاء",
             reviews: "الآراء",
             pricing: "الأسعار",
-            contact: "اتصل بنا"
+            contact: "اتصل بنا",
+            privacy: "سياسة الخصوصية"
         },
         hero: {
             badge: "دقة مدعومة بالذكاء الاصطناعي",
@@ -470,7 +474,8 @@ const translations = {
             features: "Intelligenz",
             reviews: "Bewertungen",
             pricing: "Preise",
-            contact: "Kontakt"
+            contact: "Kontakt",
+            privacy: "Datenschutzerklärung"
         },
         hero: {
             badge: "KI-gestützte Genauigkeit",
@@ -586,7 +591,8 @@ const translations = {
             features: "Intelligence",
             reviews: "Avis",
             pricing: "Tarifs",
-            contact: "Contact"
+            contact: "Contact",
+            privacy: "Politique de Confidentialité"
         },
         hero: {
             badge: "Précision alimentée par l'IA",
@@ -702,7 +708,8 @@ const translations = {
             features: "बुद्धिमत्ता",
             reviews: "समीक्षाएँ",
             pricing: "मूल्य निर्धारण",
-            contact: "संपर्क"
+            contact: "संपर्क",
+            privacy: "गोपनीयता नीति"
         },
         hero: {
             badge: "AI द्वारा संचालित सटीकता",

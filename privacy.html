@@ -5,12 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy | AI Business Card Scan</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Urbanist: The single source of truth for all typography -->
     <link
         href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap"
         rel="stylesheet">
     <link rel="icon" type="image/png" href="logo-web.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Internationalization -->
+    <script src="translations.js"></script>
+    <script src="privacy-translations.js"></script>
+
+    <!-- Dynamic Pricing Sync -->
+    <script src="pricing-sync.js"></script>
+    <script src="i18n-manager.js"></script>
 
     <script>
         tailwind.config = {
@@ -52,8 +61,20 @@
         }
     </script>
     <style>
-        * {
-            font-family: 'Urbanist', sans-serif !important;
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        span,
+        a,
+        button,
+        input,
+        div {
+            font-family: 'Urbanist', sans-serif;
         }
 
         body {
@@ -104,20 +125,21 @@
             background-image: linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
                 linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
         }
-        
+
         /* Privacy specific styling */
         .policy-content p {
             margin-bottom: 1.5rem;
             line-height: 1.8;
-            color: #9ca3af; /* text-gray-400 */
+            color: #9ca3af;
+            /* text-gray-400 */
         }
-        
+
         .policy-content ul {
             margin-bottom: 1.5rem;
             list-style-type: none;
             padding-left: 0;
         }
-        
+
         .policy-content li {
             margin-bottom: 0.75rem;
             color: #9ca3af;
@@ -127,20 +149,22 @@
         }
 
         .policy-content li::before {
-            content: "\f00c"; /* FontAwesome check */
+            content: "\f00c";
+            /* FontAwesome check */
             font-family: "Font Awesome 6 Free";
             font-weight: 900;
-            color: #06b6d4; /* Cyan */
+            color: #06b6d4;
+            /* Cyan */
             font-size: 0.8rem;
             margin-top: 5px;
         }
-        
+
         .policy-content a {
             color: #22d3ee;
             text-decoration: none;
             transition: color 0.3s;
         }
-        
+
         .policy-content a:hover {
             color: #ec4899;
             text-decoration: underline;
@@ -151,51 +175,82 @@
 <body class="antialiased selection:bg-ai-accent selection:text-white">
 
     <div class="fixed inset-0 pointer-events-none overflow-hidden">
-        <div class="absolute top-[-10%] left-[-10%] w-[500px] h-[500px] bg-purple-600/20 rounded-full blur-[128px] animate-pulse-slow"></div>
-        <div class="absolute bottom-[-10%] right-[-10%] w-[500px] h-[500px] bg-cyan-600/20 rounded-full blur-[128px] animate-pulse-slow" style="animation-delay: 2s;"></div>
-        <div class="absolute top-[20%] right-[20%] w-[300px] h-[300px] bg-pink-600/10 rounded-full blur-[96px] animate-blob"></div>
+        <div
+            class="absolute top-[-10%] left-[-10%] w-[500px] h-[500px] bg-purple-600/20 rounded-full blur-[128px] animate-pulse-slow">
+        </div>
+        <div class="absolute bottom-[-10%] right-[-10%] w-[500px] h-[500px] bg-cyan-600/20 rounded-full blur-[128px] animate-pulse-slow"
+            style="animation-delay: 2s;"></div>
+        <div
+            class="absolute top-[20%] right-[20%] w-[300px] h-[300px] bg-pink-600/10 rounded-full blur-[96px] animate-blob">
+        </div>
         <div class="absolute inset-0 grid-bg z-[-1]"></div>
     </div>
 
+    <!-- Navigation -->
     <nav class="glass-nav sticky top-0 z-50 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-20 items-center">
-                <div class="flex items-center gap-3">
-                    <a href="index.html" class="flex items-center gap-3 group">
-                        <div class="relative w-10 h-10 flex items-center justify-center">
-                            <div class="absolute inset-0 bg-gradient-to-tr from-cyan-400 to-purple-600 rounded-lg blur opacity-75 group-hover:opacity-100 transition-opacity"></div>
-                            <div class="relative bg-black rounded-lg w-full h-full overflow-hidden border border-white/10">
-                                <img src="logo-web.png" alt="AI Business Card Scan Logo" class="w-full h-full object-cover">
-                            </div>
+                <a href="index.html" class="flex items-center gap-3 group">
+                    <div class="relative w-10 h-10 flex items-center justify-center">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-tr from-cyan-400 to-purple-600 rounded-lg blur opacity-75">
                         </div>
-                        <span class="font-bold text-2xl lg:text-3xl tracking-tight text-white whitespace-nowrap">
-                            <span class="text-cyan-400">A</span>I
-                            <span class="text-cyan-400 ml-1">B</span>usiness
-                            <span class="text-cyan-400 ml-1">C</span>ard
-                        </span>
-                    </a>
-                </div>
+                        <div class="relative bg-black rounded-lg w-full h-full overflow-hidden border border-white/10">
+                            <img src="logo-web.png" alt="AI Business Card Scan Logo" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                    <!-- Brand Name with Unified Cyan and Bold Styling -->
+                    <span class="font-extrabold text-2xl lg:text-3xl tracking-tight text-white whitespace-nowrap">
+                        <span class="text-cyan-400">A</span>I
+                        <span class="text-cyan-400 ml-1">B</span>usiness
+                        <span class="text-cyan-400 ml-1">C</span>ard
+                        <span class="text-cyan-400 ml-1">Scan</span>
+                    </span>
+                </a>
                 <div class="hidden md:flex items-center gap-8">
-                    <a href="index.html" class="text-sm font-semibold text-gray-400 hover:text-white transition-colors tracking-widest uppercase">Home</a>
-                    <a href="index.html#download" class="group relative px-7 py-2.5 rounded-full bg-white/5 border border-white/10 hover:border-purple-500/50 hover:bg-white/10 transition-all duration-300">
-                        <span class="relative z-10 text-sm font-bold text-white tracking-widest uppercase">Get App</span>
-                        <div class="absolute inset-0 rounded-full bg-purple-500/20 blur opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    <a href="index.html#features"
+                        class="text-sm font-semibold text-gray-400 hover:text-white transition-colors tracking-widest uppercase"
+                        data-i18n="nav.features">Intelligence</a>
+                    <a href="index.html#reviews"
+                        class="text-sm font-semibold text-gray-400 hover:text-white transition-colors tracking-widest uppercase"
+                        data-i18n="nav.reviews">Reviews</a>
+                    <a href="index.html#pricing"
+                        class="text-sm font-semibold text-gray-400 hover:text-white transition-colors tracking-widest uppercase"
+                        data-i18n="nav.pricing">Pricing</a>
+                    <a href="privacy.html"
+                        class="text-sm font-semibold text-gray-400 hover:text-white transition-colors tracking-widest uppercase"
+                        data-i18n="nav.privacy">Privacy Policy</a>
+                    <a href="mailto:simplejoyfuljourney@gmail.com"
+                        class="text-sm font-semibold text-gray-400 hover:text-white transition-colors tracking-widest uppercase"
+                        data-i18n="nav.contact">Contact</a>
+                    <a href="https://play.google.com/store/apps/details?id=com.zenple.bcscanner"
+                        class="block transition-transform hover:scale-105 active:scale-95">
+                        <img src="google-play-badge.png" alt="Get it on Google Play" class="h-10 w-auto">
                     </a>
+
+                    <!-- Language Trigger -->
+                    <button onclick="openLanguageDrawer()"
+                        class="ml-6 flex items-center justify-center w-10 h-10 rounded-full border border-white/10 hover:bg-white/5 hover:border-cyan-500/50 transition-all group">
+                        <i class="fa-solid fa-globe text-gray-400 group-hover:text-cyan-400 text-sm"></i>
+                    </button>
                 </div>
+                <button class="md:hidden text-gray-300 hover:text-white">
+                    <i class="fa-solid fa-bars-staggered text-xl"></i>
+                </button>
             </div>
         </div>
     </nav>
 
     <main class="relative pt-12 pb-24 lg:pt-20 lg:pb-32">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            
-            <a href="index.html" class="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-gray-500 hover:text-cyan-400 transition-colors mb-8">
-                <i class="fa-solid fa-arrow-left"></i> Back to Home
-            </a>
 
-            <div class="glass-card rounded-[2.5rem] p-8 md:p-14 border border-white/5 shadow-2xl relative overflow-hidden">
-                
-                <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 opacity-50"></div>
+
+            <div
+                class="glass-card rounded-[2.5rem] p-8 md:p-14 border border-white/5 shadow-2xl relative overflow-hidden">
+
+                <div
+                    class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 opacity-50">
+                </div>
 
                 <div class="mb-12 border-b border-white/10 pb-10">
                     <h1 class="text-4xl md:text-5xl font-black mb-4 tracking-tighter text-white">
@@ -203,91 +258,167 @@
                     </h1>
                     <div class="flex items-center gap-3 text-sm font-bold uppercase tracking-widest text-cyan-400">
                         <i class="fa-regular fa-calendar-check"></i>
-                        <span>Last updated: January 29, 2026</span>
+                        <span data-i18n="privacy_content.last_updated">Last updated: January 29, 2026</span>
                     </div>
                 </div>
 
                 <div class="policy-content">
-                    <p class="text-lg text-white font-medium">ZenpleLife ("we," "our," or "us") operates the ABC Scan mobile application (the "App"). This page informs you of our policies regarding the collection, use, and disclosure of Personal Information when you use our Service and the choices you have associated with that data.</p>
-                    <p>By using the Service, you agree to the collection and use of information in accordance with this policy.</p>
+                    <p class="text-lg text-white font-medium" data-i18n="privacy_content.intro_1">ZenpleLife ("we,"
+                        "our," or "us") operates the ABC Scan
+                        mobile application (the "App"). This page informs you of our policies regarding the collection,
+                        use, and disclosure of Personal Information when you use our Service and the choices you have
+                        associated with that data.</p>
+                    <p data-i18n="privacy_content.intro_2">By using the Service, you agree to the collection and use of
+                        information in accordance with this
+                        policy.</p>
 
                     <h2 class="text-2xl font-black text-white mt-12 mb-6 flex items-center gap-3">
-                        <span class="w-8 h-8 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-cyan-400 text-sm">1</span>
-                        Information Collection and Use
+                        <span
+                            class="w-8 h-8 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-cyan-400 text-sm">1</span>
+                        <span data-i18n="privacy_content.section_1.title">Information Collection and Use</span>
                     </h2>
-                    <p>To provide a better experience and ensure the functionality of our business card scanning features, we may require you to provide us with certain personally identifiable information. The information that we request will be retained by us and used as described in this privacy policy.</p>
+                    <p data-i18n="privacy_content.section_1.content">To provide a better experience and ensure the
+                        functionality of our business card scanning
+                        features, we may require you to provide us with certain personally identifiable information. The
+                        information that we request will be retained by us and used as described in this privacy policy.
+                    </p>
 
-                    <h3 class="text-lg font-bold text-white mt-8 mb-4">A. Permissions We Request</h3>
-                    <p>For ABC Scan to function as a business card scanner, we require the following sensitive permissions on your device:</p>
+                    <h3 class="text-lg font-bold text-white mt-8 mb-4" data-i18n="privacy_content.section_1a.title">A.
+                        Permissions We Request</h3>
+                    <p data-i18n="privacy_content.section_1a.content">For ABC Scan to function as a business card
+                        scanner, we require the following sensitive
+                        permissions on your device:</p>
                     <ul>
-                        <li><strong>Camera:</strong> We use your device’s camera to capture images of business cards for Optical Character Recognition (OCR) processing.</li>
-                        <li><strong>Photo Gallery (Storage/Media):</strong> We request access to your photo gallery to allow you to upload existing images of business cards for scanning.</li>
-                        <li><strong>Contacts:</strong> We request access to your contact list (Read/Write) solely for the purpose of saving the scanned business card details directly into your device’s native address book at your request. We do not upload your contact list to our servers for any other purpose.</li>
+                        <li data-i18n="privacy_content.section_1a.list.camera"><strong>Camera:</strong> We use your
+                            device’s camera to capture images of business cards for
+                            Optical Character Recognition (OCR) processing.</li>
+                        <li data-i18n="privacy_content.section_1a.list.gallery"><strong>Photo Gallery
+                                (Storage/Media):</strong> We request access to your photo gallery to
+                            allow you to upload existing images of business cards for scanning.</li>
+                        <li data-i18n="privacy_content.section_1a.list.contacts"><strong>Contacts:</strong> We request
+                            access to your contact list (Read/Write) solely for
+                            the purpose of saving the scanned business card details directly into your device’s native
+                            address book at your request. We do not upload your contact list to our servers for any
+                            other purpose.</li>
                     </ul>
 
-                    <h3 class="text-lg font-bold text-white mt-8 mb-4">B. Personal Data</h3>
-                    <p>When you register an account via Firebase Authentication, we may collect:</p>
+                    <h3 class="text-lg font-bold text-white mt-8 mb-4" data-i18n="privacy_content.section_1b.title">B.
+                        Personal Data</h3>
+                    <p data-i18n="privacy_content.section_1b.content">When you register an account via Firebase
+                        Authentication, we may collect:</p>
                     <ul>
-                        <li>Email address</li>
-                        <li>Name</li>
-                        <li>Profile picture (if applicable via social login)</li>
+                        <li data-i18n="privacy_content.section_1b.list.email">Email address</li>
+                        <li data-i18n="privacy_content.section_1b.list.name">Name</li>
+                        <li data-i18n="privacy_content.section_1b.list.profile">Profile picture (if applicable via
+                            social login)</li>
                     </ul>
 
-                    <h3 class="text-lg font-bold text-white mt-8 mb-4">C. Scanned Data</h3>
-                    <p>The business card data you scan (names, phone numbers, company names, etc.) is processed to convert the image to text. If you choose to save this data to the cloud, it is stored securely using Google Firebase services so you can access it across devices.</p>
+                    <h3 class="text-lg font-bold text-white mt-8 mb-4" data-i18n="privacy_content.section_1c.title">C.
+                        Scanned Data</h3>
+                    <p data-i18n="privacy_content.section_1c.content">The business card data you scan (names, phone
+                        numbers, company names, etc.) is processed to
+                        convert the image to text. If you choose to save this data to the cloud, it is stored securely
+                        using Google Firebase services so you can access it across devices.</p>
 
                     <h2 class="text-2xl font-black text-white mt-12 mb-6 flex items-center gap-3">
-                        <span class="w-8 h-8 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-purple-400 text-sm">2</span>
-                        Third-Party Service Providers
+                        <span
+                            class="w-8 h-8 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-purple-400 text-sm">2</span>
+                        <span data-i18n="privacy_content.section_2.title">Third-Party Service Providers</span>
                     </h2>
-                    <p>The App uses third-party services that may collect information used to identify you. Below are the links to the privacy policies of the third-party service providers used by the App:</p>
+                    <p data-i18n="privacy_content.section_2.content">The App uses third-party services that may collect
+                        information used to identify you. Below are
+                        the links to the privacy policies of the third-party service providers used by the App:</p>
                     <ul>
-                        <li><strong>Google Play Services</strong></li>
-                        <li><strong>AdMob:</strong> We use AdMob to display advertisements. AdMob may use cookies and unique device identifiers (Advertising ID) to serve personalized ads based on your interests. <br> <a href="https://support.google.com/admob/answer/6128543?hl=en" target="_blank" class="ml-6 text-sm opacity-80 hover:opacity-100">View AdMob Privacy Policy</a></li>
-                        <li><strong>Google Firebase:</strong> We use Firebase for authentication (logging you in), analytics, and database storage (saving your scanned cards). <br> <a href="https://firebase.google.com/support/privacy" target="_blank" class="ml-6 text-sm opacity-80 hover:opacity-100">View Firebase Privacy Policy</a></li>
+                        <li data-i18n="privacy_content.section_2.list.play_services"><strong>Google Play
+                                Services</strong></li>
+                        <li><span data-i18n="privacy_content.section_2.list.admob"><strong>AdMob:</strong> We use AdMob
+                                to display advertisements. AdMob may use cookies and
+                                unique device identifiers (Advertising ID) to serve personalized ads based on your
+                                interests.</span> <br> <a href="https://support.google.com/admob/answer/6128543?hl=en"
+                                target="_blank" class="ml-6 text-sm opacity-80 hover:opacity-100"
+                                data-i18n="privacy_content.section_2.list.admob_link">View AdMob Privacy
+                                Policy</a></li>
+                        <li><span data-i18n="privacy_content.section_2.list.firebase"><strong>Google Firebase:</strong>
+                                We use Firebase for authentication (logging you in),
+                                analytics, and database storage (saving your scanned cards).</span> <br> <a
+                                href="https://firebase.google.com/support/privacy" target="_blank"
+                                class="ml-6 text-sm opacity-80 hover:opacity-100"
+                                data-i18n="privacy_content.section_2.list.firebase_link">View Firebase Privacy
+                                Policy</a></li>
                     </ul>
 
                     <h2 class="text-2xl font-black text-white mt-12 mb-6 flex items-center gap-3">
-                        <span class="w-8 h-8 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-pink-400 text-sm">3</span>
-                        Log Data
+                        <span
+                            class="w-8 h-8 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-pink-400 text-sm">3</span>
+                        <span data-i18n="privacy_content.section_3.title">Log Data</span>
                     </h2>
-                    <p>We want to inform you that whenever you use our Service, in a case of an error in the App, we collect data and information (through third-party products) on your phone called Log Data. This Log Data may include information such as your device Internet Protocol (“IP”) address, device name, operating system version, the configuration of the app when utilizing our Service, the time and date of your use of the Service, and other statistics.</p>
+                    <p data-i18n="privacy_content.section_3.content">We want to inform you that whenever you use our
+                        Service, in a case of an error in the App, we
+                        collect data and information (through third-party products) on your phone called Log Data. This
+                        Log Data may include information such as your device Internet Protocol (“IP”) address, device
+                        name, operating system version, the configuration of the app when utilizing our Service, the
+                        time and date of your use of the Service, and other statistics.</p>
 
                     <h2 class="text-2xl font-black text-white mt-12 mb-6 flex items-center gap-3">
-                        <span class="w-8 h-8 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-cyan-400 text-sm">4</span>
-                        Security
+                        <span
+                            class="w-8 h-8 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-cyan-400 text-sm">4</span>
+                        <span data-i18n="privacy_content.section_4.title">Security</span>
                     </h2>
-                    <p>We value your trust in providing us your Personal Information and your scanned data. We utilize industry-standard security measures provided by Google Firebase to protect your data during transmission and storage. However, remember that no method of transmission over the internet, or method of electronic storage is 100% secure and reliable, and we cannot guarantee its absolute security.</p>
+                    <p data-i18n="privacy_content.section_4.content">We value your trust in providing us your Personal
+                        Information and your scanned data. We utilize
+                        industry-standard security measures provided by Google Firebase to protect your data during
+                        transmission and storage. However, remember that no method of transmission over the internet, or
+                        method of electronic storage is 100% secure and reliable, and we cannot guarantee its absolute
+                        security.</p>
 
                     <h2 class="text-2xl font-black text-white mt-12 mb-6 flex items-center gap-3">
-                        <span class="w-8 h-8 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-purple-400 text-sm">5</span>
-                        Children’s Privacy
+                        <span
+                            class="w-8 h-8 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-purple-400 text-sm">5</span>
+                        <span data-i18n="privacy_content.section_5.title">Children’s Privacy</span>
                     </h2>
-                    <p>These Services do not address anyone under the age of 13. We do not knowingly collect personally identifiable information from children under 13. In the case we discover that a child under 13 has provided us with personal information, we immediately delete this from our servers. If you are a parent or guardian and you are aware that your child has provided us with personal information, please contact us so that we will be able to perform the necessary actions.</p>
+                    <p data-i18n="privacy_content.section_5.content">These Services do not address anyone under the age
+                        of 13. We do not knowingly collect personally
+                        identifiable information from children under 13. In the case we discover that a child under 13
+                        has provided us with personal information, we immediately delete this from our servers. If you
+                        are a parent or guardian and you are aware that your child has provided us with personal
+                        information, please contact us so that we will be able to perform the necessary actions.</p>
 
                     <h2 class="text-2xl font-black text-white mt-12 mb-6 flex items-center gap-3">
-                        <span class="w-8 h-8 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-pink-400 text-sm">6</span>
-                        Changes to This Privacy Policy
+                        <span
+                            class="w-8 h-8 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-pink-400 text-sm">6</span>
+                        <span data-i18n="privacy_content.section_6.title">Changes to This Privacy Policy</span>
                     </h2>
-                    <p>We may update our Privacy Policy from time to time. Thus, you are advised to review this page periodically for any changes. We will notify you of any changes by posting the new Privacy Policy on this page. These changes are effective immediately after they are posted on this page.</p>
+                    <p data-i18n="privacy_content.section_6.content">We may update our Privacy Policy from time to time.
+                        Thus, you are advised to review this page
+                        periodically for any changes. We will notify you of any changes by posting the new Privacy
+                        Policy on this page. These changes are effective immediately after they are posted on this page.
+                    </p>
 
                     <h2 class="text-2xl font-black text-white mt-12 mb-6 flex items-center gap-3">
-                        <span class="w-8 h-8 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-cyan-400 text-sm">7</span>
-                        Contact Us
+                        <span
+                            class="w-8 h-8 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-cyan-400 text-sm">7</span>
+                        <span data-i18n="privacy_content.section_7.title">Contact Us</span>
                     </h2>
-                    <p>If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us.</p>
-                    
-                    <div class="mt-8 p-6 rounded-2xl bg-white/5 border border-white/10 flex flex-col md:flex-row md:items-center gap-6">
-                        <div class="w-12 h-12 rounded-full bg-gradient-to-br from-cyan-500 to-purple-600 flex items-center justify-center text-white shadow-lg">
+                    <p data-i18n="privacy_content.section_7.content">If you have any questions or suggestions about our
+                        Privacy Policy, do not hesitate to contact us.
+                    </p>
+
+                    <div
+                        class="mt-8 p-6 rounded-2xl bg-white/5 border border-white/10 flex flex-col md:flex-row md:items-center gap-6">
+                        <div
+                            class="w-12 h-12 rounded-full bg-gradient-to-br from-cyan-500 to-purple-600 flex items-center justify-center text-white shadow-lg">
                             <i class="fa-solid fa-envelope"></i>
                         </div>
                         <div>
-                            <div class="text-xs font-bold uppercase tracking-widest text-gray-500 mb-1">Company</div>
+                            <div class="text-xs font-bold uppercase tracking-widest text-gray-500 mb-1"
+                                data-i18n="privacy_content.section_7.company_label">Company</div>
                             <div class="text-white font-bold text-lg">ZenpleLife</div>
                         </div>
                         <div class="md:ml-auto">
-                            <div class="text-xs font-bold uppercase tracking-widest text-gray-500 mb-1">Email</div>
-                            <a href="mailto:simplejoyfuljourney@gmail.com" class="text-cyan-400 font-bold hover:text-white transition-colors">simplejoyfuljourney@gmail.com</a>
+                            <div class="text-xs font-bold uppercase tracking-widest text-gray-500 mb-1"
+                                data-i18n="privacy_content.section_7.email_label">Email</div>
+                            <a href="mailto:simplejoyfuljourney@gmail.com"
+                                class="text-cyan-400 font-bold hover:text-white transition-colors">simplejoyfuljourney@gmail.com</a>
                         </div>
                     </div>
                 </div>
@@ -296,50 +427,86 @@
         </div>
     </main>
 
-    <footer class="border-t border-white/5 bg-black/50 backdrop-blur-2xl pt-24 pb-12">
+    <!-- Footer -->
+    <footer class="border-t border-white/5 bg-black/50 backdrop-blur-2xl py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-20">
-                <div class="col-span-1 md:col-span-1">
-                    <div class="flex items-center gap-3 mb-6">
-                        <img src="logo-web.png" alt="AI Business Card Scan Logo" class="w-8 h-8 object-contain">
-                        <span class="font-bold text-2xl tracking-tight text-white whitespace-nowrap">
-                            <span class="text-cyan-400">A</span>I
-                            <span class="text-cyan-400 ml-1">B</span>usiness
-                            <span class="text-cyan-400 ml-1">C</span>ard
-                        </span>
-                    </div>
-                    <p class="text-gray-500 text-sm leading-relaxed font-medium">Building the memory layer for your professional relationships.</p>
-                </div>
-                <div>
-                    <h4 class="font-black text-white mb-6 text-xs uppercase tracking-[0.3em]">Product</h4>
-                    <ul class="space-y-4 text-sm text-gray-500 font-bold uppercase tracking-widest text-[10px]">
-                        <li><a href="index.html#features" class="hover:text-cyan-400 transition-colors">Features</a></li>
-                        <li><a href="#" class="hover:text-cyan-400 transition-colors">Security</a></li>
-                        <li><a href="#" class="hover:text-cyan-400 transition-colors">Enterprise</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-black text-white mb-6 text-xs uppercase tracking-[0.3em]">Company</h4>
-                    <ul class="space-y-4 text-sm text-gray-500 font-bold uppercase tracking-widest text-[10px]">
-                        <li><a href="#" class="hover:text-cyan-400 transition-colors">Our Story</a></li>
-                        <li><a href="#" class="hover:text-cyan-400 transition-colors">Careers</a></li>
-                        <li><a href="#" class="hover:text-cyan-400 transition-colors">Contact</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-black text-white mb-6 text-xs uppercase tracking-[0.3em]">Social</h4>
-                    <div class="flex gap-5">
-                        <a href="#" class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:border-white/40 transition-colors"><i class="fa-brands fa-twitter"></i></a>
-                        <a href="#" class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:border-white/40 transition-colors"><i class="fa-brands fa-linkedin-in"></i></a>
-                        <a href="#" class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:border-white/40 transition-colors"><i class="fa-brands fa-github"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="border-t border-white/5 pt-10 text-center text-[10px] text-gray-600 uppercase font-black tracking-[0.4em]">
-                &copy; 2026 AI Business Card Scan Inc. All rights reserved.
+            <div class="text-center text-[10px] text-gray-600 uppercase font-black tracking-[0.4em]">
+                <span data-i18n="footer.copyright">&copy; 2026 ABC Scan All rights reserved.</span>
             </div>
         </div>
     </footer>
 
+    <!-- Language Drawer (Slide-over) -->
+    <div id="lang-overlay" onclick="closeLanguageDrawer()"
+        class="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 opacity-0 pointer-events-none transition-opacity duration-300">
+    </div>
+    <div id="lang-drawer"
+        class="fixed top-0 right-0 h-full w-80 bg-[#030014] border-l border-white/10 shadow-2xl z-50 transform translate-x-full transition-transform duration-300 ease-in-out p-8 flex flex-col">
+        <div class="flex items-center justify-between mb-10">
+            <h3 class="text-xl font-bold tracking-tight text-white" data-i18n="lang.title">Select Language</h3>
+            <button onclick="closeLanguageDrawer()" class="text-gray-400 hover:text-white transition-colors">
+                <i class="fa-solid fa-xmark text-xl"></i>
+            </button>
+        </div>
+
+        <div class="space-y-1.5 flex-1 overflow-y-auto pr-2 custom-scrollbar">
+            <button onclick="switchLanguage('en')"
+                class="lang-option w-full group flex items-center justify-between p-4 rounded-2xl border border-transparent hover:border-white/10 hover:bg-white/5 transition-all"
+                data-lang="en">
+                <span class="font-bold text-gray-300 group-hover:text-white">English</span>
+            </button>
+            <button onclick="switchLanguage('zh-TW')"
+                class="lang-option w-full group flex items-center justify-between p-4 rounded-2xl border border-transparent hover:border-white/10 hover:bg-white/5 transition-all"
+                data-lang="zh-TW">
+                <span class="font-bold text-gray-300 group-hover:text-white">繁體中文</span>
+            </button>
+            <button onclick="switchLanguage('es')"
+                class="lang-option w-full group flex items-center justify-between p-4 rounded-2xl border border-transparent hover:border-white/10 hover:bg-white/5 transition-all"
+                data-lang="es">
+                <span class="font-bold text-gray-300 group-hover:text-white">Español</span>
+            </button>
+            <button onclick="switchLanguage('ar')"
+                class="lang-option w-full group flex items-center justify-between p-4 rounded-2xl border border-transparent hover:border-white/10 hover:bg-white/5 transition-all"
+                data-lang="ar">
+                <span class="font-bold text-gray-300 group-hover:text-white">العربية</span>
+            </button>
+            <button onclick="switchLanguage('de')"
+                class="lang-option w-full group flex items-center justify-between p-4 rounded-2xl border border-transparent hover:border-white/10 hover:bg-white/5 transition-all"
+                data-lang="de">
+                <span class="font-bold text-gray-300 group-hover:text-white">Deutsch</span>
+            </button>
+            <button onclick="switchLanguage('fr')"
+                class="lang-option w-full group flex items-center justify-between p-4 rounded-2xl border border-transparent hover:border-white/10 hover:bg-white/5 transition-all"
+                data-lang="fr">
+                <span class="font-bold text-gray-300 group-hover:text-white">Français</span>
+            </button>
+            <button onclick="switchLanguage('hi')"
+                class="lang-option w-full group flex items-center justify-between p-4 rounded-2xl border border-transparent hover:border-white/10 hover:bg-white/5 transition-all"
+                data-lang="hi">
+                <span class="font-bold text-gray-300 group-hover:text-white">हिन्दी</span>
+            </button>
+            <button onclick="switchLanguage('ja')"
+                class="lang-option w-full group flex items-center justify-between p-4 rounded-2xl border border-transparent hover:border-white/10 hover:bg-white/5 transition-all"
+                data-lang="ja">
+                <span class="font-bold text-gray-300 group-hover:text-white">日本語</span>
+            </button>
+            <button onclick="switchLanguage('ko')"
+                class="lang-option w-full group flex items-center justify-between p-4 rounded-2xl border border-transparent hover:border-white/10 hover:bg-white/5 transition-all"
+                data-lang="ko">
+                <span class="font-bold text-gray-300 group-hover:text-white">한국어</span>
+            </button>
+            <button onclick="switchLanguage('pt')"
+                class="lang-option w-full group flex items-center justify-between p-4 rounded-2xl border border-transparent hover:border-white/10 hover:bg-white/5 transition-all"
+                data-lang="pt">
+                <span class="font-bold text-gray-300 group-hover:text-white">Português</span>
+            </button>
+        </div>
+
+        <div class="text-center text-xs text-gray-600 mt-8 font-medium" data-i18n="lang.auto_detected">
+            Auto-detected based on your location
+        </div>
+    </div>
+
 </body>
+
 </html>
