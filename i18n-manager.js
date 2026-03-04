@@ -2,79 +2,79 @@
 document.addEventListener('DOMContentLoaded', () => {
     const defaultLang = 'en';
     const supportedLangs = Object.keys(translations);
+    let hasRevealed = false;
 
-    // 1. Resolve Language (Preference > Auto-Detect > Browser > Default)
+    function revealPage() {
+        if (!hasRevealed) {
+            document.documentElement.style.visibility = 'visible';
+            hasRevealed = true;
+        }
+    }
+
+    // 1. IP Country Detection Handler (from pricing-sync.js)
+    function handleCountryDetection(country) {
+        if (localStorage.getItem('abcscan_lang')) {
+            revealPage();
+            return; // Don't override manual choice
+        }
+
+        console.log('i18n: Processing country detection:', country);
+        let targetLang = null;
+
+        if (['TW', 'HK', 'MO'].includes(country)) targetLang = 'zh-TW';
+        else if (['ES', 'MX', 'AR', 'CO', 'PE', 'VE', 'CL', 'EC', 'GT', 'CU', 'BO', 'DO', 'HN', 'PY', 'SV', 'NI', 'CR', 'PA', 'UY'].includes(country)) targetLang = 'es';
+        else if (['SA', 'AE', 'EG', 'QA', 'KW', 'OM', 'BH', 'JO', 'LB', 'LY', 'DZ', 'MA', 'TN', 'YE', 'IQ'].includes(country)) targetLang = 'ar';
+        else if (['DE', 'AT', 'CH', 'LI'].includes(country)) targetLang = 'de';
+        else if (['FR', 'BE', 'LU', 'MC'].includes(country)) targetLang = 'fr';
+        else if (country === 'IN') targetLang = 'hi';
+        else if (country === 'JP') targetLang = 'ja';
+        else if (country === 'KR') targetLang = 'ko';
+        else if (['PT', 'BR', 'AO', 'MZ'].includes(country)) targetLang = 'pt';
+
+        if (targetLang) {
+            setLanguage(targetLang);
+        }
+        revealPage();
+    }
+
+    // 2. Resolve Language (Preference > Auto-Detect > Browser > Default)
     let savedLang = localStorage.getItem('abcscan_lang');
 
     if (savedLang && translations[savedLang]) {
         // User has explicit preference
         setLanguage(savedLang);
+        revealPage();
     } else {
-        // Initial load: Try browser first, then wait for IP
+        // Initial load: Prep DOM with browser language just in case IP fails
         let browserLang = navigator.language;
-        if (browserLang === 'zh-TW' || browserLang === 'zh-HK') {
-            setLanguage('zh-TW');
-        } else if (browserLang.startsWith('es')) {
-            setLanguage('es');
-        } else if (browserLang.startsWith('ar')) {
-            setLanguage('ar');
-        } else if (browserLang.startsWith('de')) {
-            setLanguage('de');
-        } else if (browserLang.startsWith('fr')) {
-            setLanguage('fr');
-        } else if (browserLang.startsWith('hi')) {
-            setLanguage('hi');
-        } else if (browserLang.startsWith('ja')) {
-            setLanguage('ja');
-        } else if (browserLang.startsWith('ko')) {
-            setLanguage('ko');
-        } else if (browserLang.startsWith('pt')) {
-            setLanguage('pt');
-        } else if (browserLang.startsWith('zh')) {
-            setLanguage('zh-TW'); // Fallback for broadly Chinese browsers to TW
-        } else {
-            setLanguage(defaultLang);
-        }
+        let initialLang = defaultLang;
+
+        if (browserLang === 'zh-TW' || browserLang === 'zh-HK') initialLang = 'zh-TW';
+        else if (browserLang.startsWith('es')) initialLang = 'es';
+        else if (browserLang.startsWith('ar')) initialLang = 'ar';
+        else if (browserLang.startsWith('de')) initialLang = 'de';
+        else if (browserLang.startsWith('fr')) initialLang = 'fr';
+        else if (browserLang.startsWith('hi')) initialLang = 'hi';
+        else if (browserLang.startsWith('ja')) initialLang = 'ja';
+        else if (browserLang.startsWith('ko')) initialLang = 'ko';
+        else if (browserLang.startsWith('pt')) initialLang = 'pt';
+        else if (browserLang.startsWith('zh')) initialLang = 'zh-TW';
+
+        setLanguage(initialLang);
+
+        // Fallback: If IP detection takes too long or fails, reveal after 1000ms
+        setTimeout(revealPage, 1000);
     }
 
-    // 2. Listen for IP Country Detection (from pricing-sync.js)
-    function handleCountryDetection(country) {
-        if (localStorage.getItem('abcscan_lang')) return; // Don't override manual choice
-
-        console.log('i18n: Processing country detection:', country);
-
-        if (['TW', 'HK', 'MO'].includes(country)) {
-            setLanguage('zh-TW');
-        } else if (['ES', 'MX', 'AR', 'CO', 'PE', 'VE', 'CL', 'EC', 'GT', 'CU', 'BO', 'DO', 'HN', 'PY', 'SV', 'NI', 'CR', 'PA', 'UY'].includes(country)) {
-            setLanguage('es');
-        } else if (['SA', 'AE', 'EG', 'QA', 'KW', 'OM', 'BH', 'JO', 'LB', 'LY', 'DZ', 'MA', 'TN', 'YE', 'IQ'].includes(country)) {
-            setLanguage('ar');
-        } else if (['DE', 'AT', 'CH', 'LI'].includes(country)) {
-            setLanguage('de');
-        } else if (['FR', 'BE', 'LU', 'MC'].includes(country)) {
-            setLanguage('fr');
-        } else if (country === 'IN') {
-            setLanguage('hi');
-        } else if (country === 'JP') {
-            setLanguage('ja');
-        } else if (country === 'KR') {
-            setLanguage('ko');
-        } else if (['PT', 'BR', 'AO', 'MZ'].includes(country)) {
-            setLanguage('pt');
-        } else {
-            // Default stays as set in section 1
-        }
-    }
-
-    // Immediate check if pricing-sync already finished
+    // Immediate check if pricing-sync already finished before DOMContentLoaded
     if (window.USER_COUNTRY) {
         handleCountryDetection(window.USER_COUNTRY);
+    } else {
+        // Listen for future detection event
+        window.addEventListener('countryDetected', (e) => {
+            handleCountryDetection(e.detail.country);
+        });
     }
-
-    // Listen for future detection event
-    window.addEventListener('countryDetected', (e) => {
-        handleCountryDetection(e.detail.country);
-    });
 
     // 3. Expose Global Switcher
     window.switchLanguage = function (lang) {
@@ -142,10 +142,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const ogDescription = document.querySelector('meta[property="og:description"]');
             if (ogDescription && seoData.description_long) ogDescription.content = seoData.description_long;
-
-            // Twitter Tags
-            const twTitle = document.querySelector('meta[property="twitter:title"]');
-            if (twTitle && seoData.title) twTitle.content = seoData.title;
 
             const twDescription = document.querySelector('meta[property="twitter:description"]');
             if (twDescription && seoData.description_long) twDescription.content = seoData.description_long;

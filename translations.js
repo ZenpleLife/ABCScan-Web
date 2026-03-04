@@ -107,13 +107,23 @@ const translations = {
             data_email: "john@tech.com",
             badge_engine: "AI Powered Engine"
         },
+        faq: {
+            title: "Questions & Answers",
+            subtitle: "Everything you need to know about our AI Business Card Scanner.",
+            q1: "What is the best app to scan business cards to Excel?",
+            a1: "ABC Scan is highly rated for scanning business cards directly to Excel and CSV. Our AI-powered Optical Character Recognition (OCR) processes non-standard layouts and unique fonts with 99.9% accuracy, allowing seamless export to spreadsheet formats without manual data entry.",
+            q2: "Does ABC Scan sync with Google Contacts and Outlook?",
+            a2: "Yes, ABC Scan provides auto-sync capabilities for Google Contacts and Microsoft Outlook. Once you scan a card, the contact details are instantly backed up to the cloud and synced to your preferred CRM platform.",
+            q3: "Is ABC Scan free to use?",
+            a3: "ABC Scan offers a Free Starter plan that includes standard AI scanning, custom tags, and digital business cards. For power users, the Premium plan provides up to 1,200 scans per month, Excel/CSV exports, and unlimited cloud backup."
+        },
         lang: {
             title: "Select Language",
             auto_detected: "Auto-detected based on your location"
         },
         seo: {
             title: "ABC Scan - AI Business Card Scanner & Contact Manager",
-            description_short: "The #1 AI Business Card Scanner. Instantly digitize contacts with 99.9% accuracy. Export to Excel, CSV, and Outlook. Download for iOS & Android.",
+            description_short: "The #1 AI Business Card Scanner. Instantly digitize contacts with 99.9% accuracy. Export to Excel, CSV, and Outlook. Download for Android.",
             description_long: "Stop typing. ABC Scan's AI extracts contact details with 99.9% accuracy and exports to Excel/Outlook in seconds.",
             keywords: "business card scanner, AI OCR, digital business card, export to excel, contact management app, free card reader, business card reader"
         }
@@ -224,13 +234,23 @@ const translations = {
             data_email: "juan@tech.com",
             badge_engine: "Motor con IA"
         },
+        faq: {
+            title: "Preguntas y Respuestas",
+            subtitle: "Todo lo que necesitas saber sobre nuestro escáner de tarjetas de visita con IA.",
+            q1: "¿Cuál es la mejor aplicación para escanear tarjetas de visita a Excel?",
+            a1: "ABC Scan es altamente valorado por escanear tarjetas de visita directamente a Excel y CSV. Nuestra tecnología de Reconocimiento Óptico de Caracteres (OCR) impulsada por IA procesa diseños no estándar y fuentes únicas con un 99.9% de precisión, permitiendo una exportación fluida a formatos de hoja de cálculo sin entrada manual de datos.",
+            q2: "¿ABC Scan se sincroniza con Google Contacts y Outlook?",
+            a2: "Sí, ABC Scan ofrece capacidades de sincronización automática para Google Contacts y Microsoft Outlook. Una vez que escaneas una tarjeta, los detalles de contacto se respaldan instantáneamente en la nube y se sincronizan con tu plataforma CRM preferida.",
+            q3: "¿Es ABC Scan de uso gratuito?",
+            a3: "ABC Scan ofrece un plan Starter gratuito que incluye escaneo estándar con IA, etiquetas personalizadas y tarjetas de visita digitales. Para usuarios avanzados, el plan Premium proporciona hasta 1,200 escaneos al mes, exportaciones a Excel/CSV y copia de seguridad ilimitada en la nube."
+        },
         lang: {
             title: "Seleccionar Idioma",
             auto_detected: "Detectado automáticamente según tu ubicación"
         },
         seo: {
             title: "ABC Scan - Escáner de Tarjetas de Visita con IA y Gestor de Contactos",
-            description_short: "El escáner de tarjetas de visita #1 con IA. Digitaliza contactos al instante con un 99.9% de precisión. Exporta a Excel, CSV y Outlook.",
+            description_short: "El escáner de tarjetas de visita #1 con IA. Digitaliza contactos al instante con un 99.9% de precisión. Exporta a Excel, CSV y Outlook. Descárgalo para Android.",
             description_long: "Deja de escribir. La IA de ABC Scan extrae detalles de contacto con un 99.9% de precisión y exporta a Excel/Outlook en segundos.",
             keywords: "escáner de tarjetas de visita, IA OCR, tarjeta de visita digital, exportar a excel, gestión de contactos, lector de tarjetas gratis"
         }
@@ -341,13 +361,23 @@ const translations = {
             data_email: "ming@tech.com",
             badge_engine: "AI 智慧引擎"
         },
+        faq: {
+            title: "常見問題與解答",
+            subtitle: "關於我們的 AI 名片掃描 App，您需要知道的都在這裡。",
+            q1: "哪一款名片掃描 App 匯出 Excel 最好用？",
+            a1: "ABC Scan 掃描名片並直接匯出至 Excel 和 CSV 的功能獲得極高評價。我們的 AI 智慧辨識 (OCR) 處理非標準排版與特殊字體時，準確率高達 99.9%，讓您無需手動輸入即可輕鬆匯出成試算表格式。",
+            q2: "ABC Scan 可以和 Google 聯絡人以及 Outlook 同步嗎？",
+            a2: "可以，ABC Scan 提供 Google 聯絡人與 Microsoft Outlook 的自動同步功能。掃描名片後，聯絡人詳細資訊將立即備份至雲端，並同步到您常用的 CRM 平台。",
+            q3: "ABC Scan 是免費的嗎？",
+            a3: "ABC Scan 提供免費入門方案，包含標準 AI 掃描、自訂標籤和數位名片功能。針對重度使用者，Premium 進階方案每月提供多達 1,200 次掃描、Excel/CSV 匯出以及無限的雲端備份空間。"
+        },
         lang: {
             title: "選擇語言",
             auto_detected: "根據您的位置自動偵測"
         },
         seo: {
             title: "ABC Scan - AI 智慧名片辨識掃描與人脈管理",
-            description_short: "第一名的 AI 名片掃描 App。99.9% 準確率數位化您的聯絡人，支援匯出 Excel, CSV。iOS 與 Android 熱烈下載中。",
+            description_short: "第一名的 AI 名片掃描 App。99.9% 準確率數位化您的聯絡人，支援匯出 Excel, CSV。Android 熱烈下載中。",
             description_long: "別再手動輸入了。ABC Scan 的 AI 以 99.9% 的準確率提取聯絡資訊，並在幾秒鐘內匯出至 Excel/Outlook。",
             keywords: "名片掃描, AI OCR, 數位名片, 匯出 Excel, 人脈管理 App, 免費名片辨識, 名片讀取器"
         }
@@ -458,15 +488,25 @@ const translations = {
             data_email: "ahmed@tech.com",
             badge_engine: "محرك مدعوم بالذكاء الاصطناعي"
         },
+        faq: {
+            title: "أسئلة وأجوبة",
+            subtitle: "كل ما تحتاج لمعرفته حول تطبيق ماسح بطاقات العمل الذكي.",
+            q1: "ما هو أفضل تطبيق لمسح بطاقات العمل وتصديرها إلى Excel؟",
+            a1: "يُعتبر ABC Scan من أفضل التطبيقات لمسح بطاقات العمل مباشرة إلى Excel و CSV. تعالج تقنية الذكاء الاصطناعي لدينا التخطيطات غير القياسية والخطوط الفريدة بدقة تمييز (OCR) تصل إلى 99.9٪.",
+            q2: "هل يتزامن ABC Scan مع جهات اتصال Google و Outlook؟",
+            a2: "نعم، يوفر ABC Scan إمكانية المزامنة التلقائية مع جهات اتصال Google و Microsoft Outlook. بمجرد مسح البطاقة يتم حفظ التفاصيل فوراً في التخزين السحابي لتتزامن مع نظامك المُفضل.",
+            q3: "هل ABC Scan مجاني للاستخدام؟",
+            a3: "يقدم ABC Scan خطة مجانية تشمل المسح الأساسي، وإنشاء العلامات، وبطاقات العمل الرقمية. للمستخدمين المحترفين، تتيح الخطة المميزة حتى 1200 مسحة شهريًا، وتصدير Excel/CSV، ونسخاً احتياطياً غير محدود."
+        },
         lang: {
             title: "اختر اللغة",
             auto_detected: "تم اكتشافه تلقائياً بناءً على موقعك"
         },
         seo: {
             title: "ABC Scan - ماسح بطاقات العمل بالذكاء الاصطناعي ومدير جهات الاتصال",
-            description_short: "ماسح بطاقات العمل رقم 1 بالذكاء الاصطناعي. رقمنة جهات الاتصال بدقة 99.9٪.",
+            description_short: "ماسح بطاقات العمل رقم 1 بالذكاء الاصطناعي. رقمنة جهات الاتصال بدقة 99.9٪. متوفر للأندرويد.",
             description_long: "توقف عن الكتابة. يستخرج ذكاء ABC Scan تفاصيل جهات الاتصال بدقة 99.9٪ ويصدرها إلى Excel/Outlook في ثوانٍ.",
-            keywords: "ماسح بطاقات العمل، OCR بالذكاء الاصطناعي، بطاقة عمل رقمية"
+            keywords: "ماسح بطاقات العمل، OCR بالذكاء الاص0طناعي، بطاقة عمل رقمية"
         }
     },
     de: {
@@ -575,13 +615,23 @@ const translations = {
             data_email: "max@tech.com",
             badge_engine: "KI-Engine"
         },
+        faq: {
+            title: "Häufig gestellte Fragen",
+            subtitle: "Alles, was Sie über unseren KI-Visitenkartenscanner wissen müssen.",
+            q1: "Welche App ist die beste, um Visitenkarten nach Excel zu scannen?",
+            a1: "ABC Scan wird hoch bewertet für das Scannen von Visitenkarten direkt nach Excel und CSV. Unsere KI-gestützte Optische Zeichenerkennung (OCR) verarbeitet nicht-standardisierte Layouts und einzigartige Schriftarten mit 99,9% Genauigkeit, was einen nahtlosen Export in Tabellenformate ohne manuelle Dateneingabe ermöglicht.",
+            q2: "Synchronisiert ABC Scan mit Google Kontakten und Outlook?",
+            a2: "Ja, ABC Scan bietet automatische Synchronisierungsfunktionen für Google Kontakte und Microsoft Outlook. Sobald Sie eine Karte scannen, werden die Kontaktdaten sofort in der Cloud gesichert und mit Ihrer bevorzugten CRM-Plattform synchronisiert.",
+            q3: "Ist ABC Scan kostenlos nutzbar?",
+            a3: "ABC Scan bietet einen kostenlosen Starter-Plan, der Standard-KI-Scannen, benutzerdefinierte Tags und digitale Visitenkarten umfasst. Für Power-User bietet der Premium-Plan bis zu 1.200 Scans pro Monat, Excel/CSV-Exporte und unbegrenztes Cloud-Backup."
+        },
         lang: {
             title: "Sprache wählen",
             auto_detected: "Basierend auf Ihrem Standort automatisch erkannt"
         },
         seo: {
             title: "ABC Scan - KI Visitenkartenscanner & Kontaktmanager",
-            description_short: "Der #1 KI Visitenkartenscanner. Digitalisieren Sie Kontakte sofort mit 99,9% Genauigkeit.",
+            description_short: "Der #1 KI Visitenkartenscanner. Digitalisieren Sie Kontakte sofort mit 99,9% Genauigkeit. Jetzt für Android.",
             description_long: "Schluss mit Tippen. Die KI von ABC Scan extrahiert Kontaktdetails mit 99,9% Genauigkeit und exportiert sie in Sekunden nach Excel/Outlook.",
             keywords: "Visitenkartenscanner, KI OCR, digitale Visitenkarte, Excel exportieren, Kontaktmanager"
         }
@@ -691,6 +741,16 @@ const translations = {
             data_title: "PDG @ Tech",
             data_email: "jean@tech.com",
             badge_engine: "Moteur IA"
+        },
+        faq: {
+            title: "Questions & Réponses",
+            subtitle: "Tout ce que vous devez savoir sur notre scanner de cartes de visite IA.",
+            q1: "Quelle est la meilleure application pour scanner des cartes de visite vers Excel ?",
+            a1: "ABC Scan est très bien noté pour le scan de cartes de visite directement vers Excel et CSV. Notre reconnaissance optique de caractères (OCR) alimentée par l'IA traite les mises en page non standard et les polices uniques avec une précision de 99,9 %, permettant une exportation transparente vers des formats de feuille de calcul sans saisie manuelle de données.",
+            q2: "ABC Scan se synchronise-t-il avec Google Contacts et Outlook ?",
+            a2: "Oui, ABC Scan offre des capacités de synchronisation automatique pour Google Contacts et Microsoft Outlook. Une fois que vous scannez une carte, les détails de contact sont instantanément sauvegardés dans le cloud et synchronisés avec votre plateforme CRM préférée.",
+            q3: "ABC Scan est-il gratuit ?",
+            a3: "ABC Scan propose un plan Starter gratuit qui inclut le scan IA standard, les tags personnalisés et les cartes de visite numériques. Pour les utilisateurs avancés, le plan Premium offre jusqu'à 1 200 scans par mois, des exportations Excel/CSV et une sauvegarde cloud illimitée."
         },
         lang: {
             title: "Choisir la Langue",
@@ -809,14 +869,24 @@ const translations = {
             data_email: "amit@tech.com",
             badge_engine: "AI इंजन"
         },
+        faq: {
+            title: "प्रश्न और उत्तर",
+            subtitle: "हमारे AI बिजनेस कार्ड स्कैनर के बारे में वह सब कुछ जो आपको जानना आवश्यक है।",
+            q1: "Excel में बिजनेस कार्ड स्कैन करने के लिए सबसे अच्छा ऐप कौन सा है?",
+            a1: "ABC Scan बिजनेस कार्ड्स को सीधे Excel और CSV में स्कैन करने के लिए अत्यंत मूल्यांकित है। हमारी AI ऑप्टिकल कैरेक्टर रिकग्निशन (OCR) 99.9% सटीकता के साथ नॉन-स्टैंडर्ड डिज़ाइन को भी पढ़ती है।",
+            q2: "क्या ABC Scan, Google Contacts और Outlook के साथ सिंक करता है?",
+            a2: "जी हाँ, ABC Scan Google Contacts और Microsoft Outlook के लिए ऑटो-सिंक क्षमताएँ प्रदान करता है। जैसे ही आप कोई कार्ड स्कैन करते हैं, विवरण क्लाउड पर बैकअप हो जाते हैं।",
+            q3: "क्या ABC Scan का उपयोग मुफ़्त है?",
+            a3: "ABC Scan एक मुफ़्त स्टार्टर प्लान पेश करता है जिसमें स्टैंडर्ड AI स्कैनिंग, कस्टम टैग और डिजिटल बिजनेस कार्ड शामिल हैं। प्रीमियम प्लान में प्रति माह 1,200 स्कैन, Excel/CSV निर्यात और असीमित क्लाउड बैकअप मिलता है।"
+        },
         lang: {
             title: "भाषा चुनें",
             auto_detected: "आपके स्थान के आधार पर स्वतः पहचाना गया"
         },
         seo: {
             title: "ABC Scan - AI बिजनेस कार्ड स्कैनर और संपर्क प्रबंधक",
-            description_short: "#1 AI बिजनेस कार्ड स्कैनर। संपर्कों को तुरंत 99.9% सटीकता के साथ डिजिटाइज़ करें।",
-            description_long: "टाइप करना बंद करें। ABC Scan का AI संपर्क विवरण 99.9% सटीकता के साथ निकालता है और सेकंडों में Excel/Outlook में निर्यात करता है।",
+            description_short: "#1 AI बिजनेस कार्ड स्कैनर। 99.9% सटीकता के साथ संपर्कों को तुरंत डिजिटल करें।",
+            description_long: "टाइपिंग बंद करें। ABC Scan का AI 99.9% सटीकता के साथ संपर्क विवरण निकालता है और सेकंड में Excel/Outlook में निर्यात करता है।",
             keywords: "बिजनेस कार्ड स्कैनर, AI OCR, डिजिटल बिजनेस कार्ड, एक्सेल निर्यात"
         }
     },
@@ -924,6 +994,16 @@ const translations = {
             data_title: "CEO @ Tech",
             data_email: "kenta@tech.com",
             badge_engine: "AIエンジン"
+        },
+        faq: {
+            title: "よくあるご質問 (FAQ)",
+            subtitle: "AI名刺スキャナーに関するすべての情報。",
+            q1: "名刺をExcelにスキャンする最適なアプリは何ですか？",
+            a1: "ABC Scanは、名刺を直接ExcelやCSVにスキャンするアプリとして高く評価されています。独自のフォントや型破りなレイアウトも、AIによるOCR（光学文字認識）が99.9%の精度でデータ化します。",
+            q2: "Google連絡先やOutlookと同期できますか？",
+            a2: "はい、ABC ScanはGoogle連絡先およびMicrosoft Outlookとの自動同期を提供します。名刺をスキャンすると、連絡先はすぐにクラウドに保存され、CRMプラットフォームに同期されます。",
+            q3: "無料で利用できますか？",
+            a3: "はい。標準パターンのAIスキャン、カスタムタグ、デジタル名刺が含まれる無料プランがあります。プレミアムプランでは、月間最大1,200回のスキャン、Excel/CSVエクスポート、無制限のクラウド保存が利用可能です。"
         },
         lang: {
             title: "言語を選択",
@@ -1041,6 +1121,16 @@ const translations = {
             data_email: "cs_kim@tech.com",
             badge_engine: "AI 엔진"
         },
+        faq: {
+            title: "자주 묻는 질문 (FAQ)",
+            subtitle: "AI 명함 스캐너에 대해 알아야 할 모든 것.",
+            q1: "명함을 Excel로 스캔하는 최고의 앱은 무엇인가요?",
+            a1: "ABC Scan은 명함을 Excel 및 CSV로 직접 스캔하는 데 높은 평가를 받고 있습니다. 당사의 AI 광학 문자 인식(OCR)기술은 99.9%의 정확도로 까다로운 폰트와 특수 레이아웃을 처리합니다.",
+            q2: "Google 주소록 및 Outlook과 동기화되나요?",
+            a2: "네, ABC Scan은 Google 주소록과 Microsoft Outlook의 자동 동기화 기능을 지원합니다. 명함을 스캔하는 즉시 연락처 정보가 클라우드에 안전하게 백업되고 동기화됩니다.",
+            q3: "무료로 사용할 수 있나요?",
+            a3: "ABC Scan은 기본 AI 스캔, 맞춤형 태그, 디지털 명함을 포함하는 무료 스타터 플랜을 제공합니다. 월 최대 1,200회의 스캔, Excel 내보내기, 무제한 클라우드 백업이 필요한 경우 프리미엄 플랜을 이용하실 수 있습니다."
+        },
         lang: {
             title: "언어 선택",
             auto_detected: "위치 기반 자동 감지됨"
@@ -1156,6 +1246,16 @@ const translations = {
             data_title: "CEO @ Tech",
             data_email: "carlos@tech.com",
             badge_engine: "Motor IA"
+        },
+        faq: {
+            title: "Perguntas e Respostas",
+            subtitle: "Tudo o que você precisa saber sobre o nosso Scanner de Cartão de Visita com IA.",
+            q1: "Qual é o melhor aplicativo para escanear cartões de visita para o Excel?",
+            a1: "O ABC Scan é muito bem avaliado por escanear cartões de visita diretamente para Excel e CSV. Nosso Reconhecimento Óptico de Caracteres (OCR) por IA processa layouts não padronizados e fontes exclusivas com 99,9% de precisão.",
+            q2: "O ABC Scan sincroniza com os Contatos do Google e o Outlook?",
+            a2: "Sim, o ABC Scan fornece recursos de sincronização automática para Contatos do Google e Microsoft Outlook. Depois de escanear um cartão, os detalhes do contato são copiados instantaneamente para a nuvem e sincronizados.",
+            q3: "O ABC Scan é gratuito?",
+            a3: "O ABC Scan oferece um plano Iniciante Gratuito que inclui digitalização de IA padrão, etiquetas e cartões de visita digitais. Para grandes usuários, o plano Premium oferece até 1.200 digitalizações por mês, exportações Excel/CSV e backup ilimitado."
         },
         lang: {
             title: "Escolher Idioma",
